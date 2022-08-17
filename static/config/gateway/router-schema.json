@@ -1,0 +1,1798 @@
+{
+  "errcode": 200,
+  "errmsg": "ok",
+  "timestamp": 1652235124000,
+  "requestId": "0000000000000000",
+  "data": {
+    "gateway_routes_schema": {
+      "version": "3.0.0-RC3",
+      "predicates": [
+        {
+          "type": "Path",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "true",
+          "value": {
+            "type": "string",
+            "regex": "/^[A-Za-z0-9\u4e00-\u9fa5]+$/",
+            "message": {
+              "zh_CN": "规则Path",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "StripPrefix",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "int",
+            "regex": "/^[A-Za-z0-9\u4e00-\u9fa5]+$/",
+            "message": {
+              "zh_CN": "规则StriPPrefix",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Query",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "/^[A-Za-z0-9\u4e00-\u9fa5]+$/",
+            "message": {
+              "zh_CN": "规则Query",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Before",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "/^[A-Za-z0-9\u4e00-\u9fa5]+$/",
+            "defaultValue": "Befo",
+            "message": {
+              "zh_CN": "规则Before",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "After",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "/^[A-Za-z0-9\u4e00-\u9fa5]+$/",
+            "message": {
+              "zh_CN": "规则After",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Between",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(^/[\\S_-]+)(^,/[\\S_-]+)*",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Cookie",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(^/[\\S_-]+)(^,/[\\S_-]+)*",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Header",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(^/[\\S_-]+)(^,/[\\S_-]+)*",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Host",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(^/[\\S_-]+)(^,/[\\S_-]+)*",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "Method",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(^/[\\S_-]+)(^,/[\\S_-]+)*",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        },
+        {
+          "type": "RemoteAddr",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "repeat": "false",
+          "value": {
+            "type": "string",
+            "regex": "(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$",
+            "message": {
+              "zh_CN": "",
+              "en_US": ""
+            },
+            "help": {
+              "zh_CN": "",
+              "en_US": ""
+            }
+          }
+        }
+      ],
+      "filters": [
+        {
+          "type": "SimpleSignAuthing",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "appIdExtractor",
+              "type": "enum",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "Parameter",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "options": [
+                {
+                  "name": "Parameter",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RouteId",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "appIdParam",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "appId",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "secretParam",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "appSecret",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signReplayVerifyEnabled",
+              "type": "boolean",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "true",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signReplayVerifyBloomExpireSeconds",
+              "type": "int",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "604800",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signParam",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "sign",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signAlgorithm",
+              "type": "enum",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "Parameter",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "options": [
+                {
+                  "name": "MD5",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "S1",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "S256",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "S384",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "S512",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HMD5",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HS1",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HS256",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HS512",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "signHashingMode",
+              "type": "enum",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "UriParamsKeySortedHashing",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "options": [
+                {
+                  "name": "UriParamsKeySortedHashing",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "SimpleParamsBytesSortedHashing",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "signHashingIncludeParams",
+              "type": "array",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signHashingExcludeParams",
+              "type": "array",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "signHashingRequiredIncludeParams",
+              "type": "array",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "addSignAuthClientIdHeader",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "X-Sign-Auth-AppId",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "IamRequestSize",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "Limit for request content-length",
+            "en_US": "Limit for request content-length"
+          },
+          "args": [
+            {
+              "name": "maxBodySize",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "5MB",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "IamRequestLimiter",
+          "repeat": "true",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "emptyKeyStatus",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "FORBIDDEN",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "statusCode",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "TOO_MANY_REQUESTS",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "keyResolver",
+              "type": "object",
+              "multi": "false",
+              "repeat": "false",
+              "help": {
+                "zh_CN": "The available options are: (RedisQuotaLimiter|RedisRateLimiter)",
+                "en_US": "The available options are: (RedisQuotaLimiter|RedisRateLimiter)"
+              },
+              "defaultValue": "",
+              "options": [],
+              "childrens": [
+                {
+                  "name": "provider",
+                  "type": "enum",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "Host",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  },
+                  "options": [
+                    {
+                      "name": "Host",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "Header",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "Path",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "Principal",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "Interval",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "properties",
+                  "type": "map",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "500",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  },
+                  "options": [],
+                  "childrens": [
+                    {
+                      "name": "headerNames",
+                      "type": "array",
+                      "multi": "true",
+                      "repeat": "false",
+                      "defaultValue": [
+                        "X-Forwarded-For",
+                        "Proxy-Client-IP",
+                        "WL-Proxy-Client-IP"
+                      ],
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      },
+                      "options": [
+                        { "name": "X-Forwarded-For" },
+                        { "name": "Proxy-Client-IP" },
+                        { "name": "WL-Proxy-Client-IP" }
+                      ],
+                      "childrens": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "provider",
+              "type": "enum",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": "RedisRateLimiter",
+              "help": {
+                "zh_CN": "The request limiter provider",
+                "en_US": "The request limiter provider"
+              },
+              "options": [
+                {
+                  "name": "RedisRateLimiter",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RedisQuotaLimiter",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "IamCircuitBreaker",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "name",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "fallbackUri",
+              "type": "string",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "statusCodes",
+              "type": "array",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "CanaryLoadBalancer",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "choose",
+              "type": "object",
+              "multi": "false",
+              "repeat": "false",
+              "childrens": [
+                {
+                  "name": "loadBalancerAlgorithm",
+                  "type": "enum",
+                  "repeat": "false",
+                  "defaultValue": null,
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  },
+                  "options": [
+                    {
+                      "name": "R",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "RR",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "WR",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "WRR",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "DH",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "SH",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "LC",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "LT",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "WLC",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "WLT",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    }
+                  ]
+                }
+              ],
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "IamRetry",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "retries",
+              "type": "int",
+              "multi": "false",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "statuses",
+              "type": "array",
+              "multi": "true",
+              "repeat": "false",
+              "defaultValue": [
+                "BAD_GATEWAY",
+                "SERVICE_UNAVAILABLE",
+                "GATEWAY_TIMEOUT"
+              ],
+              "options": [
+                {
+                  "name": "BAD_GATEWAY",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "SERVICE_UNAVAILABLE",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "GATEWAY_TIMEOUT",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ],
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "backoff",
+              "type": "object",
+              "multi": "false",
+              "repeat": "false",
+              "childrens": [
+                {
+                  "name": "firstBackoff",
+                  "type": "int",
+                  "repeat": "false",
+                  "defaultValue": "100",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "maxBackoff",
+                  "type": "int",
+                  "repeat": "false",
+                  "defaultValue": "500",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "factor",
+                  "type": "int",
+                  "repeat": "false",
+                  "defaultValue": "2",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "basedOnPreviousValue",
+                  "type": "boolean",
+                  "repeat": "false",
+                  "defaultValue": "false",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ],
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "RemoveRequestHeader",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "RemoveRequestHeader",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "RemoveResponseHeader",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "RemoveResponseHeader",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "RewritePath",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "RewritePath",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "SetResponseHeader",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "SetResponseHeader",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "SetStatus",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "SetStatus",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "RedirectTo",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "RedirectTo",
+              "type": "stringWithNamedConfig",
+              "repeat": "false",
+              "defaultValue": null,
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "SecureHeaders",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "xssProtectionHeader",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "X-Xss-Protection:1; mode=block",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "strictTransportSecurity",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "Strict-Transport-Security:max-age=631138519",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "frameOptions",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "DENY",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "contentTypeOptions",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "nosniff",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "referrerPolicy",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "no-referrer",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "contentSecurityPolicy",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "default-src 'self' https:; font-src 'self' https: data:; img-src 'self' https: data:; object-src 'none'; script-src https:; style-src 'self' https: 'unsafe-inline'",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "downloadOptions",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "noopen",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            },
+            {
+              "name": "permittedCrossDomainPolicies",
+              "type": "string",
+              "repeat": "false",
+              "defaultValue": "none",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "IpFilter",
+          "repeat": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "preferRejectOnCidrConflict",
+              "type": "boolean",
+              "repeat": "false",
+              "multi": "false",
+              "defaultValue": "true",
+              "help": {
+                "zh_CN": "When the white-list (allow) and the CIDR of the black-list (deny) conflict, whether the black-list (deny) has a higher priority.",
+                "en_US": "When the white-list (allow) and the CIDR of the black-list (deny) conflict, whether the black-list (deny) has a higher priority."
+              }
+            },
+            {
+              "name": "acceptNotMatchCidr",
+              "type": "boolean",
+              "repeat": "false",
+              "multi": "false",
+              "defaultValue": "true",
+              "help": {
+                "zh_CN": "The accept the request when neither the whitelist nor the blacklist match.",
+                "en_US": "The accept the request when neither the whitelist nor the blacklist match."
+              }
+            },
+            {
+              "name": "anyLocalAddressAllowed",
+              "type": "boolean",
+              "repeat": "false",
+              "multi": "false",
+              "defaultValue": "true",
+              "help": {
+                "zh_CN": "The allow all local addresses to pass.",
+                "en_US": "The allow all local addresses to pass."
+              }
+            },
+            {
+              "name": "statusCode",
+              "type": "string",
+              "repeat": "false",
+              "multi": "false",
+              "defaultValue": "FORBIDDEN"
+            },
+            {
+              "name": "forwardHeaderNames",
+              "type": "array",
+              "repeat": "false",
+              "multi": "true",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "defaultValue": [
+                "X-Forwarded-For",
+                "Proxy-Client-IP",
+                "WL-Proxy-Client-IP"
+              ],
+              "options": [
+                {
+                  "name": "X-Forwarded-For",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Proxy-Client-IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "WL-Proxy-Client-IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "X-Real-IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "REMOTE_ADDR",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Remote-Addr",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RemoteAddr",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "REMOTE_IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Remote-Ip",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RemoteIp",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_X_FORWARDED_FOR",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-X-Forwarded-For",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpXForwardedFor",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_X_FORWARDED",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-X-Forwarded",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpXForwarded",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_Client_IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-Client-Ip",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpClientIp",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_X_CLUSTER_CLIENT_IP",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-X-Cluster-Client-Ip",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpXClusterClientIp",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_FORWARDED_FOR",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-Forwarded-For",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpForwardedFor",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HTTP_VIA",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "Http-Via",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "HttpVia",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "subnets",
+              "type": "array",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "childrens": [
+                {
+                  "name": "allow",
+                  "type": "boolean",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "false",
+                  "help": {
+                    "zh_CN": "The allow or deny IP subnet segments.",
+                    "en_US": "The allow or deny IP subnet segments."
+                  }
+                },
+                {
+                  "name": "cidrs",
+                  "type": "array",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": [],
+                  "help": {
+                    "zh_CN": "The matching subnet CIDRs",
+                    "en_US": "The matching subnet CIDRs"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FaultInjector",
+          "repeat": "false",
+          "multi": "false",
+          "help": {
+            "zh_CN": "Filter configuration for testing FaultInjector",
+            "en_US": "Filter configuration for testing FaultInjector"
+          },
+          "args": [
+            {
+              "name": "provider",
+              "type": "enum",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "The which is equivalent to another and condition after match the SPEL expression.",
+                "en_US": "The which is equivalent to another and condition after match the SPEL expression."
+              },
+              "options": [
+                {
+                  "name": "Abort",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "FixedDelay",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RangeDelay",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "abort",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "The request to abort fault injector configuration.",
+                "en_US": "The request to abort fault injector configuration."
+              },
+              "childrens": [
+                {
+                  "name": "percentage",
+                  "type": "double",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "1.00",
+                  "help": {
+                    "zh_CN": "The percentage of requests that require fault injection match enabled.",
+                    "en_US": "The percentage of requests that require fault injection match enabled."
+                  }
+                },
+                {
+                  "name": "statusCode",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "500",
+                  "help": {
+                    "zh_CN": "The HttpStatus returned when the fault strategy is meet.",
+                    "en_US": "The HttpStatus returned when the fault strategy is meet."
+                  }
+                }
+              ]
+            },
+            {
+              "name": "fixedDelay",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "The request to fixed delay fault injector configuration.",
+                "en_US": "The request to fixed delay fault injector configuration."
+              },
+              "childrens": [
+                {
+                  "name": "percentage",
+                  "type": "double",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "1.00",
+                  "help": {
+                    "zh_CN": "The percentage of requests that require fault injection match enabled.",
+                    "en_US": "The percentage of requests that require fault injection match enabled."
+                  }
+                },
+                {
+                  "name": "delayMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "1000",
+                  "help": {
+                    "zh_CN": "fixed delay in milliseconds",
+                    "en_US": "fixed delay in milliseconds"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "rangeDelay",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "The request to random range delay fault injector configuration.",
+                "en_US": "The request to random range delay fault injector configuration."
+              },
+              "childrens": [
+                {
+                  "name": "percentage",
+                  "type": "double",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "1.00",
+                  "help": {
+                    "zh_CN": "The percentage of requests that require fault injection match enabled.",
+                    "en_US": "The percentage of requests that require fault injection match enabled."
+                  }
+                },
+                {
+                  "name": "minDelayMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "1000",
+                  "help": {
+                    "zh_CN": "fixed delay in milliseconds",
+                    "en_US": "fixed delay in milliseconds"
+                  }
+                },
+                {
+                  "name": "maxDelayMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "5000",
+                  "help": {
+                    "zh_CN": "fixed delay in milliseconds",
+                    "en_US": "fixed delay in milliseconds"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "ResponseCache",
+          "repeat": "false",
+          "multi": "false",
+          "help": {
+            "zh_CN": "",
+            "en_US": ""
+          },
+          "args": [
+            {
+              "name": "provider",
+              "type": "enum",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "options": [
+                {
+                  "name": "SimpleCache",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "EhCache",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "RedisCache",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "simple",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "childrens": [
+                {
+                  "name": "maximumSize",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "100_000",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "expireAfterAccessMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "60_000",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "expireAfterWriteMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "600_000",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "concurrencyLevel",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "4",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "ehcache",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "childrens": [
+                {
+                  "name": "eliminationAlg",
+                  "type": "enum",
+                  "repeat": "false",
+                  "multi": "false",
+                  "defaultValue": "LRU",
+                  "help": {
+                    "zh_CN": "The cached data elimination algorithm.",
+                    "en_US": "The cached data elimination algorithm."
+                  },
+                  "options": [
+                    {
+                      "name": "LFU",
+                      "help": {
+                        "zh_CN": "Least Frequently Used",
+                        "en_US": "Least Frequently Used"
+                      }
+                    },
+                    {
+                      "name": "LRU",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    },
+                    {
+                      "name": "FIFO",
+                      "help": {
+                        "zh_CN": "",
+                        "en_US": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "cacheNamePrefix",
+                  "type": "string",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "ResponseCache",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "offHeapEntries",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "100_000",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "offHeapSize",
+                  "type": "string",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "128MB",
+                  "help": {
+                    "zh_CN": "The number of data size not persisted to keep in memory. must be less than diskSize",
+                    "en_US": "The number of data size not persisted to keep in memory. must be less than diskSize"
+                  }
+                },
+                {
+                  "name": "diskSize",
+                  "type": "string",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "512MB",
+                  "help": {
+                    "zh_CN": "The number of total data size not persisted to keep in disk. must be greater than offHeapSize",
+                    "en_US": "The number of total data size not persisted to keep in disk. must be greater than offHeapSize"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "redis",
+              "type": "object",
+              "repeat": "false",
+              "multi": "false",
+              "help": {
+                "zh_CN": "",
+                "en_US": ""
+              },
+              "childrens": [
+                {
+                  "name": "cachePrefix",
+                  "type": "string",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "iam:gateway:responsecache:data",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                },
+                {
+                  "name": "expireMs",
+                  "type": "int",
+                  "multi": "false",
+                  "repeat": "false",
+                  "defaultValue": "60000",
+                  "help": {
+                    "zh_CN": "",
+                    "en_US": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

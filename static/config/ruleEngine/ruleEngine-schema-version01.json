@@ -1,0 +1,62 @@
+{
+  "errcode": 200,
+  "errmsg": "ok",
+  "timestamp": 1652235124000,
+  "requestId": "0000000000000000",
+  "data": [
+    {
+      "//": {
+        "dataType": "当前数据的类型(content 为内容、condition 为条件、print 为结果输出)",
+        "content": "为判断内容",
+        "condition": "为判断的条件",
+        "conditionContent": "为条件内容"
+      },
+      "dataType": "content",
+      "content": "投保人的性别",
+      "childrens": [
+        {
+          "dataType": "condition",
+          "condition": "equal",
+          "conditionContent": "true",
+          "childrens": [
+            {
+              "dataType": "content",
+              "content": "投保人的年龄",
+              "childrens": [
+                {
+                  "dataType": "condition",
+                  "condition": "gattrtOrEqual",
+                  "conditionContent": "16",
+                  "chhildren": [
+                    {
+                      "dataType": "condition",
+                      "condition": "lessOrEqual",
+                      "conditionContent": "39",
+                      "childrens": [
+                        {
+                          "dataType": "end",
+                          "print": "投保人的中间结果=1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "dataType": "condition",
+          "condition": "equal",
+          "conditionContent": "false",
+          "childrens": [
+            {
+              "dataType": "end",
+              "print": "投保人的中间结果=6"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

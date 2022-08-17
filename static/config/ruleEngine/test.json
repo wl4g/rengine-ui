@@ -1,0 +1,67 @@
+{
+  "errcode": 200,
+  "errmsg": "ok",
+  "timestamp": 1652235124000,
+  "requestId": "0000000000000000",
+  "data": {
+    "rule_engine_schema": {
+      "version": "3.0.0-RC4",
+      "rules": [
+        {
+          "kind": "attribute",
+          "status": "1",
+          "type": "string",
+          "name": "收款人性别",
+          "key": "payee_gender",
+          "childrens": [
+            {
+              "kind": "operator",
+              "status": "1",
+              "type": "enum",
+              "name": "等于男",
+              "op": "eq",
+              "bind": "man",
+              "scoring": {
+                "type": "sum",
+                "value": "10"
+              },
+              "childrens": [
+                {
+                  "kind": "attribute",
+                  "status": "1",
+                  "type": "int",
+                  "name": "收款人年龄",
+                  "key": "payee_age",
+                  "childrens": [
+                    {
+                      "kind": "operator",
+                      "status": "1",
+                      "type": "int",
+                      "name": "大于等于16岁",
+                      "op": "ge",
+                      "bind": "16",
+                      "scoring": {
+                        "type": "sum",
+                        "value": "5"
+                      },
+                      "childrens": [
+                        {
+                          "kind": "operator",
+                          "status": "1",
+                          "type": "int",
+                          "name": "小于等于39岁",
+                          "op": "le",
+                          "bind": "39",
+                          "scoring": {
+                            "type": "sum",
+                            "value": "20"
+                          },
+                          "childrens": [
+                            {
+                              "kind": "stop"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
