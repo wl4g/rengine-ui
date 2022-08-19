@@ -14,12 +14,39 @@
 </template>
 <script>
 import * as monaco from 'monaco-editor';
+
+// function processSuggestions (data, arr, stringData) {
+//   data.forEach(item => {
+//     if (item.children.length > 0) {
+//       stringData += item.name
+//       processSuggestions(data, arr, stringData)
+//     } else {
+//       stringData += item.name
+//       arr.push({ stringData: stringData })
+//     }
+//   })
+// }
+function processSuggestions (params = [], result = [], key = "") {
+  //扁平化数组
+  if (Array.isArray(params) && params.length) {
+    params.forEach(item => {
+      // 每次开启新的一轮循环，拷贝一份副本（key），因为副本会用于当前轮的其它兄弟，所以你不能改变副本（即不能改变key的值）
+      let currentkey = key
+      currentkey += "." + item.name
+      if (item.children.length > 0) {
+        processSuggestions(item.children, result, currentkey)
+      } else if (item.children.length == 0) {
+        result.push(currentkey.slice(1))
+      }
+    })
+  }
+}
 export default {
   props: {
     codes: {
       type: String,
       default: function () {
-        return '<div>请编辑内容</div>'
+        return ''
       }
     },
     showTheme: {
@@ -80,14 +107,30 @@ export default {
       codesCopy: null,//内容备份
       suggestions: [{
         label: '$123',
-        kind: monaco.languages.CompletionItemKind['Function'], //这里Function也可以是别的值，主要用来显示不同的图标
-        insertText: '123', // 如果没有此项，则无法插入
+        // kind: monaco.languages.CompletionItemKind['Function'], //这里Function也可以是别的值，主要用来显示不同的图标
+        insertText: '$123', // 如果没有此项，则无法插入
         detail: '$'
       }]
     }
   },
   mounted () {
-    this.initEditor();
+    this.$nextTick(() => {
+      this.initEditor();
+
+    })
+    let data = require("./mock.json").data
+
+    let result = []
+    processSuggestions(data, result)
+    console.info("2222222", result)
+    result.forEach(item => {
+      this.suggestions.push({
+        label: item,
+        insertText: item,
+        detail: item.split(".")[0]
+      })
+      console.info("2222222", item.split("."))
+    })
   },
   beforeDestroy () {
 
@@ -129,6 +172,8 @@ export default {
       self.monacoEditor.onDidChangeModelContent(function (event) {//编辑器内容changge事件
         // self.codesCopy = self.monacoEditor.getValue();
         self.$emit('onCodeChange', self.monacoEditor.getValue(), event);
+
+
       });
       //编辑器随窗口自适应
       window.addEventListener('resize', function () {
@@ -141,7 +186,7 @@ export default {
       // this.$emit('runResult',this.monacoEditor.getValue())
     },
     themeChange (val) {
-      this.initEditor();
+      this.initEditor(this.codes);
     }
   }
 }

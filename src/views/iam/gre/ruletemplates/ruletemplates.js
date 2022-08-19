@@ -6,7 +6,7 @@ export default {
     }
   },
   mounted() {
-    this.tableData = getTableData()
+    // this.tableData = getTableData()
   },
   methods: {
     showRuleDetail(row) {
@@ -18,10 +18,14 @@ export default {
         query: { id: row.id },
       })
     },
+    addTemplat() {
+      this.$router.push({
+        path: this.permitutil.getRoutePathByPermission("iam:ruletemplatesEdit"),
+      })
+    },
     design() {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission("iam:ruletemplatesEdit"),
-        // query: { id: row.id },
       })
     },
     delData() {},

@@ -1,0 +1,26 @@
+{
+  "code": 200,
+  "status": "Normal",
+  "requestId": null,
+  "message": "Ok",
+  "data": {
+    "hits": [
+      { "date": "08-01", "value": 100 },
+      { "date": "08-02", "value": 150 },
+      { "date": "08-03", "value": 300 },
+      { "date": "08-04", "value": 400 }
+    ],
+    "missHits": [
+      { "date": "08-01", "value": 90 },
+      { "date": "08-02", "value": 85 },
+      { "date": "08-03", "value": 70 },
+      { "date": "08-04", "value": 88 }
+    ],
+    "hitRate": [
+      { "date": "08-01", "value": 10 },
+      { "date": "08-02", "value": 15 },
+      { "date": "08-03", "value": 30 },
+      { "date": "08-04", "value": 12 }
+    ]
+  }
+}
