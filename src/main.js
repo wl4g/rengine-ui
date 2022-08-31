@@ -104,4 +104,7 @@ new Promise(resolve => {
       console.debug("根组件：mounted")
     },
   })
+  if (module.hot) {
+    module.hot.accept()
+  }
 })

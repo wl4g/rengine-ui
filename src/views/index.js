@@ -3,6 +3,6 @@
  */
 
 import Init from "./init/"
-import Iam from "./iam"
+import Modules from "./modules/"
 
-export { Init, Iam }
+export { Init, Modules }

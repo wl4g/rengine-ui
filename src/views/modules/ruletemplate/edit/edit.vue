@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ruletemplatesEdit from "./ruletemplatesEdit.js"
+import ruletemplatesEdit from "./edit.js"
 export default ruletemplatesEdit
 </script>
 

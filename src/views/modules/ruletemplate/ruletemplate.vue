@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Ruleflows from "./ruletemplates.js"
+import Ruleflows from "./ruletemplate.js"
 export default Ruleflows
 </script>
 

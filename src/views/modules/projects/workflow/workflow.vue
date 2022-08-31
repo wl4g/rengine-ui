@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Ruleflows from "./ruleflows.js"
+import Ruleflows from "./workflow.js"
 export default Ruleflows
 </script>
 

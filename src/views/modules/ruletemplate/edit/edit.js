@@ -1,7 +1,7 @@
 // import * as monaco from 'monaco-editor/esm/vs/editor/editor.api.js';
-import MyEditor from "./MonacoEeditor"
+import MyEditor from "./monaco-editor.vue"
 export default {
-  name: "ruletemplatesEdit",
+  name: "Edit",
   components: {
     MyEditor,
   },
@@ -20,11 +20,13 @@ export default {
       MainTainDialogVisible: false,
       dialogTitle: "数据维护",
       dialogLoading: false,
-      sqlCodes: "select areaname, id,from ysdsf select dsaflk",
+      sqlCodes: "select areaname, id,from ysdsf select 888888 ",
     }
   },
 
-  mounted() {},
+  mounted() {
+    console.info("11111111111111111111111111111")
+  },
 
   methods: {
     onSubmit() {},

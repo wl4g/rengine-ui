@@ -1,0 +1,372 @@
+{
+  "code": 200,
+  "message": "Ok",
+  "status": "Normal",
+  "data": {
+    "metadata": {
+      "lang": "groovy",
+      "langFamily": "java",
+      "library": "infra-common",
+      "version": "3.0.0",
+      "extension": "jar"
+    },
+    "types": [
+      {
+        "name": "com.wl4g.infra.common.serial.JacksonUtils",
+        "kind": "abstract",
+        "modifier": "public",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "toJSONString",
+            "modifier": "public",
+            "returnType": "java.lang.String",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          },
+          {
+            "name": "parseJSON",
+            "modifier": "public",
+            "returnType": "java.lang.parseJSON",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              },
+              {
+                "name": "obj",
+                "type": "java.lang.Object1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "com.wl4g.iam.core.util.SecurityUtils",
+        "kind": "abstract",
+        "modifier": "public",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "getUser",
+            "modifier": "public",
+            "returnType": "com.wl4g.iam.common.bean.User",
+            "args": [
+              {
+                "name": "force",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "com.wl4g.iam.common.bean.User",
+        "kind": "abstract",
+        "modifier": "public",
+        "fields": [],
+        "staticFields": [],
+        "methods": [
+          {
+            "name": "getUserName",
+            "modifier": "public",
+            "returnType": "java.lang.String",
+            "args": [
+              {
+                "name": "force1",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ],
+        "staticMethods": [
+          {
+            "name": "getClass",
+            "modifier": "public",
+            "returnType": "java.lang.Class",
+            "args": [
+              {
+                "name": "force2",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.Class",
+        "kind": "abstract",
+        "modifier": "public",
+        "fields": [],
+        "staticFields": [],
+        "methods": [
+          {
+            "name": "getUserNameTest",
+            "modifier": "public",
+            "returnType": "java.lang.StringTest",
+            "args": [
+              {
+                "name": "forceTest1",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ],
+        "staticMethods": [
+          {
+            "name": "getClassTest",
+            "modifier": "public",
+            "returnType": "java.lang.ClassTest",
+            "args": [
+              {
+                "name": "forceTest2",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "com.wl4g.infra.common.eventbus.EventBusSupport",
+        "kind": "class",
+        "modifier": "public",
+        "constructors": [
+          {
+            "name": "constructors01",
+            "modifier": "public",
+            "returnType": "com.wl4g.infra.common.eventbus.constructors01",
+            "args": [
+              {
+                "name": "eventThreads",
+                "type": "int"
+              }
+            ]
+          },
+          {
+            "name": "constructors02",
+            "modifier": "public",
+            "returnType": "com.wl4g.infra.common.eventbus.constructors02",
+            "args": [
+              {
+                "name": "prefix",
+                "type": "java.lang.String"
+              },
+              {
+                "name": "eventThreads",
+                "type": "int"
+              }
+            ]
+          }
+        ],
+        "fields": [],
+        "staticFields": [],
+        "methods": [
+          {
+            "name": "register",
+            "modifier": "public",
+            "returnType": "void",
+            "args": [
+              {
+                "name": "objects",
+                "type": "java.lang.Object[]"
+              }
+            ]
+          }
+        ],
+        "staticMethods": []
+      },
+      {
+        "name": "com.wl4g.infra.common.eventbus.constructors01",
+        "kind": "abstract",
+        "modifier": "public",
+        "fields": [],
+        "staticFields": [],
+        "constructors": [
+          {
+            "name": "constructors11",
+            "modifier": "public",
+            "returnType": "java.lang.StringTest",
+            "args": [
+              {
+                "name": "forceTest1",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ],
+        "methods": [
+          {
+            "name": "constructors11",
+            "modifier": "public",
+            "returnType": "java.lang.StringTest",
+            "args": [
+              {
+                "name": "forceTest1",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ],
+        "staticMethods": [
+          {
+            "name": "constructors12",
+            "modifier": "public",
+            "returnType": "java.lang.ClassTest",
+            "args": [
+              {
+                "name": "forceTest2",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "com.wl4g.iam.common.bean.ctx",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "getNode",
+            "modifier": "public",
+            "returnType": "java.lang.getNode",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          },
+          {
+            "name": "getCounter",
+            "modifier": "public",
+            "returnType": "java.lang.getCounter",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.getNode",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "getId",
+            "modifier": "public",
+            "returnType": "java.lang.getId",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.json",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "at",
+            "modifier": "public",
+            "returnType": "java.lang.at",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.at",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "asText",
+            "modifier": "public",
+            "returnType": "java.lang.asText",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.Date",
+        "constructors": [
+          {
+            "name": "getTime",
+            "modifier": "public",
+            "returnType": "java.lang.StringTest",
+            "args": [
+              {
+                "name": "forceTest1",
+                "type": "java.lang.Boolean"
+              }
+            ]
+          }
+        ],
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "asText",
+            "modifier": "public",
+            "returnType": "java.lang.asText",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "java.lang.r",
+        "fields": [],
+        "staticFields": [],
+        "methods": [],
+        "staticMethods": [
+          {
+            "name": "getName",
+            "modifier": "public",
+            "returnType": "java.lang.getName",
+            "args": [
+              {
+                "name": "obj",
+                "type": "java.lang.Object"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

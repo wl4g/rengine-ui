@@ -1,5 +1,5 @@
 export default {
-  name: "Ruleflows",
+  name: "ProjectList",
   data() {
     return {
       tableData: [{}],
@@ -20,12 +20,16 @@ export default {
     },
     addTemplat() {
       this.$router.push({
-        path: this.permitutil.getRoutePathByPermission("iam:ruletemplatesEdit"),
+        path: this.permitutil.getRoutePathByPermission(
+          "modules:ruletemplate:edit"
+        ),
       })
     },
     design() {
       this.$router.push({
-        path: this.permitutil.getRoutePathByPermission("iam:ruletemplatesEdit"),
+        path: this.permitutil.getRoutePathByPermission(
+          "modules:ruletemplate:edit"
+        ),
       })
     },
     delData() {},

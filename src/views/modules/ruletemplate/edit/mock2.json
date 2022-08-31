@@ -1,0 +1,17 @@
+{
+  "code": 200,
+  "message": "Ok",
+  "status": "Normal",
+  "data": {
+    "s3": {
+      "endPoint": "10.0.0.163",
+      "port": 19000,
+      "useSSL": false,
+      "accessKey": "test12345678",
+      "secretKey": "test12345678",
+      "partSize": "20M",
+      "sessionToken": "",
+      "bucketName": "test12345678"
+    }
+  }
+}
