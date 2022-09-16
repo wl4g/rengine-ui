@@ -1,5 +1,5 @@
 export default {
-  name: "ProjectList",
+  name: "RuleModeles",
   data() {
     return {
       tableData: [{}],
@@ -28,7 +28,7 @@ export default {
     design() {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "modules:projects:design"
         ),
       })
     },
