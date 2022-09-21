@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import MinioUpload from "../../../../../components/minio-upload.vue"
+import MinioUpload from "../../../../components/minio-upload.vue"
 
 export default {
   name: "UserLibrarys",

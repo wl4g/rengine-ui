@@ -12,32 +12,32 @@
 export default {
   name: "app",
   components: {},
-  data() {
+  data () {
     return {};
   },
   methods: {
-    onTestRestFulApi() {
+    onTestRestFulApi () {
       this.$api_test_getArticle({
         pathParams: {
           id: 1,
         },
-        fn: () => {},
+        fn: () => { },
       });
     },
-    onUpdateTabs() {
+    onUpdateTabs () {
       this.$store.dispatch("update_tabs", {
         route: this.$route,
       });
     },
-    init() {
+    init () {
       this.onUpdateTabs();
     },
   },
-  mounted() {
+  mounted () {
     this.init();
   },
   watch: {
-    $route(to, from) {
+    $route (to, from) {
       this.init();
     },
   },
@@ -400,5 +400,10 @@ aside {
 }
 #nprogress .bar {
   z-index: 9999 !important;
+}
+.table_a {
+  cursor: pointer;
+  color: #61c3ff;
+  padding: 0 4px 0 1px;
 }
 </style>

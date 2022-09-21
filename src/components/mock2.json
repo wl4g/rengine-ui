@@ -11,7 +11,7 @@
       "secretKey": "test12345678",
       "partSize": "20M",
       "sessionToken": "",
-      "bucketName": "test12345678"
+      "bucketName": "rengine"
     }
   }
 }

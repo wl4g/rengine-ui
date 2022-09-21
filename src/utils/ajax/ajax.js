@@ -106,25 +106,25 @@ export default function ({
 
   // step3: Add build-in security headers(replayToken/xsrfToken).
   if ("POST,PUT,DELETE".includes(options.method)) {
-    var iamCore = new IAMCore()
-    var replayToken = iamCore.generateReplayToken()
-    options.headers[replayToken.headerName] = replayToken.value
-    var xsrfToken = iamCore.getXsrfToken()
-    options.headers[xsrfToken.headerName] = xsrfToken.value
+    // var iamCore = new IAMCore()
+    // var replayToken = iamCore.generateReplayToken()
+    // options.headers[replayToken.headerName] = replayToken.value
+    // var xsrfToken = iamCore.getXsrfToken()
+    // options.headers[xsrfToken.headerName] = xsrfToken.value
   }
 
   // step4: 统一添加organCode(用于控制数据权限)
   const currentOrganization = cache.get("currentOrganization")
   if (currentOrganization) {
-    if (options.url.indexOf("?") > 0) {
-      options.url +=
-        "&organization_code=" +
-        Common.Util.Codec.encodeBase58(currentOrganization.organizationCode)
-    } else {
-      options.url +=
-        "?organization_code=" +
-        Common.Util.Codec.encodeBase58(currentOrganization.organizationCode)
-    }
+    // if (options.url.indexOf("?") > 0) {
+    //   options.url +=
+    //     "&organization_code=" +
+    //     Common.Util.Codec.encodeBase58(currentOrganization.organizationCode)
+    // } else {
+    //   options.url +=
+    //     "?organization_code=" +
+    //     Common.Util.Codec.encodeBase58(currentOrganization.organizationCode)
+    // }
   }
 
   // step5: Send request.

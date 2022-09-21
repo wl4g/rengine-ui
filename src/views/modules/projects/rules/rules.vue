@@ -5,48 +5,47 @@
         <div class="line"></div>
         {{$t('message.common.total')}}： <span class="number">{{total}}</span>
       </div>
-      <el-button type="primary" @click="addWorkflow()"> + </el-button>
+      <!-- 新增按钮 -->
+      <el-button type="primary" @click="addRules()"> + </el-button>
     </div>
     <div>
       <template>
         <el-table :data="tableData" style="width:100%">
-          <el-table-column prop="id" label="工作流ID" width="150">
+          <el-table-column prop="id" label="规则ID" width="100">
             <template slot-scope="scope">
-              <a class="table_a" @click="showWorkDetail(scope.row)">{{ "#" + scope.row.id}}</a>
+              <el-tooltip class="item" effect="dark" :content="scope.row.id" placement="top">
+                <a class="table_a">{{ scope.row.id | ellipsis}}</a>
+              </el-tooltip>
             </template>
           </el-table-column>
-          <el-table-column prop="name" label="名称" width=100></el-table-column>
-          <el-table-column prop="enabled" label="状态" width=150>
-            <template slot-scope="scope">
-              <p>{{scope.row.enabled == 1 ?"启用":"禁用"}}</p>
-            </template>
-          </el-table-column>
-          <!-- <el-table-column prop="所属场景" label="所属场景" width=150></el-table-column> -->
-          <el-table-column prop="labels" label="标签"></el-table-column>
+          <el-table-column prop="name" label="规则名称" width=150></el-table-column>
+          <el-table-column prop="enabled" label="状态" width=150></el-table-column>
+          <el-table-column prop="labels" label="标签" width=150></el-table-column>
           <el-table-column prop="updateDate" label="更新时间" width=150></el-table-column>
-          <el-table-column prop="updateBy" label="更新人" width=80></el-table-column>
+          <el-table-column prop="updateBy" label="更新人" width=150></el-table-column>
           <el-table-column prop="remark" label="备注" width=150></el-table-column>
-          <el-table-column :label="$t('message.common.operation')" min-width="170">
+          <el-table-column :label="$t('message.common.operation')" min-width="100">
             <template slot-scope="scope">
-              <a class="table_a">设计</a>|
-              <a class="table_a" @click="showRuleDetail(scope.row)">禁用</a>|
-              <a class="table_a" @click="editWorkflow(scope.row)">编辑</a>|
+              <a class="table_a" @click="design(scope.row)">设计</a>|
+              <a class="table_a" @click="design(scope.row)">导入</a>|
+              <a class="table_a" @click="design(scope.row)">导出</a>|
+              <a class="table_a" @click="design(scope.row)">clone</a>|
+              <a class="table_a" @click="editRules(scope.row)">编辑</a>|
               <el-popover placement="top" width="160" v-model="visible">
-                <p>确定删除该工作流？</p>
+                <p>确定删除该项目？</p>
                 <div style="text-align: right; margin: 0">
                   <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                  <el-button type="primary" size="mini" @click="visible = false ; workflowDel(scope.row)">确定</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false ; ruleDel(scope.row)">确定</el-button>
                 </div>
                 <a class="table_a" slot="reference">删除</a>
               </el-popover>
-              <a class="table_a" @click="showRuleDetail(scope.row)">导出</a>
             </template>
           </el-table-column>
         </el-table>
       </template>
     </div>
     <el-pagination background layout="prev, pager, next" :total="total" :current-page="pageNum" @current-change='currentChange'></el-pagination>
-    <el-dialog :close-on-click-modal="false" :title="dialogTitle" :visible.sync="dialogVisible " width="350px">
+    <el-dialog :close-on-click-modal="false" :title="dialogTitle" :visible.sync="dialogVisible " width="350px" v-loading='dialogLoading'>
       <el-form label-width="80px" size="mini" :model="saveForm" ref="saveForm" class="demo-form-inline">
         <el-row>
           <el-col :span="24">
@@ -79,20 +78,19 @@
         </el-row>
       </el-form>
       <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="saveWorkflow()">{{$t('message.common.save')}}</el-button>
+        <el-button type="primary" @click="saveRules()">{{$t('message.common.save')}}</el-button>
         <el-button @click="dialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
       </span>
     </el-dialog>
   </div>
-
 </template>
 
 <script>
-import WorkFlow from "./workflow.js"
-export default WorkFlow
+import RuleModeles from "./rules.js"
+export default RuleModeles
 </script>
 
-<style scoped>
+<style>
 .labels-style {
   display: flex;
   align-items: center;

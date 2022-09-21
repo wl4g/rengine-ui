@@ -5,11 +5,17 @@
  * @type {Object}
  */
 import iam from "./iam/"
+import modules from "./modules/"
 
 export default [
   {
     module: "iam",
     name: "权限管理",
     list: iam,
+  },
+  {
+    module: "modules",
+    name: "权限管理",
+    list: modules,
   },
 ]

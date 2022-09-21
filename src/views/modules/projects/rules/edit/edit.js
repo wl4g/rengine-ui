@@ -24,9 +24,7 @@ export default {
     }
   },
 
-  mounted() {
-    console.info("11111111111111111111111111111")
-  },
+  mounted() {},
 
   methods: {
     onSubmit() {},

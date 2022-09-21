@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <div>
       <el-row :gutter="20" class="grid">
         <el-col :span="3">
@@ -52,6 +52,113 @@
 
     </div>
 
+  </div> -->
+  <div class="email">
+    <el-form label-width="140px" size="mini" :model="content" ref="content" class="demo-form-inline" :rules="rules">
+      <el-row :gutter="24">
+        <el-col :span="10">
+          <el-form-item label="Smtp Host" prop="smtpHost" class="item">
+            <template slot="label" class="demolavel">
+              <div class="grid-content1">App Key
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-input v-model="content.smtpHost" placeholder="请输入Smtp Host"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="Smtp Port" prop="smtpPort">
+            <template slot="label">
+              <div class="grid-content1">Smtp Port
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-input-number :controls="false" v-model="content.smtpPort" :min="0" :precision="0" placeholder="请输入Smtp Port"></el-input-number>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="Send Mail" prop="sendMail">
+            <template slot="label">
+              <div class="grid-content1">Send Mail
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-input v-model="content.sendMail" placeholder="请输入mail"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="User Name" prop="username">
+            <template slot="label">
+              <div class="grid-content1">User Name
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-input v-model="content.username" placeholder="请输入mail"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="Password" prop="password">
+            <template slot="label">
+              <div class="grid-content1">Password
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-input v-model="content.password" placeholder="请输入Password"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="Use ssl" prop="useSSL">
+            <template slot="label">
+              <div class="grid-content1">Use ssl
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-radio-group v-model="content.useSSL">
+              <el-radio :label="true">true</el-radio>
+              <el-radio :label="false">false</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+        <el-col :span="10">
+          <el-form-item label="状态">
+            <template slot="label">
+              <div class="grid-content1">状态
+                <el-tooltip placement="top">
+                  <div slot="content">*********</div>
+                  <i class="el-icon-question"></i>
+                </el-tooltip>
+              </div>
+            </template>
+            <el-radio-group v-model="content.enabled">
+              <el-radio :label="0">停用</el-radio>
+              <el-radio :label="1">启用</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
+      </el-row>
+    </el-form>
+    <div class="notification-foot">
+      <el-button type="primary" @click="submitForm()">Save</el-button>
+      <el-button @click="resetForm()">Cancel</el-button>
+    </div>
   </div>
 </template>
 

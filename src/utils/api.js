@@ -15,25 +15,24 @@
  * limitations under the License.
  */
 
-import axios from 'axios'
-import { Message } from 'element-ui'
-import C from './conf'
-import global from "@/common/global_variable";
+import axios from "axios"
+import { Message } from "element-ui"
+import C from "./conf"
+import global from "@/common/global_variable"
 
-axios.defaults.headers.post['Content-Type'] = 'application/jsoncharset=UTF-8'
+axios.defaults.headers.post["Content-Type"] = "application/jsoncharset=UTF-8"
 axios.defaults.withCredentials = true
 
 function ajax(url, type, options, config) {
-
   return new Promise((resolve, reject) => {
     axios({
       method: type,
-      url: global.getBaseUrl(global.uds) + url,// 修改地址
+      url: global.getBaseUrl(global.uds) + url, // 修改地址
       timeout: 10000,
       headers: headers,
       withCredentials: true, // 实现cors必须设置
-      params: type === 'get' ? options : null,
-      data: options
+      params: type === "get" ? options : null,
+      data: options,
     })
       .then(result => {
         const data = result.data
@@ -46,16 +45,16 @@ function ajax(url, type, options, config) {
         if (!success) {
           if (data.errorCode === 403) {
             const store = window.localStorage
-            store.removeItem('Access-Token')
-            store.removeItem('username')
-            location.href = '#/login'
+            store.removeItem("Access-Token")
+            store.removeItem("username")
+            location.href = "#/login"
             return
           }
           reject(data)
           Message({
             message: data.errorMsg,
-            type: 'error',
-            duration: 2 * 1000
+            type: "error",
+            duration: 2 * 1000,
           })
           return
         }
@@ -63,8 +62,8 @@ function ajax(url, type, options, config) {
       .catch(error => {
         Message({
           message: error,
-          type: 'error',
-          duration: 2 * 1000
+          type: "error",
+          duration: 2 * 1000,
         })
       })
   })
@@ -73,7 +72,7 @@ function ajax(url, type, options, config) {
 const config = {
   get(url, options, config) {
     return new Promise((resolve, reject) => {
-      ajax(url, 'get', options, config).then(
+      ajax(url, "get", options, config).then(
         data => {
           resolve(data)
         },
@@ -86,7 +85,7 @@ const config = {
 
   post(url, options, config) {
     return new Promise((resolve, reject) => {
-      ajax(url, 'post', options, config).then(
+      ajax(url, "post", options, config).then(
         data => {
           resolve(data)
         },
@@ -99,7 +98,7 @@ const config = {
 
   put(url, options) {
     return new Promise((resolve, reject) => {
-      ajax(url, 'put', options).then(
+      ajax(url, "put", options).then(
         data => {
           resolve(data)
         },
@@ -112,7 +111,7 @@ const config = {
 
   delete(url, options) {
     return new Promise((resolve, reject) => {
-      ajax(url, 'delete', options).then(
+      ajax(url, "delete", options).then(
         data => {
           resolve(data)
         },
@@ -121,7 +120,7 @@ const config = {
         }
       )
     })
-  }
+  },
 }
 
 export default config

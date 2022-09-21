@@ -21,9 +21,9 @@
           <el-table-column prop="备注" label="备注" width=150></el-table-column>
           <el-table-column :label="$t('message.common.operation')" min-width="100">
             <template slot-scope="scope">
-              <a class="table_a drawer_a" @click="design(scope.row)">启用</a> |
-              <a class="table_a drawer_a" @click="design(scope.row)">下载</a> |
-              <a class="table_a drawer_a" @click="showRuleDetail(scope.row)">删除</a>
+              <a class="table_a" @click="design(scope.row)">启用</a> |
+              <a class="table_a" @click="design(scope.row)">下载</a> |
+              <a class="table_a" @click="showRuleDetail(scope.row)">删除</a>
             </template>
           </el-table-column>
         </el-table>

@@ -30,7 +30,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.authorizationUrl" />
           </div>
         </el-col>
       </el-row>
@@ -40,7 +40,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.tokenUrl" />
           </div>
         </el-col>
       </el-row>
@@ -50,7 +50,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.userinfoUrl" />
           </div>
         </el-col>
       </el-row>
@@ -60,7 +60,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.clientId" />
           </div>
         </el-col>
       </el-row>
@@ -70,7 +70,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.clientSecret" />
           </div>
         </el-col>
       </el-row>
@@ -80,7 +80,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.userId" />
           </div>
         </el-col>
       </el-row>
@@ -90,7 +90,7 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.userName" />
           </div>
         </el-col>
       </el-row>
@@ -100,11 +100,23 @@
         </el-col>
         <el-col :span="6">
           <div class="grid-content">
-            <el-input />
+            <el-input v-model="content.scopes" />
           </div>
         </el-col>
       </el-row>
-
+      <el-row :gutter="20" class="grid">
+        <el-col :span="3">
+          <div class="grid-content1">状态</div>
+        </el-col>
+        <el-col :span="6">
+          <div class="grid-content">
+            <el-select v-model="content.enabled" collapse-tags placeholder="请选择">
+              <el-option label="停用" :value="0"></el-option>
+              <el-option label="启用" :value="1"></el-option>
+            </el-select>
+          </div>
+        </el-col>
+      </el-row>
     </div>
 
     <div>
@@ -125,11 +137,21 @@
 
 <script>
 export default {
+  props: {
+    content: {
+      type: Object,
+      required: true,
+      default: []
+    },
+  },
   data () {
     return {
       value1: [],
       show: true,
       sliderDisable: false,
+      content: {
+        useSSL: []
+      },
       options: [
         {
           value: '选项1',
@@ -156,8 +178,19 @@ export default {
       checked: false
     }
   },
+  mounted () {
+    console.info(this.content)
+  },
   methods: {
+    submitForm () {
+      let data = { provider: this.content }
+      this.$$api_modules_saveIdp({
+        data: data,
+        fn: res => {
 
+        }
+      })
+    },
   }
 }
 </script>

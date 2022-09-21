@@ -60,51 +60,51 @@ Vue.directive("tableScroll", {
   },
 })
 
-new Promise(resolve => {
-  var iamModuleConfig = {
-    pluginName: "IamPlugin",
-    version: "v2.0.0",
-    modules: [
-      {
-        modName: "IamAllModule",
-        stable: "IAM.all.min.js",
-        grey: "IAM.all.js",
-        css_stable: "IAM.all.min.css",
-        css_grey: "IAM.all.css",
-        ratio: 100,
-      },
-    ],
-    dependencies: [
-      { features: ["IamAll"], depends: ["IamAllModule"], sync: true },
-    ],
-  }
-  new LoaderJS(iamModuleConfig).use("IamAll", function () {
-    console.log("******* IAM JSSDK loaded completed! *******")
-    resolve()
-  })
-}).then(() => {
-  /* eslint-disable no-new */
-  new Vue({
-    el: "#app",
-    router,
-    store,
-    i18n,
-    template: "<App/>",
-    components: { App },
-    beforeCreate() {
-      console.debug("根组件：beforeCreate")
-    },
-    created() {
-      console.debug("根组件：created")
-    },
-    beforeMount() {
-      console.debug("根组件：beforeMount")
-    },
-    mounted() {
-      console.debug("根组件：mounted")
-    },
-  })
-  if (module.hot) {
-    module.hot.accept()
-  }
+// new Promise(resolve => {
+//   var iamModuleConfig = {
+//     pluginName: "IamPlugin",
+//     version: "v2.0.0",
+//     modules: [
+//       {
+//         modName: "IamAllModule",
+//         stable: "IAM.all.min.js",
+//         grey: "IAM.all.js",
+//         css_stable: "IAM.all.min.css",
+//         css_grey: "IAM.all.css",
+//         ratio: 100,
+//       },
+//     ],
+//     dependencies: [
+//       { features: ["IamAll"], depends: ["IamAllModule"], sync: true },
+//     ],
+//   }
+//   new LoaderJS(iamModuleConfig).use("IamAll", function () {
+//     console.log("******* IAM JSSDK loaded completed! *******")
+//     resolve()
+//   })
+// }).then(() => {
+/* eslint-disable no-new */
+new Vue({
+  el: "#app",
+  router,
+  store,
+  i18n,
+  template: "<App/>",
+  components: { App },
+  beforeCreate() {
+    console.debug("根组件：beforeCreate")
+  },
+  created() {
+    console.debug("根组件：created")
+  },
+  beforeMount() {
+    console.debug("根组件：beforeMount")
+  },
+  mounted() {
+    console.debug("根组件：mounted")
+  },
 })
+if (module.hot) {
+  module.hot.accept()
+}
+// })

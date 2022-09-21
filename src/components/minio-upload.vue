@@ -86,7 +86,7 @@ export default {
         } else {
           //选择
           //获取文件类型及大小
-          const fileName = file.name
+          const fileName = "library/" + file.name
           const mineType = file.type
           const fileSize = file.size
 
