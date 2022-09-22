@@ -1,7 +1,7 @@
 <template>
   <div class="minioBox">
     <el-button style="marginRight:10px;" @click="getFileName" size="mini" type="success">选择文件</el-button>
-    <input accept=".pdf,.doc" type="file" multiple="multiple" id="minIoFile" ref="minIoFile" v-show="false" @change="getFile">
+    <input :accept="acceptType" type="file" multiple="multiple" id="minIoFile" ref="minIoFile" v-show="false" @change="getFile">
     <el-button v-if="fileList.length>0" style="marginRight:10px;" @click="upload" size="mini" type="success">上传</el-button>
     <ul class="uploadFileList">
       <li v-for="item,index of fileList" :key="index">
@@ -28,15 +28,25 @@ var minioClient
 // partSize: '',
 // sessionToken: ""
 export default {
+  props: {
+    acceptType: {
+      type: String,
+      required: true,
+      default: ''
+    },
+  },
   data () {
     return {
       fileList: [],
       minioConfig: null
     }
   },
+  activated () {
+
+  },
   mounted () {
-    this.minioConfig = require("./mock2.json").data.s3;
-    minioClient = new Minio.Client({ ...this.minioConfig })
+    // this.minioConfig = require("./mock2.json").data.s3;
+    // minioClient = new Minio.Client({ ...this.minioConfig })
   },
   methods: {
     getFileName () {
@@ -74,71 +84,86 @@ export default {
     },
     //上传文件
     uploadMinIo (fileObj, index) {
-      let vm = this
-      console.info(minioClient)
-      // const files = fileObj;
-      if (fileObj) {
-        let file = fileObj
-        //判断是否选择了文件
-        if (file == undefined) {
-          //未选择
-          console.log("请上传文件")
-        } else {
-          //选择
-          //获取文件类型及大小
-          const fileName = "library/" + file.name
-          const mineType = file.type
-          const fileSize = file.size
+      let that = this
+      let params = {
+        "enabled": 1,
+        "remark": "string",
+        "bizType": "USER_LIBRARY",
+        "prefix": "string",
+        "filename": fileObj.name,
+        "extension": "string",
+        "labels": [
+          "string"
+        ],
+        "size": fileObj.size,
+        "md5sum": "string",
+        "sha1sum": "string"
+      }
+      that.$$api_modules_uploadApply({
+        data: params,
+        fn: res => {
+          let data = res.data
+          let url = new URL(data.endpoint)
+          data.useSSL = url.port ? url.protocol == "http:" ? false : true : false
+          data.port = url.port ? parseInt(url.port) : 80
+          data.endPoint = url.hostname
+          data.bucketName = data.bucket
+          console.info(data)
+          minioClient = new Minio.Client({ ...data })
+          let pathName = data.prefix.replace(data.bucketName + "/", "")
+          console.info(minioClient)
+          if (fileObj) {
+            let file = fileObj
+            //判断是否选择了文件
+            if (file == undefined) {
+              //未选择
+              console.log("请上传文件")
+            } else {
+              console.info(file)
+              //参数
+              let metadata = {
+                "content-type": fileObj.type,
+                "content-length": fileObj.size
+              }
+              //准备上传
+              let reader = new FileReader();
+              reader.readAsDataURL(file);
+              reader.onloadend = function (e) {
+                const dataurl = e.target.result
+                //base64转blob
+                const blob = that.toBlob(dataurl)
+                //blob转arrayBuffer
+                let reader2 = new FileReader()
+                reader2.readAsArrayBuffer(blob)
 
-          //参数
-          let metadata = {
-            "content-type": mineType,
-            "content-length": fileSize
-          }
-          //判断储存桶是否存在
-          minioClient.bucketExists(vm.minioConfig.bucketName, function (err) {
-            console.info(err)
-            if (err) {
-              if (err.code == 'NoSuchBucket') return console.log("bucket does not exist.")
-              return console.log(err)
-            }
-            //存在
-            console.log('Bucket exists.')
-            //准备上传
-            let reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onloadend = function (e) {
-              const dataurl = e.target.result
-              //base64转blob
-              const blob = vm.toBlob(dataurl)
-              //blob转arrayBuffer
-              let reader2 = new FileReader()
-              reader2.readAsArrayBuffer(blob)
+                reader2.onload = function (ex) {
+                  //定义流
+                  let bufferStream = new stream.PassThrough();
+                  //将buffer写入
+                  bufferStream.end(new Buffer(ex.target.result));
+                  //上传
+                  minioClient.putObject(data.bucketName, pathName, bufferStream, fileObj.size, metadata, function (err, etag) {
+                    if (err == null) {
+                      minioClient.presignedGetObject(data.bucketName, pathName, 24 * 60 * 60, function (err, presignedUrl) {
+                        if (err) return console.log(err)
+                        //输出url
+                        console.log(presignedUrl)
+                        that.$message.success('upload success');
 
-              reader2.onload = function (ex) {
-                //定义流
-                let bufferStream = new stream.PassThrough();
-                //将buffer写入
-                bufferStream.end(new Buffer(ex.target.result));
-                //上传
-                minioClient.putObject(vm.minioConfig.bucketName, fileName, bufferStream, fileSize, metadata, function (err, etag) {
-                  if (err == null) {
-                    minioClient.presignedGetObject(vm.minioConfig.bucketName, fileName, 24 * 60 * 60, function (err, presignedUrl) {
-                      if (err) return console.log(err)
-                      //输出url
-                      console.log(presignedUrl)
-                      vm.$message.success('upload success');
-
-                    })
-                  }
-                  //return console.log(err, etag)
-                })
+                      })
+                    }
+                    //return console.log(err, etag)
+                  })
+                }
               }
             }
-          })
-        }
 
-      }
+          }
+        },
+        errFn: () => {
+          that.$message.error("Fail")
+        }
+      })
     },
     //base64转blob
     toBlob (base64Data) {

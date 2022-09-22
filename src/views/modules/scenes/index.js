@@ -1,2 +1,5 @@
-import Scenes from "./scenes.vue"
-export default Scenes
+import ProjectList from "./project-list"
+
+export default {
+  ProjectList,
+}

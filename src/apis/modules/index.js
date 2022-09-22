@@ -107,4 +107,29 @@ export default [
     dataType: "json",
     sysModule: global.modules,
   },
+
+  //自定义库
+  {
+    name: "自定义库上传文件配置",
+    method: "uploadApply",
+    path: "/upload/apply",
+    type: "post",
+    dataType: "json",
+    sysModule: global.modules,
+  },
+  {
+    name: "自定义库 新增|编辑 保存",
+    method: "uploadSave",
+    path: "/upload/save",
+    type: "post",
+    dataType: "json",
+    sysModule: global.modules,
+  },
+  {
+    name: "自定义库列表",
+    method: "queryUpload",
+    path: "/upload/query",
+    type: "get",
+    sysModule: global.modules,
+  },
 ]

@@ -89,7 +89,7 @@ export default {
     showWorkDetail(val) {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:projects:runhistory"
+          "modules:scenes:runhistory"
         ),
       })
     },

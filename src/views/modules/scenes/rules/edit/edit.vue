@@ -16,6 +16,6 @@ export default ruletemplatesEdit
 }
 .body .MyEditor {
   width: 100%;
-  height: 85vh;
+  height: 84vh;
 }
 </style>

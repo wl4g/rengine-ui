@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import ProjectList from "./project.js";
+import ProjectList from "./scenes.js";
 export default ProjectList
 </script>
 

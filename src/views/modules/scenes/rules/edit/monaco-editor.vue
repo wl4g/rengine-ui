@@ -1,16 +1,40 @@
 <template>
   <div class="myEditor">
-    <p style="display: flex; justify-content: space-between; padding-bottom: 1vw" v-if="showTheme || runningButton">
+    <!-- <p style="display: flex; justify-content: space-between; height: 50px;" v-if="showTheme || runningButton">
       <span class="theme" v-if="showTheme">
         <el-select v-model="theme" size="mini" @change="themeChange" placeholder="请选择主题">
           <el-option v-for="item in themeOption" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
         </el-select>
-        <!-- <MinioUpload></MinioUpload> -->
       </span>
       <el-button v-if="runningButton" type="success" @click="RunResult">确定</el-button>
-    </p>
-    <div id="container" ref="container" style="height: 95%"></div>
+    </p> -->
+    <div class="monacoTop"></div>
+    <div class="monacoBody">
+      <div class="file-directory">
+        <!--鼠标右键菜单栏 -->
+        <div v-show="showRightMenu == true">
+          <ul id="menu" class="right-menu">
+            <li class="menu-item" @click="editTreeNode">
+              重命名
+            </li>
+            <li class="menu-item" @click="delTreeNode">
+              删除
+            </li>
+          </ul>
+        </div>
+        <el-tree :data="treeData" :props="defaultProps" :expand-on-click-node="false" ref="tree" class="tree-line" :indent="0" highlight-current @node-click="nodeClick" @node-contextmenu="rightClick" @check-change="handleCheckChange" default-expand-all>
+          <span class="custom-tree-node" slot-scope="{ node, data }">
+            <span>
+              <span>
+                {{data.path}}
+              </span>
+            </span>
+          </span>
+        </el-tree>
+      </div>
+      <div id="container" ref="container" style="height:100%"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -86,6 +110,22 @@ export default {
       librarys: [],
       fileList: [],
       minioConfig: null,
+      defaultProps: {
+        children: "childrens",
+        label: "path",
+      },
+      treeData: [
+        {
+          path: "path1",
+          childrens: [{
+            path: "path1-1",
+            childrens: []
+          }]
+        }
+      ],
+      showRightMenu: false,
+      nodeDetail: {},
+      currentNodeId: ''
     };
   },
   mounted () {
@@ -189,15 +229,110 @@ export default {
     themeChange (val) {
       this.initEditor(this.codes);
     },
+    // nodeClick (data) {
+    //   console.info("ddddddddddddddddd")
+    //   let currentCli = document.getElementById("menu")
+    //   console.info(currentCli)
+    //   if (currentCli) {
+    //     if (!currentCli.contains(event.target)) {
+    //       //点击到了id为option-button-group以外的区域，就隐藏菜单
+    //       this.showRightMenu = false
+    //     }
+    //   }
+    // },
+    rightClick (event, data, node, obj) {
+      this.showRightMenu = false
+      this.showRightMenu = true
+      let menu = document.querySelector("#menu")
+      console.info("11111111111")
+      menu.style.left = `calc(${event.screenX + "px"} + 1vw)`
+      menu.style.top = event.screenY - 100 + "px"
+      menu.style.display = ""
+      //
+      document.addEventListener("click", this.closeRightMenu)
+      document.addEventListener('contextmenu', this.closeRightMenu)
+      this.nodeDetail = { ...node }
+    },
+    closeRightMenu () {
+      console.info("监听右键关闭")
+      this.showRightMenu = false
+      let menu = document.querySelector("#menu")
+      menu.style.display = "none"
+      this.nodeDetail = {}
+      // 关掉鼠标监听事件
+      document.removeEventListener("click", this.closeRightMenu)
+    },
+    editTreeNode () {
+      let that = this
+      console.info("222222")
+    },
   },
 };
 </script>
-<style scoped>
-#container {
-  height: 100%;
-  text-align: left;
-}
-.theme {
-  display: flex;
+<style lang="scss" >
+.myEditor {
+  .theme {
+    display: flex;
+  }
+  .monacoTop {
+    height: 40px;
+    width: 100%;
+    background: #3c3c3c;
+  }
+  .monacoBody {
+    display: flex;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .file-directory {
+    width: 25%;
+    height: 100%;
+    background: #252526;
+  }
+  #container {
+    height: 100%;
+    width: 75%;
+    text-align: left;
+  }
+  .tree-line {
+    background: #252526;
+    color: #fff;
+    .el-tree-node__content {
+      &:hover {
+        background-color: #2a2d2e;
+      }
+    }
+    .el-tree-node.is-current > .el-tree-node__content {
+      background-color: #37373d;
+    }
+  }
+  .right-menu {
+    z-index: 99;
+    position: absolute;
+    width: 100px;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid #303031;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .menu-item {
+      line-height: 33px;
+      text-align: left;
+      padding-left: 6px;
+      height: 33px;
+      font-size: 14px;
+      background: #303031;
+      color: #fff;
+      list-style: none;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: #edf6ff;
+      color: #606266;
+    }
+  }
 }
 </style>

@@ -1,19 +1,24 @@
 export default {
-  name: "ProjectList",
+  name: "RuleModeles",
   data() {
     return {
-      tableData: [],
+      tableData: [{}],
+      projectId: "",
       dialogTitle: "新增",
       dialogVisible: false,
-      // visible: false,
       saveForm: {
         enabled: 1,
         labels: [""],
       },
     }
   },
+  activated() {
+    this.projectId = this.$route.query.id
+    this.saveForm = { ...this.saveForm, projectId: this.projectId }
+    this.getTableData(this.projectId)
+  },
   mounted() {
-    this.getTableData()
+    // this.tableData = getTableData()
   },
   filters: {
     ellipsis(value) {
@@ -26,24 +31,21 @@ export default {
     },
   },
   methods: {
-    getTableData() {
+    getTableData(val) {
       let data = {
-        projectId: "string",
+        ruleId: val,
         name: "string",
-        owner: "string",
         labels: "string",
       }
-      this.$$api_modules_queryProject({
+      this.$$api_modules_queryrules({
         data: data,
         fn: res => {
-          this.tableData = res.data.projects
+          this.tableData = res.data.rules
         },
-        errFn: () => {
-          this.$message.error("Fail")
-        },
+        errFn: () => {},
       })
     },
-    addProject() {
+    addRules() {
       this.dialogVisible = true
       this.dialogTitle = "新增"
       this.saveForm = {
@@ -51,7 +53,7 @@ export default {
         labels: [""],
       }
     },
-    editProject(row) {
+    editRules(row) {
       this.dialogVisible = true
       this.dialogTitle = "编辑"
       this.saveForm = { ...row }
@@ -62,15 +64,17 @@ export default {
     delLabels(val) {
       this.saveForm.labels.splice(val, 1)
     },
-    saveProject() {
-      console.info(this.saveForm)
-      this.$$api_modules_projectSave({
-        data: this.saveForm,
+    saveRules() {
+      let data = {
+        ...this.saveForm,
+        projectId: this.projectId,
+      }
+      this.$$api_modules_saveRule({
+        data: data,
         fn: res => {
-          this.dialogVisible = false
           if (res.message == "Ok") {
             this.$message.success("success")
-            this.getTableData()
+            this.getTableData(this.projectId)
           }
         },
         errFn: () => {
@@ -78,12 +82,12 @@ export default {
         },
       })
     },
-    projectDel(row) {
-      this.$$api_modules_projectDel({
+    ruleDel(row) {
+      this.$$api_modules_ruleDel({
         data: { id: row.id },
         fn: res => {
           this.$message.success("success")
-          this.getTableData()
+          this.getTableData(this.projectId)
         },
         errFn: () => {
           this.$message.error("Fail")
@@ -91,6 +95,7 @@ export default {
       })
     },
     showRuleDetail(row) {
+      console.info("11111", row)
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
           "iam:securityGateway:ruleEngine:ruleEngineDetail"
@@ -98,36 +103,17 @@ export default {
         query: { id: row.id },
       })
     },
-    // addTemplat() {
-    //   this.$router.push({
-    //     path: this.permitutil.getRoutePathByPermission(
-    //       "modules:ruletemplate:edit"
-    //     ),
-    //   })
-    // },
-    toWorkFlow(row) {
-      this.$router.push({
-        path: this.permitutil.getRoutePathByPermission(
-          "modules:projects:workflow"
-        ),
-        query: { id: row.id },
-      })
-    },
-    toRuleModeles(row) {
-      this.$router.push({
-        path: this.permitutil.getRoutePathByPermission(
-          "modules:projects:rulemodeles"
-        ),
-        query: { id: row.id },
-      })
-    },
-    design() {
+    addTemplat() {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
           "modules:ruletemplate:edit"
         ),
       })
     },
-    delData() {},
+    design() {
+      this.$router.push({
+        path: this.permitutil.getRoutePathByPermission("modules:scenes:design"),
+      })
+    },
   },
 }

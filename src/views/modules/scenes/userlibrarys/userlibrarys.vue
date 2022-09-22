@@ -12,13 +12,15 @@
     <div>
       <template>
         <el-table :data="tableData" :border="true" style="width:100%">
-          <el-table-column prop="名称" label="名称" width="100"></el-table-column>
+          <el-table-column prop="类库名称" label="类库名称" width="100"></el-table-column>
+          <el-table-column prop="bizType" label="类库类型" width="100"></el-table-column>
           <el-table-column prop="状态" label="状态" width=150></el-table-column>
-          <el-table-column prop="lable" label="lable" width=150></el-table-column>
+          <el-table-column prop="标签" label="标签" width=150></el-table-column>
           <el-table-column prop="size" label="size" width=150></el-table-column>
-          <el-table-column prop="更新时间" label="更新时间" width=150></el-table-column>
-          <el-table-column prop="更新人" label="更新人" width=150></el-table-column>
-          <el-table-column prop="备注" label="备注" width=150></el-table-column>
+          <el-table-column prop="md5sum" label="md5sum" width=150></el-table-column>
+          <el-table-column prop="updateDate" label="更新时间" width=150></el-table-column>
+          <el-table-column prop="updateBy" label="更新人" width=150></el-table-column>
+          <el-table-column prop="remark" label="备注" width=150></el-table-column>
           <el-table-column :label="$t('message.common.operation')" min-width="100">
             <template slot-scope="scope">
               <a class="table_a" @click="design(scope.row)">启用</a> |
@@ -58,14 +60,14 @@
           </el-col>
           <el-col :span="12">
             <el-form-item label="上传文件">
-              <MinioUpload></MinioUpload>
+              <MinioUpload :acceptType="acceptType"></MinioUpload>
             </el-form-item>
           </el-col>
         </el-row>
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="saveTemplat()">{{$t('message.common.save')}}</el-button>
-        <el-button @click="newDialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
+        <el-button @click="libraryDialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
       </span>
     </el-dialog>
   </div>
@@ -94,12 +96,25 @@ export default {
         tagMap: [],
         rules: [],
       },
+      acceptType: ".jar"
     }
   },
   mounted () {
-    // this.tableData = getTableData()
+    this.getTableData()
   },
   methods: {
+    getTableData () {
+      let data
+      this.$$api_modules_queryUpload({
+        data: data,
+        fn: res => {
+          console.info(res)
+        },
+        errFn: () => {
+          this.$message.error("Fail")
+        }
+      })
+    },
     showRuleDetail (row) {
       console.info("11111", row)
       this.$router.push({
