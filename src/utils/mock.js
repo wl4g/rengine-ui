@@ -225,7 +225,7 @@ export function mockMenuQuery() {
           humanUpdateDate: "2 days ago",
           delFlag: 0,
           nameEn: "Rule Templates Edit",
-          nameZh: "规则模型编辑",
+          nameZh: "规则设计",
           type: 3,
           status: 0,
           level: 3,

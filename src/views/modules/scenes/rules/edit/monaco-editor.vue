@@ -9,9 +9,58 @@
       </span>
       <el-button v-if="runningButton" type="success" @click="RunResult">确定</el-button>
     </p> -->
-    <div class="monacoTop"></div>
+    <div class="monacoTop">
+      <el-menu class="el-menu-demo" mode="horizontal" background-color="#303031" text-color="#fff" active-text-color="#fff">
+        <el-submenu index="1">
+          <template slot="title">文件(F)</template>
+          <el-menu-item index="1-1">添加依赖库</el-menu-item>
+          <div class="bottom-line"></div>
+          <el-menu-item index="1-2">保存</el-menu-item>
+          <div class="bottom-line"></div>
+          <el-menu-item index="1-3">
+            <template slot="title">
+              <div class="save">
+                <div>自动保存1</div>
+                <div>自动保存2</div>
+              </div>
+            </template>
+          </el-menu-item>
+          <div class="bottom-line"></div>
+          <el-submenu index="2-4">
+            <template slot="title">首选项</template>
+            <el-menu-item index="2-4-1">颜色主题</el-menu-item>
+          </el-submenu>
+        </el-submenu>
+        <el-submenu index="2">
+          <template slot="title">编辑(E)</template>
+          <el-menu-item index="2-1">撤销</el-menu-item>
+          <el-menu-item index="2-2">恢复</el-menu-item>
+          <div class="bottom-line"></div>
+          <el-menu-item index="2-3">剪切</el-menu-item>
+          <el-menu-item index="2-3">复制</el-menu-item>
+          <el-menu-item index="2-3">粘贴</el-menu-item>
+          <div class="bottom-line"></div>
+          <el-menu-item index="2-3">查找</el-menu-item>
+          <el-menu-item index="2-3">替换</el-menu-item>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title">运行(R)</template>
+          <el-menu-item index="2-1">模拟启动</el-menu-item>
+          <el-menu-item index="2-2">最近运行</el-menu-item>
+        </el-submenu>
+        <el-submenu index="4">
+          <template slot="title">终端(T)</template>
+        </el-submenu>
+        <el-submenu index="5">
+          <template slot="title">帮助(H)</template>
+          <el-menu-item index="2-1">文档</el-menu-item>
+          <el-menu-item index="2-2"><a href="https://www.ele.me" target="_blank">关于</a></el-menu-item>
+        </el-submenu>
+      </el-menu>
+    </div>
     <div class="monacoBody">
       <div class="file-directory">
+        <i class="el-icon-s-fold fileIcon" @click="fileIcon(false)"></i>
         <!--鼠标右键菜单栏 -->
         <div v-show="showRightMenu == true">
           <ul id="menu" class="right-menu">
@@ -33,6 +82,7 @@
           </span>
         </el-tree>
       </div>
+      <i class="el-icon-s-unfold  fileIconShow" v-if="fileIconShow == false" @click="fileIcon(true)"></i>
       <div id="container" ref="container" style="height:100%"></div>
     </div>
   </div>
@@ -125,7 +175,8 @@ export default {
       ],
       showRightMenu: false,
       nodeDetail: {},
-      currentNodeId: ''
+      currentNodeId: '',
+      fileIconShow: true
     };
   },
   mounted () {
@@ -240,6 +291,18 @@ export default {
     //     }
     //   }
     // },
+    fileIcon (val) {
+      this.fileIconShow = !this.fileIconShow
+      console.info(this.fileIconShow)
+      if (val == true) {
+        document.querySelector(".file-directory").style.display = ""
+        document.querySelector(".file-directory").style.width = "25%"
+        document.querySelector("#container").style.width = "75%"
+      } else {
+        document.querySelector(".file-directory").style.display = "none"
+        document.querySelector("#container").style.width = "100%"
+      }
+    },
     rightClick (event, data, node, obj) {
       this.showRightMenu = false
       this.showRightMenu = true
@@ -266,6 +329,15 @@ export default {
       let that = this
       console.info("222222")
     },
+    handleCheckChange (data, checked, indeterminate) {
+
+    },
+    nodeClick (data) {
+
+    },
+    delTreeNode () {
+
+    },
   },
 };
 </script>
@@ -275,20 +347,55 @@ export default {
     display: flex;
   }
   .monacoTop {
-    height: 40px;
+    height: 30px;
     width: 100%;
-    background: #3c3c3c;
+    background: #3c3c3c !important;
+    .el-menu-demo {
+      height: 30px;
+      width: 100%;
+      background: #3c3c3c !important;
+    }
+    .el-menu--horizontal > .el-menu-item {
+      height: 30px;
+      line-height: 30px;
+    }
+    .el-menu--horizontal > .el-submenu .el-submenu__title {
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 0;
+      width: 60px;
+      color: #fff !important;
+      background: #3c3c3c !important;
+      padding: 0;
+      text-align: center;
+    }
+    li.el-menu-item.is-active {
+      color: #fff !important;
+      border-bottom-color: #545c64 !important;
+      background: #545c64 !important;
+    }
+    .el-menu.el-menu--horizontal {
+      border-bottom: none !important;
+    }
+    .el-menu--horizontal > .el-submenu .el-submenu__icon-arrow {
+      display: none;
+    }
+    .el-menu--horizontal .el-menu .el-menu-item,
+    .el-menu--horizontal .el-menu .el-submenu__title {
+      background: #232730 !important;
+    }
   }
+
   .monacoBody {
     display: flex;
     justify-items: center;
-    height: 100%;
+    height: calc(100% - 30px);
     width: 100%;
   }
   .file-directory {
     width: 25%;
     height: 100%;
-    background: #252526;
+    background: #232730;
   }
   #container {
     height: 100%;
@@ -296,7 +403,7 @@ export default {
     text-align: left;
   }
   .tree-line {
-    background: #252526;
+    background: #232730;
     color: #fff;
     .el-tree-node__content {
       &:hover {
@@ -305,6 +412,7 @@ export default {
     }
     .el-tree-node.is-current > .el-tree-node__content {
       background-color: #37373d;
+      padding-left: 12px;
     }
   }
   .right-menu {
@@ -334,5 +442,50 @@ export default {
       color: #606266;
     }
   }
+  .fileIcon {
+    color: #fff;
+    font-size: 18px;
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+  }
+  .fileIconShow {
+    position: absolute;
+    color: #fff;
+    z-index: 9999;
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .save {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.el-menu--popup-bottom-start {
+  margin-top: -3px !important;
+}
+//二次菜单悬浮及背景样式
+.el-menu--popup-bottom-start .el-menu-item:hover {
+  color: #fff !important;
+  background: #04395e !important;
+}
+.el-menu--popup-bottom-start .el-menu-item:hover {
+  color: #fff !important;
+  background: #04395e !important;
+}
+.el-menu--popup-bottom-start .el-menu-item {
+  height: 27px !important;
+  line-height: 27px !important;
+}
+.bottom-line {
+  width: 90%;
+  height: 2px;
+  background: #606060;
+  margin: auto;
+}
+.save {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
