@@ -12,67 +12,82 @@
     <div class="monacoTop">
       <el-menu class="el-menu-demo" mode="horizontal" background-color="#303031" text-color="#fff" active-text-color="#fff">
         <el-submenu index="1">
-          <template slot="title">文件(F)</template>
-          <el-menu-item index="1-1">添加依赖库</el-menu-item>
+          <template slot="title">{{$t('message.monaco.file')}}</template>
+          <el-menu-item index="1-1">{{$t("message.monaco.addDependencyLibrary")}}</el-menu-item>
           <div class="bottom-line"></div>
-          <el-menu-item index="1-2">保存</el-menu-item>
+          <el-menu-item index="1-2">{{$t("message.monaco.save")}}</el-menu-item>
           <div class="bottom-line"></div>
           <el-menu-item index="1-3">
             <template slot="title">
               <div class="save">
-                <div>自动保存1</div>
-                <div>自动保存2</div>
+                <div>{{$t("message.monaco.autoSave")}}</div>
+                <i class="el-icon-check"></i>
               </div>
             </template>
           </el-menu-item>
           <div class="bottom-line"></div>
           <el-submenu index="2-4">
-            <template slot="title">首选项</template>
-            <el-menu-item index="2-4-1">颜色主题</el-menu-item>
+            <template slot="title">{{$t("message.monaco.firstChoice")}}</template>
+            <!-- <el-menu-item index="2-4-1"></el-menu-item> -->
+            <el-submenu index="2-4">
+              <template slot="title">{{$t("message.monaco.themes")}}</template>
+              <el-menu-item :index="item.value" v-for="item in themeOption" :key="item.value" @click="chooseThemes(item.value)">
+                <template slot="title">
+                  <div class="save">
+                    <div>{{item.label}}</div>
+                    <i class="el-icon-check" v-if="item.value == theme"></i>
+                  </div>
+                </template>
+              </el-menu-item>
+            </el-submenu>
           </el-submenu>
         </el-submenu>
         <el-submenu index="2">
-          <template slot="title">编辑(E)</template>
-          <el-menu-item index="2-1">撤销</el-menu-item>
-          <el-menu-item index="2-2">恢复</el-menu-item>
+          <template slot="title">{{$t("message.monaco.edit")}}</template>
+          <el-menu-item index="2-1">{{$t("message.monaco.revoke")}}</el-menu-item>
+          <el-menu-item index="2-2">{{$t("message.monaco.recover")}}</el-menu-item>
           <div class="bottom-line"></div>
-          <el-menu-item index="2-3">剪切</el-menu-item>
-          <el-menu-item index="2-3">复制</el-menu-item>
-          <el-menu-item index="2-3">粘贴</el-menu-item>
+          <el-menu-item index="2-3">{{$t("message.monaco.cut")}}</el-menu-item>
+          <el-menu-item index="2-3">{{$t("message.monaco.copy")}}</el-menu-item>
+          <el-menu-item index="2-3">{{$t("message.monaco.paste")}}</el-menu-item>
           <div class="bottom-line"></div>
-          <el-menu-item index="2-3">查找</el-menu-item>
-          <el-menu-item index="2-3">替换</el-menu-item>
+          <el-menu-item index="2-4">{{$t("message.monaco.find")}}</el-menu-item>
+          <el-menu-item index="2-4">{{$t("message.monaco.replace")}}</el-menu-item>
         </el-submenu>
         <el-submenu index="3">
-          <template slot="title">运行(R)</template>
-          <el-menu-item index="2-1">模拟启动</el-menu-item>
-          <el-menu-item index="2-2">最近运行</el-menu-item>
+          <template slot="title">{{$t("message.monaco.running")}}</template>
+          <el-menu-item index="3-1" @click="simulationStart()">{{$t("message.monaco.simulationStart")}}</el-menu-item>
+          <el-menu-item index="3-2">{{$t("message.monaco.recentlyRun")}}</el-menu-item>
         </el-submenu>
-        <el-submenu index="4">
-          <template slot="title">终端(T)</template>
-        </el-submenu>
+        <el-menu-item index="4">{{$t("message.monaco.terminal")}}</el-menu-item>
         <el-submenu index="5">
-          <template slot="title">帮助(H)</template>
-          <el-menu-item index="2-1">文档</el-menu-item>
-          <el-menu-item index="2-2"><a href="https://www.ele.me" target="_blank">关于</a></el-menu-item>
+          <template slot="title">{{$t("message.monaco.help")}}</template>
+          <el-menu-item index="5-1"><a style="color: #fff !important;" href="https://www.ele.me" target="_blank">{{$t("message.monaco.documentation")}}</a></el-menu-item>
+          <el-menu-item index="5-2">{{$t("message.monaco.about")}}</el-menu-item>
         </el-submenu>
       </el-menu>
     </div>
     <div class="monacoBody">
-      <div class="file-directory">
-        <i class="el-icon-s-fold fileIcon" @click="fileIcon(false)"></i>
+      <div class="monacoBodyTopSelect" v-show="showTopSelect">
+        <el-select ref="selectRef" v-model="value" filterable remote v-load-more.method="loadmore" reserve-keyword placeholder="请输入关键词">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="" :class="`file-directory-${theme}`">
+        <i class="el-icon-s-fold " :class="`fileIcon-${theme}`" @click="fileIcon(false)"></i>
         <!--鼠标右键菜单栏 -->
         <div v-show="showRightMenu == true">
           <ul id="menu" class="right-menu">
             <li class="menu-item" @click="editTreeNode">
-              重命名
+              {{$t("message.monaco.rename")}}
             </li>
             <li class="menu-item" @click="delTreeNode">
-              删除
+              {{$t("message.monaco.delete")}}
             </li>
           </ul>
         </div>
-        <el-tree :data="treeData" :props="defaultProps" :expand-on-click-node="false" ref="tree" class="tree-line" :indent="0" highlight-current @node-click="nodeClick" @node-contextmenu="rightClick" @check-change="handleCheckChange" default-expand-all>
+        <el-tree :data="treeData" :props="defaultProps" :expand-on-click-node="false" ref="tree" :class="`tree-line-${theme}`" :indent="0" highlight-current @node-click="nodeClick" @node-contextmenu="rightClick" @check-change="handleCheckChange" default-expand-all>
           <span class="custom-tree-node" slot-scope="{ node, data }">
             <span>
               <span>
@@ -82,7 +97,7 @@
           </span>
         </el-tree>
       </div>
-      <i class="el-icon-s-unfold  fileIconShow" v-if="fileIconShow == false" @click="fileIcon(true)"></i>
+      <i class="el-icon-s-unfold" :class="`fileIconShow-${theme}`" v-if="fileIconShow == false" @click="fileIcon(true)"></i>
       <div id="container" ref="container" style="height:100%"></div>
     </div>
   </div>
@@ -95,6 +110,7 @@ import JavaDialect from './dialect/java.js';
 import JavascriptDialect from './dialect/javascript.js';
 
 export default {
+
 
   props: {
     codes: {
@@ -153,7 +169,22 @@ export default {
           label: "深色",
         },
       ],
-      theme: "hc-black",
+      theme: "vs",
+      options: [
+        {
+          value: '选项1',
+          label: 'Java Dependencies 模拟运行'
+        },
+        {
+          value: '选项2',
+          label: 'sql Dependencies 模拟运行'
+        },
+        {
+          value: '选项3',
+          label: 'groovy Dependencies 模拟运行'
+        },
+      ],
+      value: '',
       codesCopy: null, //内容备份
       suggestions: [],
       triggerCharacters: ["."],
@@ -166,19 +197,31 @@ export default {
       },
       treeData: [
         {
-          path: "path1",
+          path: "User Dependencies",
           childrens: [{
-            path: "path1-1",
+            path: "Java Dependencies",
             childrens: []
           }]
         }
       ],
       showRightMenu: false,
+      showTopSelect: false,
       nodeDetail: {},
       currentNodeId: '',
       fileIconShow: true
     };
   },
+  filters: {
+    ellipsis (value) {
+      if (!value) return ""
+      let num = value.toString().length
+      if (num > 3) {
+        return "#..." + value.toString().slice(num - 3, num)
+      }
+      return value
+    },
+  },
+
   mounted () {
     this.librarys = require("./mock1.json").data.types;
     this.librarys.forEach((item) => {
@@ -277,29 +320,28 @@ export default {
     //   console.log(this.monacoEditor.getValue());
     //   // this.$emit('runResult',this.monacoEditor.getValue())
     // },
-    themeChange (val) {
+    chooseThemes (val) {
+      this.theme = val
       this.initEditor(this.codes);
     },
-    // nodeClick (data) {
-    //   console.info("ddddddddddddddddd")
-    //   let currentCli = document.getElementById("menu")
-    //   console.info(currentCli)
-    //   if (currentCli) {
-    //     if (!currentCli.contains(event.target)) {
-    //       //点击到了id为option-button-group以外的区域，就隐藏菜单
-    //       this.showRightMenu = false
-    //     }
-    //   }
-    // },
+    simulationStart () {
+      this.showTopSelect = true
+      console.info(this.$refs.selectRef)
+      this.$refs.selectRef.toggleMenu()
+    },
+    loadmore () {
+      // 在这里请求接口加载数据
+      console.log("滚动到底部了")
+    },
     fileIcon (val) {
       this.fileIconShow = !this.fileIconShow
       console.info(this.fileIconShow)
       if (val == true) {
-        document.querySelector(".file-directory").style.display = ""
-        document.querySelector(".file-directory").style.width = "25%"
+        document.querySelector(`.file-directory-${this.theme}`).style.display = ""
+        document.querySelector(`.file-directory-${this.theme}`).style.width = "25%"
         document.querySelector("#container").style.width = "75%"
       } else {
-        document.querySelector(".file-directory").style.display = "none"
+        document.querySelector(`.file-directory-${this.theme}`).style.display = "none"
         document.querySelector("#container").style.width = "100%"
       }
     },
@@ -326,7 +368,6 @@ export default {
       document.removeEventListener("click", this.closeRightMenu)
     },
     editTreeNode () {
-      let that = this
       console.info("222222")
     },
     handleCheckChange (data, checked, indeterminate) {
@@ -355,27 +396,33 @@ export default {
       width: 100%;
       background: #3c3c3c !important;
     }
-    .el-menu--horizontal > .el-menu-item {
-      height: 30px;
-      line-height: 30px;
-    }
+    .el-menu--horizontal > .el-menu-item,
     .el-menu--horizontal > .el-submenu .el-submenu__title {
       height: 30px;
       line-height: 30px;
       border-bottom: 0;
-      width: 60px;
       color: #fff !important;
       background: #3c3c3c !important;
       padding: 0;
       text-align: center;
+      padding: 0 15px 0 0;
     }
     li.el-menu-item.is-active {
       color: #fff !important;
-      border-bottom-color: #545c64 !important;
-      background: #545c64 !important;
+      border-bottom-color: #3c3c3c !important;
+      background: #3c3c3c !important;
+    }
+    .el-menu--horizontal > .el-submenu .el-submenu__title:hover {
+      background: #5a5a5a !important;
+    }
+    li.el-menu-item:hover {
+      color: #fff !important;
+      border-bottom-color: #5a5a5a !important;
+      background: #5a5a5a !important;
     }
     .el-menu.el-menu--horizontal {
       border-bottom: none !important;
+      padding-left: 15px;
     }
     .el-menu--horizontal > .el-submenu .el-submenu__icon-arrow {
       display: none;
@@ -385,24 +432,49 @@ export default {
       background: #232730 !important;
     }
   }
-
   .monacoBody {
     display: flex;
     justify-items: center;
     height: calc(100% - 30px);
     width: 100%;
   }
-  .file-directory {
+  .monacoBodyTopSelect {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    z-index: 9999;
+  }
+  .file-directory-hc-black,
+  .file-directory-vs-dark {
     width: 25%;
     height: 100%;
     background: #232730;
+  }
+  .file-directory-vs {
+    width: 25%;
+    height: 100%;
+    background: #eaebef;
   }
   #container {
     height: 100%;
     width: 75%;
     text-align: left;
   }
-  .tree-line {
+  .tree-line-vs {
+    background: #eaebef;
+    color: #000;
+    .el-tree-node__content {
+      &:hover {
+        background-color: #b4c1cb;
+      }
+    }
+    .el-tree-node.is-current > .el-tree-node__content {
+      background-color: #37373d;
+      padding-left: 12px;
+    }
+  }
+  .tree-line-hc-black,
+  .tree-line-vs-dark {
     background: #232730;
     color: #fff;
     .el-tree-node__content {
@@ -442,24 +514,42 @@ export default {
       color: #606266;
     }
   }
-  .fileIcon {
-    color: #fff;
-    font-size: 18px;
+  .fileIcon-vs {
+    color: #2c2b2b;
+    font-size: 20px;
     text-align: right;
     width: 100%;
     cursor: pointer;
   }
-  .fileIconShow {
+  .fileIcon-hc-blac,
+  .fileIcon-vs-dark {
+    color: #fff;
+    font-size: 20px;
+    text-align: right;
+    width: 100%;
+    cursor: pointer;
+  }
+  .fileIconShow-vs {
+    position: absolute;
+    color: #2c2b2b;
+    z-index: 9999;
+    font-size: 20px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .fileIconShow-hc-blac,
+  .fileIconShow-vs-dark {
     position: absolute;
     color: #fff;
     z-index: 9999;
-    font-size: 18px;
+    font-size: 20px;
     text-align: right;
     cursor: pointer;
   }
   .save {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .el-menu--popup-bottom-start {
@@ -480,7 +570,7 @@ export default {
 }
 .bottom-line {
   width: 90%;
-  height: 2px;
+  height: 1px;
   background: #606060;
   margin: auto;
 }

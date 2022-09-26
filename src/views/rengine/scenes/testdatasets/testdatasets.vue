@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import MinioUpload from "../../../../../components/minio-upload.vue"
+import MinioUpload from "../../../../components/minio-upload.vue"
 
 export default {
   name: "UserLibrarys",
@@ -112,14 +112,14 @@ export default {
     addTemplat () {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "rengine:ruletemplate:edit"
         ),
       })
     },
     design () {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "rengine:ruletemplate:edit"
         ),
       })
     },

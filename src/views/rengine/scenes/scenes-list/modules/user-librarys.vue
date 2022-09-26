@@ -112,14 +112,14 @@ export default {
     addTemplat () {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "rengine:ruletemplate:edit"
         ),
       })
     },
     design () {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "rengine:ruletemplate:edit"
         ),
       })
     },

@@ -101,28 +101,26 @@ export default {
     // addTemplat() {
     //   this.$router.push({
     //     path: this.permitutil.getRoutePathByPermission(
-    //       "modules:ruletemplate:edit"
+    //       "rengine:ruletemplate:edit"
     //     ),
     //   })
     // },
     toWorkFlow(row) {
       this.$router.push({
-        path: this.permitutil.getRoutePathByPermission(
-          "modules:scenes:workflow"
-        ),
+        path: this.permitutil.getRoutePathByPermission("rengine:workflows"),
         query: { id: row.id },
       })
     },
     toRuleModeles(row) {
       this.$router.push({
-        path: this.permitutil.getRoutePathByPermission("modules:scenes:rules"),
+        path: this.permitutil.getRoutePathByPermission("rengine:rules"),
         query: { id: row.id },
       })
     },
     design() {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:ruletemplate:edit"
+          "rengine:ruletemplate:edit"
         ),
       })
     },

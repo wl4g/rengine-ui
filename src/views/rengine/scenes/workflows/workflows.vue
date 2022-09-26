@@ -12,7 +12,9 @@
         <el-table :data="tableData" style="width:100%">
           <el-table-column prop="id" label="工作流ID" width="150">
             <template slot-scope="scope">
-              <a class="table_a" @click="showWorkDetail(scope.row)">{{ "#" + scope.row.id}}</a>
+              <el-tooltip class="item" effect="dark" :content="scope.row.id" placement="top">
+                <a class="table_a" @click="showWorkDetail(scope.row)">{{ scope.row.id | ellipsis}}</a>
+              </el-tooltip>
             </template>
           </el-table-column>
           <el-table-column prop="name" label="名称" width=100></el-table-column>
@@ -88,7 +90,7 @@
 </template>
 
 <script>
-import WorkFlow from "./workflow.js"
+import WorkFlow from "./workflows.js"
 export default WorkFlow
 </script>
 

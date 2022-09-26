@@ -17,6 +17,16 @@ export default {
     this.saveForm = { ...this.saveForm, projectId: this.projectId }
     this.queryWorkflow(this.projectId)
   },
+  filters: {
+    ellipsis(value) {
+      if (!value) return ""
+      let num = value.toString().length
+      if (num > 3) {
+        return "#..." + value.toString().slice(num - 3, num)
+      }
+      return value
+    },
+  },
   mounted() {},
   methods: {
     queryWorkflow() {
@@ -89,7 +99,7 @@ export default {
     showWorkDetail(val) {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
-          "modules:scenes:runhistory"
+          "rengine:workflows:runhistories"
         ),
       })
     },
