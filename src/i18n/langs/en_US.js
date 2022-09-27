@@ -70,7 +70,7 @@ const en_US = {
       addDependencyLibrary: "Add dependency library",
       save: "Save",
       autoSave: "Auto Save",
-      firstChoice: "First Choice",
+      preferred: "Preferred",
       themes: "Themes",
       revoke: "Revoke",
       recover: "Recover",

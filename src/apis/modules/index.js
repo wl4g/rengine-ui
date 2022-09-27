@@ -2,27 +2,28 @@ import global from "../../common/global_variable"
 import ajax from "@/utils/ajax/ajax"
 
 export default [
-  // project
+  // scenes
   {
     name: "项目管理列表",
-    method: "queryProject",
-    path: "/project/query",
+    method: "queryScenes",
+    path: "/scenes/query",
     type: "get",
     sysModule: global.modules,
   },
   {
     name: "项目管理 新增|编辑 保存",
-    method: "projectSave",
-    path: "/project/save",
+    method: "scenesSave",
+    path: "/scenes/save",
     type: "post",
     dataType: "json",
     sysModule: global.modules,
   },
   {
     name: "项目管理删除",
-    method: "projectDel",
-    path: "/project/delete",
+    method: "scenesDel",
+    path: "/scenes/delete",
     type: "post",
+    dataType: "json",
     sysModule: global.modules,
   },
 

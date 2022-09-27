@@ -7,8 +7,15 @@ export default {
       dialogVisible: false,
       // visible: false,
       saveForm: {
-        enabled: 1,
+        enable: 1,
         labels: [""],
+      },
+      pageNum: 0,
+      total: 0,
+      //查询条件
+      loading: false,
+      searchParams: {
+        name: "",
       },
     }
   },
@@ -26,17 +33,30 @@ export default {
     },
   },
   methods: {
+    currentChange(i) {
+      this.pageNum = i - 1
+      this.getTableData()
+    },
+    onSubmit() {
+      this.loading = true
+      this.getTableData()
+    },
     getTableData() {
       let data = {
-        projectId: "string",
-        name: "string",
-        owner: "string",
+        orgCode: "string",
+        name: this.searchParams.name,
         labels: "string",
+        enable: 1,
+        pageNum: this.pageNum,
+        pageSize: 10,
+        scenesId: "string",
       }
-      this.$$api_modules_queryProject({
+      this.$$api_modules_queryScenes({
         data: data,
         fn: res => {
-          this.tableData = res.data.projects
+          this.loading = false
+          this.tableData = res.data.records
+          this.total = res.data.total
         },
         errFn: () => {
           this.$message.error("Fail")
@@ -47,14 +67,26 @@ export default {
       this.dialogVisible = true
       this.dialogTitle = "新增"
       this.saveForm = {
-        enabled: 1,
+        enable: 1,
         labels: [""],
+        orgCode: "string",
+        scenesCode: "",
+        workflowId: 0,
       }
     },
     editProject(row) {
       this.dialogVisible = true
       this.dialogTitle = "编辑"
-      this.saveForm = { ...row }
+      this.saveForm = {
+        id: row.id,
+        orgCode: row.orgCode,
+        enable: row.enable,
+        labels: row.labels,
+        remark: row.remark,
+        scenesCode: row.scenesCode,
+        name: row.name,
+        workflowId: row.workflowId,
+      }
     },
     addLabels() {
       this.saveForm.labels.push("")
@@ -64,7 +96,7 @@ export default {
     },
     saveProject() {
       console.info(this.saveForm)
-      this.$$api_modules_projectSave({
+      this.$$api_modules_scenesSave({
         data: this.saveForm,
         fn: res => {
           this.dialogVisible = false
@@ -78,8 +110,8 @@ export default {
         },
       })
     },
-    projectDel(row) {
-      this.$$api_modules_projectDel({
+    scenesDel(row) {
+      this.$$api_modules_scenesDel({
         data: { id: row.id },
         fn: res => {
           this.$message.success("success")

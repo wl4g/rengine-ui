@@ -27,7 +27,7 @@
           </el-menu-item>
           <div class="bottom-line"></div>
           <el-submenu index="2-4">
-            <template slot="title">{{$t("message.monaco.firstChoice")}}</template>
+            <template slot="title">{{$t("message.monaco.preferred")}}</template>
             <!-- <el-menu-item index="2-4-1"></el-menu-item> -->
             <el-submenu index="2-4">
               <template slot="title">{{$t("message.monaco.themes")}}</template>
@@ -108,7 +108,7 @@ import DialectFactory from "./dialect/base.js"
 import GroovyDialect from './dialect/groovy.js';
 import JavaDialect from './dialect/java.js';
 import JavascriptDialect from './dialect/javascript.js';
-
+import { cache } from "../../../../../utils";
 export default {
 
 
@@ -208,7 +208,8 @@ export default {
       showTopSelect: false,
       nodeDetail: {},
       currentNodeId: '',
-      fileIconShow: true
+      fileIconShow: true,
+      global_theme: cache.get("global_theme")
     };
   },
   filters: {
@@ -223,6 +224,7 @@ export default {
   },
 
   mounted () {
+
     this.librarys = require("./mock1.json").data.types;
     this.librarys.forEach((item) => {
       item.simpleName =
@@ -396,6 +398,7 @@ export default {
       width: 100%;
       background: #3c3c3c !important;
     }
+
     .el-menu--horizontal > .el-menu-item,
     .el-menu--horizontal > .el-submenu .el-submenu__title {
       height: 30px;
@@ -430,6 +433,8 @@ export default {
     .el-menu--horizontal .el-menu .el-menu-item,
     .el-menu--horizontal .el-menu .el-submenu__title {
       background: #232730 !important;
+      height: 30px !important;
+      line-height: 30px !important;
     }
   }
   .monacoBody {
@@ -461,7 +466,7 @@ export default {
     text-align: left;
   }
   .tree-line-vs {
-    background: #eaebef;
+    background: #eaebef !important;
     color: #000;
     .el-tree-node__content {
       &:hover {
@@ -568,6 +573,28 @@ export default {
   height: 27px !important;
   line-height: 27px !important;
 }
+ul.el-menu.el-menu--popup.el-menu--popup-right-start {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  .el-submenu__title {
+    height: 35px !important;
+  }
+}
+.el-menu--horizontal .el-menu .el-menu-item,
+.el-menu--horizontal .el-menu .el-submenu__title {
+  background: #232730 !important;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+.el-menu--horizontal .el-menu-item:hover {
+  background: #04395e !important;
+}
+.el-submenu__title {
+  font-size: 12px !important;
+}
+//二次菜单悬浮及背景样式 end
 .bottom-line {
   width: 90%;
   height: 1px;
@@ -577,5 +604,6 @@ export default {
 .save {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 </style>

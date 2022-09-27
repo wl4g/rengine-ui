@@ -70,7 +70,7 @@ const zh_CN = {
       addDependencyLibrary: "添加依赖库",
       save: "保存",
       autoSave: "自动保存",
-      firstChoice: "首选项",
+      preferred: "首选项",
       themes: "主题",
       revoke: "撤销",
       recover: "恢复",

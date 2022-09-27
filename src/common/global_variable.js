@@ -75,28 +75,28 @@ export default {
     let baseUri = null
     // Extract baseUri from store.
     let sysModuleCache = cache.get("iamSysModules")
-    // let modulesMock = {
-    //   appName: "modules-manager",
-    //   createBy: null,
-    //   createDate: null,
-    //   delFlag: 0,
-    //   enable: null,
-    //   envType: "fat",
-    //   extranetBaseUri: "http://10.0.0.163:28001/admin",
-    //   humanCreateDate: null,
-    //   humanUpdateDate: null,
-    //   id: 99,
-    //   intranetBaseUri: "http://localhost:17070/modules-manager",
-    //   organizationCode: null,
-    //   remark: "URM Web(Cluster Portal) Services",
-    //   type: 2,
-    //   updateBy: null,
-    //   updateDate: null,
-    //   viewExtranetBaseUri: "http://dopaas.wl4g.fat",
-    // }
-    // sysModuleCache = { ...sysModuleCache, "modules-manager": modulesMock }
-    // console.info(sysModuleCache)
-    // cache.set("iamSysModules", sysModuleCache)
+    let modulesMock = {
+      appName: "modules-manager",
+      createBy: null,
+      createDate: null,
+      delFlag: 0,
+      enable: null,
+      envType: "fat",
+      extranetBaseUri: "http://10.0.0.163:28001/admin",
+      humanCreateDate: null,
+      humanUpdateDate: null,
+      id: 99,
+      intranetBaseUri: "http://localhost:17070/modules-manager",
+      organizationCode: null,
+      remark: "URM Web(Cluster Portal) Services",
+      type: 2,
+      updateBy: null,
+      updateDate: null,
+      viewExtranetBaseUri: "http://dopaas.wl4g.fat",
+    }
+    sysModuleCache = { ...sysModuleCache, "modules-manager": modulesMock }
+    console.info(sysModuleCache)
+    cache.set("iamSysModules", sysModuleCache)
     if (
       sysModuleCache &&
       sysModuleCache[sysModule.cluster] &&
