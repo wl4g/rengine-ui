@@ -40,7 +40,7 @@ export default {
       this.$$api_modules_queryrules({
         data: data,
         fn: res => {
-          this.tableData = res.data.rules
+          this.tableData = res.data.records
         },
         errFn: () => {},
       })

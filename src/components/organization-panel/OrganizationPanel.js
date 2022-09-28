@@ -3,11 +3,12 @@ import it from "element-ui/src/locale/lang/it"
 import { cache } from "../../utils"
 import fa from "element-ui/src/locale/lang/fa"
 import AreaSelector from "../area-selector"
-
+import selectTreeDropdown from "../select-tree-dropdown"
 export default {
   name: "organization-panel",
   components: {
     "area-selector": AreaSelector,
+    selectTreeDropdown,
   },
   data() {
     return {
@@ -35,6 +36,21 @@ export default {
       parkAreaCode: "",
       companyAreaCode: "",
       departmentAreaCode: "",
+
+      formFields: { sename: "", switchingroomname: "", switchingroomId: "" },
+      zNodes: [],
+      //弹窗园区树下拉树组件传递对象
+      selectGardenTreeData: {
+        nodeKey: "equipementStationId",
+        list: [],
+        treeShow: false,
+        checkedKeys: [],
+        defaultProps: {
+          children: "childNode",
+          label: "sename",
+          id: "equipementStationId",
+        },
+      },
 
       areaTree: [],
 
@@ -89,6 +105,47 @@ export default {
     // this.getOrganizations();
     //this.getCurrentOrganization();
     // this.getAreaTree();
+    let res = {
+      data: [
+        {
+          equipementStationId: "3307340982518784",
+          sename: "广州总部",
+          parentModuleId: null,
+          customerId: "10000002",
+          equipMentInfo: null,
+          childNode: [
+            {
+              equipementStationId: "3307342025278464",
+              sename: "保利克洛维",
+              parentModuleId: "3307340982518784",
+              customerId: "10000002",
+              equipMentInfo: null,
+              childNode: [
+                {
+                  equipementStationId: "3307342168622080",
+                  sename: "15F",
+                  parentModuleId: "3307342025278464",
+                  customerId: "10000002",
+                  equipMentInfo: null,
+                  childNode: null,
+                },
+                {
+                  equipementStationId: "3671983409939456",
+                  sename: "10F",
+                  parentModuleId: "3307342025278464",
+                  customerId: "10000002",
+                  equipMentInfo: null,
+                  childNode: null,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      code: 200,
+      message: null,
+    }
+    this.selectGardenTreeData.list = res.data
   },
   methods: {
     //get data from server
@@ -486,6 +543,33 @@ export default {
       } else {
         return this.current
       }
+    },
+    /**
+     * 园区树节点选中事件
+     */
+    gardenCheckChange(node) {
+      this.formFields.equipementStationId = node.equipementStationId
+      let parkId = node.equipementStationId + ","
+      let parkName = node.sename + ","
+      let _self = this
+      prakData(node.parentModuleId)
+      function prakData(parentModuleId) {
+        if (parentModuleId) {
+          for (let i = 0; i < _self.zNodes.length; i++) {
+            if (_self.zNodes[i].equipementStationId == parentModuleId) {
+              parkId += parentModuleId + ","
+              parkName += _self.zNodes[i].sename + ","
+              prakData(_self.zNodes[i].pId)
+            }
+          }
+        }
+      }
+      this.parkId = parkId.substr(0, parkId.length - 1)
+      this.parkId = this.parkId.split(",").reverse("").join(",")
+      parkName = parkName.substr(0, parkName.length - 1)
+      let name = parkName.split(",").reverse("").join(",")
+      this.formFields.sename = name != "undefined" ? name : ""
+      this.formFields.equipementStationId = node.equipementStationId
     },
   },
 }

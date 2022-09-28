@@ -333,15 +333,15 @@ p {
 
 /* Organization style */
 .organization-popover {
-  background-color: #303643 !important;
-
+  background-color: #f7f3f3 !important;
+  box-shadow: #dcdede 3px 1px 12px 3px, #dcdede 7px 1px 3px 2px !important;
   .title-center {
     position: absolute;
     top: 5%;
     left: 5%;
 
     p {
-      color: rgb(230, 230, 230);
+      color: #000;
       font-weight: bold;
       margin: 5px 0;
     }
@@ -405,5 +405,16 @@ aside {
   cursor: pointer;
   color: #61c3ff;
   padding: 0 4px 0 1px;
+}
+.orgForm {
+  display: flex;
+  padding-top: 30px;
+  .el-form-item.el-form-item--mini {
+    width: 50%;
+    // display: flex;
+    .el-input.el-input--mini {
+      width: 190px;
+    }
+  }
 }
 </style>

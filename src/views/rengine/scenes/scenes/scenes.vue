@@ -16,7 +16,6 @@
         <div class="line"></div>
         {{$t('message.common.total')}}： <span class="number">{{total}}</span>
       </div>
-      <!-- <el-button type="primary" @click="addProject()"> + </el-button> -->
     </div>
     <div>
       <template>
@@ -66,10 +65,10 @@
           </el-col>
           <el-col :span="24">
             <el-form-item label="状态">
-              <el-select v-model="saveForm.enable" collapse-tags placeholder="请选择">
-                <el-option label="停用" :value="0"></el-option>
-                <el-option label="启用" :value="1"></el-option>
-              </el-select>
+              <el-radio-group v-model="saveForm.enable" class="radio-style">
+                <el-radio :label="0">停用</el-radio>
+                <el-radio :label="1">启用</el-radio>
+              </el-radio-group>
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -77,25 +76,29 @@
               <div class="labels-style" v-for="(item,index) in saveForm.labels">
                 <el-input v-model="saveForm.labels[index]"></el-input>
                 <i class="el-icon-remove-outline" @click="delLabels(index)" v-if="saveForm.labels.length > 1"></i>
-                <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="saveForm.labels.length < 5 && index == saveForm.labels.length -1"></i>
+                <!-- <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="saveForm.labels.length < 5 && index == saveForm.labels.length -1"></i> -->
+                <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="index == saveForm.labels.length -1"></i>
               </div>
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="所有人" prop="scenesCode">
-              <el-input v-model="saveForm.scenesCode" placeholder="请输入所有人名称"></el-input>
+            <el-form-item label="标识" prop="scenesCode">
+              <div class="scenesCodeLabel">
+                <el-input v-model="saveForm.scenesCode" :disabled="scenesDisabled" placeholder="请输入标识"></el-input>
+                <a @click="changeScenes">修改</a>
+              </div>
             </el-form-item>
           </el-col>
           <el-col :span="24">
             <el-form-item label="备注" prop="remark">
-              <el-input v-model="saveForm.remark" placeholder="请输入备注"></el-input>
+              <el-input type="textarea" v-model="saveForm.remark" placeholder="请输入备注"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="saveProject()">{{$t('message.common.save')}}</el-button>
-        <el-button @click="dialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
+        <el-button @click="dialogVisible = false;scenesDisabled=true">{{$t('message.common.cancel')}}</el-button>
       </span>
     </el-dialog>
   </div>
@@ -107,16 +110,26 @@ export default ProjectList
 </script>
 
 <style scoped>
-.labels-style {
+.labels-style,
+.scenesCodeLabel {
   display: flex;
   align-items: center;
 }
 .labels-style .el-input {
-  width: 80%;
+  width: 84%;
 }
 .labels-style i {
   font-size: 16px;
   line-height: 2 !important;
+  cursor: pointer;
+  padding-left: 4px;
+}
+.radio-style .el-radio {
+  margin-right: 14px;
+}
+.scenesCodeLabel a {
+  width: 18%;
+  padding-left: 4px;
   cursor: pointer;
 }
 </style>

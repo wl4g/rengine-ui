@@ -14,6 +14,7 @@ export default {
       total: 0,
       //查询条件
       loading: false,
+      scenesDisabled: true,
       searchParams: {
         name: "",
       },
@@ -73,6 +74,9 @@ export default {
         scenesCode: "",
         workflowId: 0,
       }
+    },
+    changeScenes() {
+      this.scenesDisabled = false
     },
     editProject(row) {
       this.dialogVisible = true
