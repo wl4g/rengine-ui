@@ -62,8 +62,8 @@ export default {
         this.$alert(
           `For the convenience of development and debugging, 
 please use the domain name as the request address, do not use localhost or IP. 
-For more information, more refer to: \nhttps://github.com/wl4g/xcloud-devops/blob/master/README_CN.md
-\n或者\nhttps://gitee.com/wl4g/xcloud-devops/blob/master/README_CN.md`,
+For more information, more refer to: \nhttps://github.com/wl4g/rengine/blob/master/README_CN.md
+\n或者\nhttps://gitee.com/wl4g/rengine/blob/master/README_CN.md`,
           "警告",
           {
             confirmButtonText: "确定",

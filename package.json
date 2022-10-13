@@ -1,8 +1,8 @@
 {
-  "name": "xcloud-devops-view",
-  "version": "v2.0.0",
-  "description": "rengine View",
-  "author": "<wanglsir@gmail.com>",
+  "name": "rengine-ui",
+  "version": "v1.0.0",
+  "description": "Rengine UI",
+  "author": "<jameswong1376@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
