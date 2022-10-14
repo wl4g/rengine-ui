@@ -1,11 +1,21 @@
 <template>
   <div>
+    <el-form :inline="true" :model="searchParams" class="searchbar" @keyup.enter.native.prevent="onSubmit()">
+      <el-form-item :label="$t('message.common.name')">
+        <el-input v-model="searchParams.name" placeholder="e.g. example" style="width:165px"></el-input>
+      </el-form-item>
+      <input hidden></input>
+      <el-form-item>
+        <el-button @click="onSubmit" type="success" :loading="loading">{{$t('message.common.search')}}</el-button>
+      </el-form-item>
+
+      <el-button type="primary" style='float:right;margin-right:20px' @click="addWorkflow()">+ Add</el-button>
+    </el-form>
     <div class="query">
       <div class="query-left">
         <div class="line"></div>
         {{$t('message.common.total')}}： <span class="number">{{total}}</span>
       </div>
-      <el-button type="primary" @click="addWorkflow()"> + </el-button>
     </div>
     <div>
       <template>
@@ -18,9 +28,9 @@
             </template>
           </el-table-column>
           <el-table-column prop="name" label="名称" width=100></el-table-column>
-          <el-table-column prop="enabled" label="状态" width=150>
+          <el-table-column prop="enable" label="状态" width=150>
             <template slot-scope="scope">
-              <p>{{scope.row.enabled == 1 ?"启用":"禁用"}}</p>
+              <p>{{scope.row.enable == 1 ?"启用":"禁用"}}</p>
             </template>
           </el-table-column>
           <!-- <el-table-column prop="所属场景" label="所属场景" width=150></el-table-column> -->
@@ -47,7 +57,7 @@
         </el-table>
       </template>
     </div>
-    <el-pagination background layout="prev, pager, next" :total="total" :current-page="pageNum" @current-change='currentChange'></el-pagination>
+    <el-pagination background layout="prev, pager, next" :total="total" :current-page="pageNum +1" @current-change='currentChange'></el-pagination>
     <el-dialog :close-on-click-modal="false" :title="dialogTitle" :visible.sync="dialogVisible " width="350px">
       <el-form label-width="80px" size="mini" :model="saveForm" ref="saveForm" class="demo-form-inline">
         <el-row>
@@ -58,10 +68,10 @@
           </el-col>
           <el-col :span="24">
             <el-form-item label="状态">
-              <el-select v-model="saveForm.enabled" collapse-tags placeholder="请选择">
-                <el-option label="停用" :value="0"></el-option>
-                <el-option label="启用" :value="1"></el-option>
-              </el-select>
+              <el-radio-group v-model="saveForm.enable" class="radio-style">
+                <el-radio :label="0">停用</el-radio>
+                <el-radio :label="1">启用</el-radio>
+              </el-radio-group>
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -69,7 +79,7 @@
               <div class="labels-style" v-for="(item,index) in saveForm.labels">
                 <el-input v-model="saveForm.labels[index]"></el-input>
                 <i class="el-icon-remove-outline" @click="delLabels(index)" v-if="saveForm.labels.length > 1"></i>
-                <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="saveForm.labels.length < 5 && index == saveForm.labels.length -1"></i>
+                <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="index == saveForm.labels.length -1"></i>
               </div>
             </el-form-item>
           </el-col>
@@ -95,16 +105,26 @@ export default WorkFlow
 </script>
 
 <style scoped>
-.labels-style {
+.labels-style,
+.scenesCodeLabel {
   display: flex;
   align-items: center;
 }
 .labels-style .el-input {
-  width: 80%;
+  width: 84%;
 }
 .labels-style i {
   font-size: 16px;
   line-height: 2 !important;
+  cursor: pointer;
+  padding-left: 4px;
+}
+.radio-style .el-radio {
+  margin-right: 14px;
+}
+.scenesCodeLabel a {
+  width: 18%;
+  padding-left: 4px;
   cursor: pointer;
 }
 </style>

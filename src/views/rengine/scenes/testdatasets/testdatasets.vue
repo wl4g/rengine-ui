@@ -1,29 +1,46 @@
 <template>
   <div>
+    <el-form :inline="true" :model="searchParams" class="searchbar" @keyup.enter.native.prevent="onSubmit()">
+      <el-form-item :label="$t('message.common.name')">
+        <el-input v-model="searchParams.name" placeholder="e.g. example" style="width:165px"></el-input>
+      </el-form-item>
+      <input hidden></input>
+      <el-form-item>
+        <el-button @click="onSubmit" type="success" :loading="loading">{{$t('message.common.search')}}</el-button>
+      </el-form-item>
+
+      <el-button type="primary" style='float:right;margin-right:20px' @click="addLibrary()">+ Add</el-button>
+    </el-form>
     <div class="query">
       <div class="query-left">
         <div class="line"></div>
         {{$t('message.common.total')}}： <span class="number">{{total}}</span>
       </div>
-      <!-- 新增按钮 -->
-      <el-button type="primary" @click="addLibrary()"> + </el-button>
-
     </div>
     <div>
       <template>
-        <el-table :data="tableData" :border="true" style="width:100%">
-          <el-table-column prop="名称" label="名称" width="100"></el-table-column>
+        <el-table :data="tableData" style="width:100%">
+          <el-table-column prop="类库名称" label="类库名称" width="100"></el-table-column>
+          <el-table-column prop="uploadType" label="类库类型" width="100"></el-table-column>
           <el-table-column prop="状态" label="状态" width=150></el-table-column>
-          <el-table-column prop="lable" label="lable" width=150></el-table-column>
+          <el-table-column prop="标签" label="标签" width=150></el-table-column>
           <el-table-column prop="size" label="size" width=150></el-table-column>
-          <el-table-column prop="更新时间" label="更新时间" width=150></el-table-column>
-          <el-table-column prop="更新人" label="更新人" width=150></el-table-column>
-          <el-table-column prop="备注" label="备注" width=150></el-table-column>
+          <el-table-column prop="md5sum" label="md5sum" width=150></el-table-column>
+          <el-table-column prop="updateDate" label="更新时间" width=150></el-table-column>
+          <el-table-column prop="updateBy" label="更新人" width=150></el-table-column>
+          <el-table-column prop="remark" label="备注" width=150></el-table-column>
           <el-table-column :label="$t('message.common.operation')" min-width="100">
             <template slot-scope="scope">
               <a class="table_a" @click="design(scope.row)">启用</a> |
               <a class="table_a" @click="design(scope.row)">下载</a> |
-              <a class="table_a" @click="showRuleDetail(scope.row)">删除</a>
+              <el-popover placement="top" width="160" v-model="visible">
+                <p>确定删除该类库？</p>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false ; delLibrary(scope.row)">确定</el-button>
+                </div>
+                <a class="table_a" slot="reference">删除</a>
+              </el-popover>
             </template>
           </el-table-column>
         </el-table>
@@ -58,14 +75,14 @@
           </el-col>
           <el-col :span="12">
             <el-form-item label="上传文件">
-              <MinioUpload></MinioUpload>
+              <MinioUpload :acceptType="acceptType"></MinioUpload>
             </el-form-item>
           </el-col>
         </el-row>
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="saveTemplat()">{{$t('message.common.save')}}</el-button>
-        <el-button @click="newDialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
+        <el-button @click="libraryDialogVisible = false;">{{$t('message.common.cancel')}}</el-button>
       </span>
     </el-dialog>
   </div>
@@ -94,12 +111,65 @@ export default {
         tagMap: [],
         rules: [],
       },
+      acceptType: ".jar",
+      searchParams: {
+        name: "",
+      },
+      pageNum: 0,
+      total: 0,
+      //查询条件
+      loading: false,
     }
   },
   mounted () {
-    // this.tableData = getTableData()
+    this.getTableData()
   },
   methods: {
+    currentChange (i) {
+      this.pageNum = i - 1
+      this.getTableData()
+    },
+    onSubmit () {
+      this.loading = true
+      this.getTableData()
+    },
+    getTableData () {
+      let data = {
+        name: "string",
+        orgCode: "string",
+        labels: "string",
+        enable: true,
+        pageNum: 0,
+        pageSize: 1,
+        uploadId: "string",
+        scenesId: "string",
+        extension: "string",
+        uploadType: "TEST_DATASET"
+      }
+      this.$$api_modules_queryUpload({
+        data: data,
+        fn: res => {
+          this.loading = false
+          this.tableData = res.data.records
+          this.total = res.data.total
+        },
+        errFn: () => {
+          this.$message.error("Fail")
+        }
+      })
+    },
+    delLibrary (row) {
+      this.$$api_modules_uploadDel({
+        data: { id: row.id },
+        fn: res => {
+          this.$message.success("success")
+          this.getTableData()
+        },
+        errFn: () => {
+          this.$message.error("Fail")
+        },
+      })
+    },
     showRuleDetail (row) {
       console.info("11111", row)
       this.$router.push({

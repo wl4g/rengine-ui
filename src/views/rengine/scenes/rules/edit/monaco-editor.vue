@@ -35,22 +35,49 @@
         </el-submenu>
         <el-submenu index="2">
           <template slot="title">{{$t("message.monaco.edit")}}</template>
-          <el-menu-item index="2-1">{{$t("message.monaco.revoke")}}</el-menu-item>
-          <el-menu-item index="2-2">{{$t("message.monaco.recover")}}</el-menu-item>
-          <div class="bottom-line"></div>
-          <el-menu-item index="2-3">{{$t("message.monaco.cut")}}</el-menu-item>
-          <el-menu-item index="2-3">{{$t("message.monaco.copy")}}</el-menu-item>
-          <el-menu-item index="2-3">{{$t("message.monaco.paste")}}</el-menu-item>
-          <div class="bottom-line"></div>
-          <el-menu-item index="2-4">{{$t("message.monaco.find")}}</el-menu-item>
-          <el-menu-item index="2-4">{{$t("message.monaco.replace")}}</el-menu-item>
+          <!-- <div>
+
+            <el-menu-item index="2-1" @click="clickShortcuts">{{$t("message.monaco.revoke")}}</el-menu-item>
+            <el-menu-item index="2-2">{{$t("message.monaco.recover")}}</el-menu-item>
+            <div class="bottom-line"></div>
+            <el-menu-item index="2-3">{{$t("message.monaco.cut")}}</el-menu-item>
+            <el-menu-item index="2-3">{{$t("message.monaco.copy")}}</el-menu-item>
+            <el-menu-item index="2-3">{{$t("message.monaco.paste")}}</el-menu-item>
+            <div class="bottom-line"></div>
+            <el-menu-item index="2-4">{{$t("message.monaco.find")}}</el-menu-item>
+            <el-menu-item index="2-4">{{$t("message.monaco.replace")}}</el-menu-item>
+          </div> -->
+          <div v-for="(item,index) in editMenuList">
+            <el-menu-item v-if="item.name" :index="`2-${index+1}`" @click="clickShortcuts(item.name)">
+              <template slot="title">
+                <div class="save">
+                  <div>{{$t(`message.monaco.${item.name}`)}}</div>
+                  <div>{{item.shortcutsName}}</div>
+                </div>
+              </template>
+            </el-menu-item>
+            <div v-else class="bottom-line"></div>
+          </div>
         </el-submenu>
         <el-submenu index="3">
           <template slot="title">{{$t("message.monaco.running")}}</template>
           <el-menu-item index="3-1" @click="simulationStart()">{{$t("message.monaco.simulationStart")}}</el-menu-item>
-          <el-menu-item index="3-2">{{$t("message.monaco.recentlyRun")}}</el-menu-item>
+          <!-- <el-menu-item index="3-2">{{$t("message.monaco.recentlyRun")}}</el-menu-item> -->
+          <el-submenu index="3-2">
+            <template slot="title">{{$t("message.monaco.recentlyRun")}}</template>
+            <el-menu-item :index="item.value" v-for="item in recentlyRun" :key="item.value" @click="chooseRecentlyRun(item.value)">
+              <template slot="title">
+                <div class="save">
+                  <div>{{item.label}}</div>
+                </div>
+              </template>
+            </el-menu-item>
+          </el-submenu>
         </el-submenu>
-        <el-menu-item index="4" @click="showTerminal">{{$t("message.monaco.terminal")}}</el-menu-item>
+        <el-submenu index="4">
+          <template slot="title">{{$t("message.monaco.terminal")}}</template>
+          <el-menu-item index="4-1" @click="showTerminal">{{$t("message.monaco.openTerminal")}}</el-menu-item>
+        </el-submenu>
         <el-submenu index="5">
           <template slot="title">{{$t("message.monaco.help")}}</template>
           <el-menu-item index="5-1"><a style="color: #fff !important;" href="https://www.ele.me" target="_blank">{{$t("message.monaco.documentation")}}</a></el-menu-item>
@@ -60,10 +87,12 @@
     </div>
     <div class="monacoBody">
       <div class="monacoBodyTopSelect" v-show="showTopSelect">
-        <el-select ref="selectRef" v-model="value" filterable remote v-load-more.method="loadmore" reserve-keyword placeholder="请输入关键词">
+        <!-- <el-select ref="selectRef" v-model="value" filterable remote v-load-more.method="loadmore" reserve-keyword placeholder="请输入关键词">
           <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
           </el-option>
-        </el-select>
+        </el-select> -->
+        <select-tree-dropdown placeholder="单击展开依赖库" readonly filterable default-expand-all v-model="formFields.sename" :treeData="selectGardenTreeData.list" :treeProps="selectGardenTreeData.defaultProps" :node-key="selectGardenTreeData.nodeKey" :checkedKeys="selectGardenTreeData.checkedKeys" @check-change="gardenCheckChange">
+        </select-tree-dropdown>
       </div>
       <div class="" :class="`file-directory-${theme}`">
         <i class="el-icon-s-fold " :class="`fileIcon-${theme}`" @click="fileIcon(false)"></i>
@@ -92,7 +121,10 @@
       <div class="monaco-content">
         <div id="container" ref="container" :style="{'height': showTerminalVisible==true ?'80%':'100%'}"></div>
         <div class="terminal" v-show="showTerminalVisible">
-          <i class="el-icon-close closeTerminal" @click="showTerminalVisible=false"></i>
+          <div class="terminalTitle">
+            <i :class="terminalFullScreen? 'el-icon-arrow-down': 'el-icon-arrow-up'" @click="showTerminalFull"></i>
+            <i class="el-icon-close" @click="showTerminalVisible=false,terminalFullScreen=false"></i>
+          </div>
           <div id="terminal" ref="terminal"></div>
         </div>
       </div>
@@ -192,18 +224,32 @@ export default monacoEdit
     text-align: left;
   }
   #terminal {
-    height: 100%;
+    height: calc(100% - 18px);
   }
   .terminal {
     height: 20%;
     width: auto;
     border-top: 1px #b7b2b2 solid;
     position: relative;
+    box-shadow: 2px 0px 5px #929497;
   }
-  .closeTerminal {
-    position: absolute;
-    z-index: 99;
-    right: 20px;
+  .terminalTitle {
+    height: 18px;
+    width: 100%;
+    border-right: 1px solid rgb(219, 219, 218);
+    text-align: right;
+    font-size: 18px;
+    line-height: 18px;
+    background: #d5d1d1;
+    border-radius: 0px 4px 0 0;
+  }
+  .terminalTitle i {
+    padding-right: 2px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .terminalTitle i:last-child {
+    padding-right: 0px;
     font-size: 17px;
     cursor: pointer;
   }
@@ -344,7 +390,7 @@ ul.el-menu.el-menu--popup.el-menu--popup-right-start {
 .bottom-line {
   width: 90%;
   height: 1px;
-  background: #606060;
+  background: #424242;
   margin: auto;
 }
 .save {

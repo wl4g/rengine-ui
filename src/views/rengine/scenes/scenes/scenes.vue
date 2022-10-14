@@ -76,7 +76,6 @@
               <div class="labels-style" v-for="(item,index) in saveForm.labels">
                 <el-input v-model="saveForm.labels[index]"></el-input>
                 <i class="el-icon-remove-outline" @click="delLabels(index)" v-if="saveForm.labels.length > 1"></i>
-                <!-- <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="saveForm.labels.length < 5 && index == saveForm.labels.length -1"></i> -->
                 <i class="el-icon-circle-plus-outline" @click="addLabels" v-if="index == saveForm.labels.length -1"></i>
               </div>
             </el-form-item>

@@ -86,9 +86,10 @@ export default {
     uploadMinIo (fileObj, index) {
       let that = this
       let params = {
-        "enabled": 1,
+        orgCode: "string",
+        "enable": 1,
         "remark": "string",
-        "bizType": "USER_LIBRARY",
+        "uploadType": "USER_LIBRARY_WITH_GROOVY",
         "prefix": "string",
         "filename": fileObj.name,
         "extension": "string",
@@ -98,6 +99,13 @@ export default {
         "size": fileObj.size,
         "md5sum": "string",
         "sha1sum": "string"
+      }
+      if (!fileObj.size) {
+        this.$message({
+          message: `文件不能为空`,
+          type: 'warning'
+        });
+        return
       }
       that.$$api_modules_uploadApply({
         data: params,
@@ -110,7 +118,8 @@ export default {
           data.bucketName = data.bucket
           console.info(data)
           minioClient = new Minio.Client({ ...data })
-          let pathName = data.prefix.replace(data.bucketName + "/", "")
+          console.info("pathName:", data.objectPrefix)
+          let pathName = data.objectPrefix.replace(data.bucketName + "/", "")
           console.info(minioClient)
           if (fileObj) {
             let file = fileObj

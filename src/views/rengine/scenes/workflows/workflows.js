@@ -2,7 +2,7 @@ export default {
   name: "WorkFlow",
   data() {
     return {
-      projectId: "",
+      scenesId: "",
       tableData: [],
       dialogVisible: false,
       dialogTitle: "",
@@ -10,12 +10,18 @@ export default {
         enabled: 1,
         labels: [""],
       },
+      searchParams: {
+        name: "",
+      },
+      pageNum: 0,
+      total: 0,
+      loading: false,
     }
   },
   activated() {
-    this.projectId = this.$route.query.id
-    this.saveForm = { ...this.saveForm, projectId: this.projectId }
-    this.queryWorkflow(this.projectId)
+    this.scenesId = this.$route.query.id
+    this.saveForm = { ...this.saveForm, scenesId: this.scenesId }
+    this.getTableData(this.scenesId)
   },
   filters: {
     ellipsis(value) {
@@ -29,23 +35,35 @@ export default {
   },
   mounted() {},
   methods: {
-    queryWorkflow() {
+    onSubmit() {
+      this.loading = true
+      this.getTableData()
+    },
+    getTableData() {
       let data = {
         workflowId: "string",
-        projectId: this.projectId ? this.projectId : "string",
-        name: "string",
+        scenesId: this.scenesId ? this.scenesId : "string",
+        name: this.searchParams.name,
         labels: "string",
+        pageNum: this.pageNum,
+        pageSize: 10,
+        orgCode: "string",
       }
       this.$$api_modules_queryWorkflow({
         data: data,
-        fn: json => {
-          console.info(json)
-          this.tableData = json.data.workflows
+        fn: res => {
+          this.loading = false
+          this.tableData = res.data.records
+          this.total = res.data.total
         },
         errFn: () => {
           this.$message.error("Fail")
         },
       })
+    },
+    currentChange(i) {
+      this.pageNum = i - 1
+      this.getTableData()
     },
     addWorkflow() {
       this.dialogVisible = true
@@ -53,14 +71,25 @@ export default {
       this.saveForm = {
         enabled: 1,
         labels: [""],
-        projectId: this.projectId,
+        scenesId: this.scenesId,
+        orgCode: "string",
+        workflowId: "string",
+        ruleIds: [0],
       }
     },
     editWorkflow(row) {
       this.dialogVisible = true
       this.dialogTitle = "编辑"
-      row.projectId = row.projectId ? row.projectId : this.projectId
-      this.saveForm = { ...row }
+      row.scenesId = row.scenesId ? row.scenesId : this.scenesId
+      this.saveForm = {
+        orgCode: row.orgCode,
+        enable: row.enable,
+        labels: row.labels,
+        id: row.id,
+        remark: row.remark,
+        name: row.name,
+        ruleIds: row.ruleIds,
+      }
     },
     addLabels() {
       this.saveForm.labels.push("")
@@ -76,7 +105,7 @@ export default {
           this.dialogVisible = false
           if (res.message == "Ok") {
             this.$message.success("success")
-            this.queryWorkflow()
+            this.getTableData()
           }
         },
         errFn: () => {
@@ -89,7 +118,7 @@ export default {
         data: { id: row.id },
         fn: res => {
           this.$message.success("success")
-          this.queryWorkflow()
+          this.getTableData()
         },
         errFn: () => {
           this.$message.error("Fail")

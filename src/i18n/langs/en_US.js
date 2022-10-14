@@ -85,6 +85,7 @@ const en_US = {
       about: "About",
       rename: "Rename",
       delete: "Delete",
+      openTerminal: "Open Terminal",
     },
     iam: {
       navEntryName: "Products and Services",

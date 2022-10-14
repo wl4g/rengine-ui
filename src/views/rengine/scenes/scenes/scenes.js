@@ -1,3 +1,5 @@
+import { string } from "../../../../utils"
+
 export default {
   name: "ProjectList",
   data() {
@@ -43,14 +45,19 @@ export default {
       this.getTableData()
     },
     getTableData() {
+      // let data = {
+      //   orgCode: "string",
+      //   name: this.searchParams.name,
+      //   labels: "bbb",
+      //   enable: 1,
+      //   pageNum: this.pageNum,
+      //   pageSize: 10,
+      //   scenesId: "string",
+      // }
       let data = {
-        orgCode: "string",
-        name: this.searchParams.name,
         labels: "string",
-        enable: 1,
-        pageNum: this.pageNum,
-        pageSize: 10,
-        scenesId: "string",
+        pageNum: 0,
+        pageSize: 1,
       }
       this.$$api_modules_queryScenes({
         data: data,

@@ -85,6 +85,7 @@ const zh_CN = {
       about: "关于",
       rename: "重命名",
       delete: "删除",
+      openTerminal: "打开终端",
     },
     iam: {
       navEntryName: "产品与服务",

@@ -1,12 +1,21 @@
 <template>
   <div>
+    <el-form :inline="true" :model="searchParams" class="searchbar" @keyup.enter.native.prevent="onSubmit()">
+      <el-form-item :label="$t('message.common.name')">
+        <el-input v-model="searchParams.name" placeholder="e.g. example" style="width:165px"></el-input>
+      </el-form-item>
+      <input hidden></input>
+      <el-form-item>
+        <el-button @click="onSubmit" type="success" :loading="loading">{{$t('message.common.search')}}</el-button>
+      </el-form-item>
+
+      <el-button type="primary" style='float:right;margin-right:20px' @click="addRules()">+ Add</el-button>
+    </el-form>
     <div class="query">
       <div class="query-left">
         <div class="line"></div>
         {{$t('message.common.total')}}： <span class="number">{{total}}</span>
       </div>
-      <!-- 新增按钮 -->
-      <el-button type="primary" @click="addRules()"> + </el-button>
     </div>
     <div>
       <template>
@@ -19,7 +28,7 @@
             </template>
           </el-table-column>
           <el-table-column prop="name" label="规则名称" width=150></el-table-column>
-          <el-table-column prop="enabled" label="状态" width=150></el-table-column>
+          <el-table-column prop="enable" label="状态" width=150></el-table-column>
           <el-table-column prop="labels" label="标签" width=150></el-table-column>
           <el-table-column prop="updateDate" label="更新时间" width=150></el-table-column>
           <el-table-column prop="updateBy" label="更新人" width=150></el-table-column>
@@ -55,10 +64,10 @@
           </el-col>
           <el-col :span="24">
             <el-form-item label="状态">
-              <el-select v-model="saveForm.enabled" collapse-tags placeholder="请选择">
-                <el-option label="停用" :value="0"></el-option>
-                <el-option label="启用" :value="1"></el-option>
-              </el-select>
+              <el-radio-group v-model="saveForm.enable" class="radio-style">
+                <el-radio :label="0">停用</el-radio>
+                <el-radio :label="1">启用</el-radio>
+              </el-radio-group>
             </el-form-item>
           </el-col>
           <el-col :span="24">
@@ -91,16 +100,26 @@ export default RuleModeles
 </script>
 
 <style>
-.labels-style {
+.labels-style,
+.scenesCodeLabel {
   display: flex;
   align-items: center;
 }
 .labels-style .el-input {
-  width: 80%;
+  width: 84%;
 }
 .labels-style i {
   font-size: 16px;
   line-height: 2 !important;
+  cursor: pointer;
+  padding-left: 4px;
+}
+.radio-style .el-radio {
+  margin-right: 14px;
+}
+.scenesCodeLabel a {
+  width: 18%;
+  padding-left: 4px;
   cursor: pointer;
 }
 </style>

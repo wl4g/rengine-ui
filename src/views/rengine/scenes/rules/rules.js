@@ -6,10 +6,17 @@ export default {
       projectId: "",
       dialogTitle: "新增",
       dialogVisible: false,
+      scenesId: "",
       saveForm: {
         enabled: 1,
         labels: [""],
       },
+      searchParams: {
+        name: "",
+      },
+      pageNum: 0,
+      total: 0,
+      loading: false,
     }
   },
   activated() {
@@ -19,6 +26,11 @@ export default {
   },
   mounted() {
     // this.tableData = getTableData()
+  },
+  activated() {
+    this.scenesId = this.$route.query.id
+    this.saveForm = { ...this.saveForm, scenesId: this.scenesId }
+    this.getTableData(this.scenesId)
   },
   filters: {
     ellipsis(value) {
@@ -31,16 +43,27 @@ export default {
     },
   },
   methods: {
+    onSubmit() {
+      this.loading = true
+      this.getTableData()
+    },
     getTableData(val) {
       let data = {
-        ruleId: val,
-        name: "string",
+        ruleId: 0,
+        scenesId: this.scenesId ? this.scenesId : 0,
+        name: this.searchParams.name,
         labels: "string",
+        pageNum: this.pageNum,
+        pageSize: 10,
+        orgCode: "string",
+        enable: true,
       }
       this.$$api_modules_queryrules({
         data: data,
         fn: res => {
+          this.loading = false
           this.tableData = res.data.records
+          this.total = res.data.total
         },
         errFn: () => {},
       })
@@ -49,14 +72,25 @@ export default {
       this.dialogVisible = true
       this.dialogTitle = "新增"
       this.saveForm = {
-        enabled: 1,
+        orgCode: "string",
+        enable: 1,
         labels: [""],
+        uploadIds: [0],
       }
     },
     editRules(row) {
       this.dialogVisible = true
       this.dialogTitle = "编辑"
-      this.saveForm = { ...row }
+      row.scenesId = row.scenesId ? row.scenesId : this.scenesId
+      this.saveForm = {
+        id: row.id,
+        orgCode: row.orgCode,
+        enable: row.enable,
+        labels: row.labels,
+        remark: row.remark,
+        name: row.name,
+        uploadIds: row.uploadIds,
+      }
     },
     addLabels() {
       this.saveForm.labels.push("")
@@ -95,7 +129,6 @@ export default {
       })
     },
     showRuleDetail(row) {
-      console.info("11111", row)
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
           "iam:securityGateway:ruleEngine:ruleEngineDetail"

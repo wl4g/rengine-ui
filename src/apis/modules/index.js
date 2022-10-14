@@ -48,6 +48,7 @@ export default [
     method: "workflowDel",
     path: "/workflow/delete",
     type: "post",
+    dataType: "json",
     sysModule: global.modules,
   },
 
@@ -72,6 +73,7 @@ export default [
     method: "ruleDel",
     path: "/rule/delete",
     type: "post",
+    dataType: "json",
     sysModule: global.modules,
   },
 
@@ -131,6 +133,14 @@ export default [
     method: "queryUpload",
     path: "/upload/query",
     type: "get",
+    sysModule: global.modules,
+  },
+  {
+    name: "自定义库列表删除",
+    method: "uploadDel",
+    path: "/upload/delete",
+    type: "get",
+    dataType: "json",
     sysModule: global.modules,
   },
 ]
