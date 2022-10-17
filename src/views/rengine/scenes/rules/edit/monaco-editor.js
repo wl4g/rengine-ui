@@ -186,11 +186,11 @@ export default {
       editMenuList: [
         {
           name: "revoke",
-          shortcutsName: "Crtl+Z",
+          shortcutsName: "Ctrl + Z",
         },
         {
           name: "recover",
-          shortcutsName: "Crtl+Y",
+          shortcutsName: "Ctrl + Y",
         },
         {
           name: null,
@@ -198,15 +198,15 @@ export default {
         },
         {
           name: "cut",
-          shortcutsName: "Ctrl+X",
+          shortcutsName: "Ctrl + X",
         },
         {
           name: "copy",
-          shortcutsName: "Ctrl+C",
+          shortcutsName: "Ctrl + C",
         },
         {
           name: "paste",
-          shortcutsName: "Ctrl+V",
+          shortcutsName: "Ctrl + V",
         },
         {
           name: null,
@@ -214,11 +214,11 @@ export default {
         },
         {
           name: "find",
-          shortcutsName: "Ctrl+F",
+          shortcutsName: "Ctrl + F",
         },
         {
           name: "replace",
-          shortcutsName: "Ctrl+H",
+          shortcutsName: "Ctrl + H",
         },
       ],
     }

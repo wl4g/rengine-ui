@@ -75,6 +75,14 @@ export default function ({
   if (!dataType || dataType == "query") {
     if (reqDataKey == "params") {
       if (typeof data == "object") {
+        // for (let key in data) {
+        //   if (typeof data[key] == "object") {
+        //     data[key].forEach((item, index) => {
+        //       data[`${key}${index + 1}`] = item
+        //     })
+        //     data[key] = undefined
+        //   }
+        // }
         options[reqDataKey] = data
       } else {
         var additionParams = ""

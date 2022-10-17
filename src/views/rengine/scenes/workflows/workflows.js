@@ -91,6 +91,13 @@ export default {
         ruleIds: row.ruleIds,
       }
     },
+    toDesign() {
+      this.$router.push({
+        path: this.permitutil.getRoutePathByPermission(
+          "rengine:workflows:design"
+        ),
+      })
+    },
     addLabels() {
       this.saveForm.labels.push("")
     },

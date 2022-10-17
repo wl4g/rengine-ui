@@ -40,7 +40,7 @@
           <el-table-column prop="remark" label="备注" width=150></el-table-column>
           <el-table-column :label="$t('message.common.operation')" min-width="170">
             <template slot-scope="scope">
-              <a class="table_a">设计</a>|
+              <a class="table_a" @click="toDesign(scope.row)">设计</a>|
               <a class="table_a" @click="showRuleDetail(scope.row)">禁用</a>|
               <a class="table_a" @click="editWorkflow(scope.row)">编辑</a>|
               <el-popover placement="top" width="160" v-model="visible">

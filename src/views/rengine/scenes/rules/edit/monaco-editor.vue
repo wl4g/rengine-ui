@@ -50,9 +50,9 @@
           <div v-for="(item,index) in editMenuList">
             <el-menu-item v-if="item.name" :index="`2-${index+1}`" @click="clickShortcuts(item.name)">
               <template slot="title">
-                <div class="save">
+                <div class="shortcuts">
                   <div>{{$t(`message.monaco.${item.name}`)}}</div>
-                  <div>{{item.shortcutsName}}</div>
+                  <div class="shortcutsName">{{item.shortcutsName}}</div>
                 </div>
               </template>
             </el-menu-item>
@@ -397,5 +397,13 @@ ul.el-menu.el-menu--popup.el-menu--popup-right-start {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.shortcuts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .shortcutsName {
+    color: #b3abab;
+  }
 }
 </style>

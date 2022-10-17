@@ -1,17 +1,7921 @@
+[{
+  "id": "editor.action.toggleTabFocusMode",
+  "label": "Toggle Tab Key Moves Focus",
+  "alias": "Toggle Tab Key Moves Focus",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
 {
-  "code": 200,
-  "message": "Ok",
-  "status": "Normal",
-  "data": {
-    "s3": {
-      "endPoint": "10.0.0.163",
-      "port": 19000,
-      "useSSL": false,
-      "accessKey": "test12345678",
-      "secretKey": "test12345678",
-      "partSize": "20M",
-      "sessionToken": "",
-      "bucketName": "test12345678"
-    }
+  "id": "editor.action.showAccessibilityHelp",
+  "label": "Show Accessibility Help",
+  "alias": "Show Accessibility Help",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.setSelectionAnchor",
+  "label": "Set Selection Anchor",
+  "alias": "Set Selection Anchor",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.selectToBracket",
+  "label": "Select to Bracket",
+  "alias": "Select to Bracket",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.jumpToBracket",
+  "label": "Go to Bracket",
+  "alias": "Go to Bracket",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveCarretLeftAction",
+  "label": "Move Selected Text Left",
+  "alias": "Move Selected Text Left",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveCarretRightAction",
+  "label": "Move Selected Text Right",
+  "alias": "Move Selected Text Right",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.clipboardCopyWithSyntaxHighlightingAction",
+  "label": "Copy With Syntax Highlighting",
+  "alias": "Copy With Syntax Highlighting",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.quickFix",
+  "label": "Quick Fix...",
+  "alias": "Quick Fix...",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasCodeActionsProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.refactor",
+  "label": "Refactor...",
+  "alias": "Refactor...",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasCodeActionsProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.sourceAction",
+  "label": "Source Action...",
+  "alias": "Source Action...",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasCodeActionsProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.commentLine",
+  "label": "Toggle Line Comment",
+  "alias": "Toggle Line Comment",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.addCommentLine",
+  "label": "Add Line Comment",
+  "alias": "Add Line Comment",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.removeCommentLine",
+  "label": "Remove Line Comment",
+  "alias": "Remove Line Comment",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.blockComment",
+  "label": "Toggle Block Comment",
+  "alias": "Toggle Block Comment",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.showContextMenu",
+  "label": "Show Editor Context Menu",
+  "alias": "Show Editor Context Menu",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "cursorUndo",
+  "label": "Cursor Undo",
+  "alias": "Cursor Undo",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "cursorRedo",
+  "label": "Cursor Redo",
+  "alias": "Cursor Redo",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "actions.find",
+  "label": "Find",
+  "alias": "Find",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "actions.findWithSelection",
+  "label": "Find With Selection",
+  "alias": "Find With Selection",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.nextMatchFindAction",
+  "label": "Find Next",
+  "alias": "Find Next",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.previousMatchFindAction",
+  "label": "Find Previous",
+  "alias": "Find Previous",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.nextSelectionMatchFindAction",
+  "label": "Find Next Selection",
+  "alias": "Find Next Selection",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.previousSelectionMatchFindAction",
+  "label": "Find Previous Selection",
+  "alias": "Find Previous Selection",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.startFindReplaceAction",
+  "label": "Replace",
+  "alias": "Replace",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.unfold",
+  "label": "Unfold",
+  "alias": "Unfold",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.unfoldRecursively",
+  "label": "Unfold Recursively",
+  "alias": "Unfold Recursively",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.fold",
+  "label": "Fold",
+  "alias": "Fold",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldRecursively",
+  "label": "Fold Recursively",
+  "alias": "Fold Recursively",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldAll",
+  "label": "Fold All",
+  "alias": "Fold All",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.unfoldAll",
+  "label": "Unfold All",
+  "alias": "Unfold All",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldAllBlockComments",
+  "label": "Fold All Block Comments",
+  "alias": "Fold All Block Comments",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldAllMarkerRegions",
+  "label": "Fold All Regions",
+  "alias": "Fold All Regions",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.unfoldAllMarkerRegions",
+  "label": "Unfold All Regions",
+  "alias": "Unfold All Regions",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.toggleFold",
+  "label": "Toggle Fold",
+  "alias": "Toggle Fold",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel1",
+  "label": "Fold Level 1",
+  "alias": "Fold Level 1",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel2",
+  "label": "Fold Level 2",
+  "alias": "Fold Level 2",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel3",
+  "label": "Fold Level 3",
+  "alias": "Fold Level 3",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel4",
+  "label": "Fold Level 4",
+  "alias": "Fold Level 4",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel5",
+  "label": "Fold Level 5",
+  "alias": "Fold Level 5",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel6",
+  "label": "Fold Level 6",
+  "alias": "Fold Level 6",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.foldLevel7",
+  "label": "Fold Level 7",
+  "alias": "Fold Level 7",
+  "_precondition": {
+    "key": "foldingEnabled",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.fontZoomIn",
+  "label": "Editor Font Zoom In",
+  "alias": "Editor Font Zoom In",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.fontZoomOut",
+  "label": "Editor Font Zoom Out",
+  "alias": "Editor Font Zoom Out",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.fontZoomReset",
+  "label": "Editor Font Zoom Reset",
+  "alias": "Editor Font Zoom Reset",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.formatDocument",
+  "label": "Format Document",
+  "alias": "Format Document",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasDocumentFormattingProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      },
+      {
+        "key": "inCompositeEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.formatSelection",
+  "label": "Format Selection",
+  "alias": "Format Selection",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasDocumentSelectionFormattingProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.marker.next",
+  "label": "Go to Next Problem (Error, Warning, Info)",
+  "alias": "Go to Next Problem (Error, Warning, Info)",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.marker.prev",
+  "label": "Go to Previous Problem (Error, Warning, Info)",
+  "alias": "Go to Previous Problem (Error, Warning, Info)",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.marker.nextInFiles",
+  "label": "Go to Next Problem in Files (Error, Warning, Info)",
+  "alias": "Go to Next Problem in Files (Error, Warning, Info)",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.marker.prevInFiles",
+  "label": "Go to Previous Problem in Files (Error, Warning, Info)",
+  "alias": "Go to Previous Problem in Files (Error, Warning, Info)",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.gotoLine",
+  "label": "Go to Line/Column...",
+  "alias": "Go to Line/Column...",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.revealDefinition",
+  "label": "Go to Definition",
+  "alias": "Go to Definition",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasDefinitionProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "isInEmbeddedEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.revealDefinitionAside",
+  "label": "Open Definition to the Side",
+  "alias": "Open Definition to the Side",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasDefinitionProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "isInEmbeddedEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.peekDefinition",
+  "label": "Peek Definition",
+  "alias": "Peek Definition",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasDefinitionProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "inReferenceSearchEditor",
+        "type": 3
+      },
+      {
+        "key": "isInEmbeddedEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.goToReferences",
+  "label": "Go to References",
+  "alias": "Go to References",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasReferenceProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "inReferenceSearchEditor",
+        "type": 3
+      },
+      {
+        "key": "isInEmbeddedEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.referenceSearch.trigger",
+  "label": "Peek References",
+  "alias": "Peek References",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasReferenceProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "inReferenceSearchEditor",
+        "type": 3
+      },
+      {
+        "key": "isInEmbeddedEditor",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.showHover",
+  "label": "Show Hover",
+  "alias": "Show Hover",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.showDefinitionPreviewHover",
+  "label": "Show Definition Preview Hover",
+  "alias": "Show Definition Preview Hover",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.inPlaceReplace.up",
+  "label": "Replace with Previous Value",
+  "alias": "Replace with Previous Value",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.inPlaceReplace.down",
+  "label": "Replace with Next Value",
+  "alias": "Replace with Next Value",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.indentationToSpaces",
+  "label": "Convert Indentation to Spaces",
+  "alias": "Convert Indentation to Spaces",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.indentationToTabs",
+  "label": "Convert Indentation to Tabs",
+  "alias": "Convert Indentation to Tabs",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.indentUsingTabs",
+  "label": "Indent Using Tabs",
+  "alias": "Indent Using Tabs",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.indentUsingSpaces",
+  "label": "Indent Using Spaces",
+  "alias": "Indent Using Spaces",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.detectIndentation",
+  "label": "Detect Indentation from Content",
+  "alias": "Detect Indentation from Content",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.reindentlines",
+  "label": "Reindent Lines",
+  "alias": "Reindent Lines",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.reindentselectedlines",
+  "label": "Reindent Selected Lines",
+  "alias": "Reindent Selected Lines",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.inspectTokens",
+  "label": "Developer: Inspect Tokens",
+  "alias": "Developer: Inspect Tokens",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.copyLinesUpAction",
+  "label": "Copy Line Up",
+  "alias": "Copy Line Up",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.copyLinesDownAction",
+  "label": "Copy Line Down",
+  "alias": "Copy Line Down",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.duplicateSelection",
+  "label": "Duplicate Selection",
+  "alias": "Duplicate Selection",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveLinesUpAction",
+  "label": "Move Line Up",
+  "alias": "Move Line Up",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveLinesDownAction",
+  "label": "Move Line Down",
+  "alias": "Move Line Down",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.sortLinesAscending",
+  "label": "Sort Lines Ascending",
+  "alias": "Sort Lines Ascending",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.sortLinesDescending",
+  "label": "Sort Lines Descending",
+  "alias": "Sort Lines Descending",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.trimTrailingWhitespace",
+  "label": "Trim Trailing Whitespace",
+  "alias": "Trim Trailing Whitespace",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.deleteLines",
+  "label": "Delete Line",
+  "alias": "Delete Line",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.indentLines",
+  "label": "Indent Line",
+  "alias": "Indent Line",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.outdentLines",
+  "label": "Outdent Line",
+  "alias": "Outdent Line",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.insertLineBefore",
+  "label": "Insert Line Above",
+  "alias": "Insert Line Above",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.insertLineAfter",
+  "label": "Insert Line Below",
+  "alias": "Insert Line Below",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "deleteAllLeft",
+  "label": "Delete All Left",
+  "alias": "Delete All Left",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "deleteAllRight",
+  "label": "Delete All Right",
+  "alias": "Delete All Right",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.joinLines",
+  "label": "Join Lines",
+  "alias": "Join Lines",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.transpose",
+  "label": "Transpose characters around the cursor",
+  "alias": "Transpose characters around the cursor",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.transformToUppercase",
+  "label": "Transform to Uppercase",
+  "alias": "Transform to Uppercase",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.transformToLowercase",
+  "label": "Transform to Lowercase",
+  "alias": "Transform to Lowercase",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.transformToTitlecase",
+  "label": "Transform to Title Case",
+  "alias": "Transform to Title Case",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.openLink",
+  "label": "Open Link",
+  "alias": "Open Link",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.insertCursorAbove",
+  "label": "Add Cursor Above",
+  "alias": "Add Cursor Above",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.insertCursorBelow",
+  "label": "Add Cursor Below",
+  "alias": "Add Cursor Below",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.insertCursorAtEndOfEachLineSelected",
+  "label": "Add Cursors to Line Ends",
+  "alias": "Add Cursors to Line Ends",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.addSelectionToNextFindMatch",
+  "label": "Add Selection To Next Find Match",
+  "alias": "Add Selection To Next Find Match",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.addSelectionToPreviousFindMatch",
+  "label": "Add Selection To Previous Find Match",
+  "alias": "Add Selection To Previous Find Match",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveSelectionToNextFindMatch",
+  "label": "Move Last Selection To Next Find Match",
+  "alias": "Move Last Selection To Next Find Match",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.moveSelectionToPreviousFindMatch",
+  "label": "Move Last Selection To Previous Find Match",
+  "alias": "Move Last Selection To Previous Find Match",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.selectHighlights",
+  "label": "Select All Occurrences of Find Match",
+  "alias": "Select All Occurrences of Find Match",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.addCursorsToBottom",
+  "label": "Add Cursors To Bottom",
+  "alias": "Add Cursors To Bottom",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.addCursorsToTop",
+  "label": "Add Cursors To Top",
+  "alias": "Add Cursors To Top",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.onTypeRename",
+  "label": "On Type Rename Symbol",
+  "alias": "On Type Rename Symbol",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasRenameProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.triggerParameterHints",
+  "label": "Trigger Parameter Hints",
+  "alias": "Trigger Parameter Hints",
+  "_precondition": {
+    "key": "editorHasSignatureHelpProvider",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.quickCommand",
+  "label": "Command Palette",
+  "alias": "Command Palette",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.quickOutline",
+  "label": "Go to Symbol...",
+  "alias": "Go to Symbol...",
+  "_precondition": {
+    "key": "editorHasDocumentSymbolProvider",
+    "type": 2,
+    "_defaultValue": false
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.rename",
+  "label": "Rename Symbol",
+  "alias": "Rename Symbol",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasRenameProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.smartSelect.expand",
+  "label": "Expand Selection",
+  "alias": "Expand Selection",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.smartSelect.shrink",
+  "label": "Shrink Selection",
+  "alias": "Shrink Selection",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.triggerSuggest",
+  "label": "Trigger Suggest",
+  "alias": "Trigger Suggest",
+  "_precondition": {
+    "expr": [{
+        "key": "editorHasCompletionItemProvider",
+        "type": 2,
+        "_defaultValue": false
+      },
+      {
+        "key": "editorReadonly",
+        "type": 3
+      }
+    ],
+    "type": 6
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.toggleHighContrast",
+  "label": "Toggle High Contrast Theme",
+  "alias": "Toggle High Contrast Theme",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.transposeLetters",
+  "label": "Transpose Letters",
+  "alias": "Transpose Letters",
+  "_precondition": {
+    "key": "editorReadonly",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.wordHighlight.trigger",
+  "label": "Trigger Symbol Highlight",
+  "alias": "Trigger Symbol Highlight",
+  "_precondition": {
+    "key": "hasWordHighlights",
+    "type": 3
+  },
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
+  }
+},
+{
+  "id": "editor.action.forceRetokenize",
+  "label": "Developer: Force Retokenize",
+  "alias": "Developer: Force Retokenize",
+  "_contextKeyService": {
+    "_onDidChangeContext": {
+      "_disposed": false,
+      "_options": {},
+      "_isPaused": 0,
+      "_eventQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      },
+      "_listeners": {
+        "_first": {
+          "next": {},
+          "prev": {}
+        },
+        "_last": {
+          "next": {},
+          "prev": {}
+        },
+        "_size": 1
+      },
+      "_deliveryQueue": {
+        "_first": {},
+        "_last": {},
+        "_size": 0
+      }
+    },
+    "_isDisposed": false,
+    "_myContextId": 1,
+    "_parent": {
+      "_onDidChangeContext": {
+        "_disposed": false,
+        "_options": {},
+        "_isPaused": 0,
+        "_eventQueue": {
+          "_first": {},
+          "_last": {},
+          "_size": 0
+        },
+        "_listeners": {
+          "_first": {
+            "next": {},
+            "prev": {}
+          },
+          "_last": {
+            "next": {},
+            "prev": {}
+          },
+          "_size": 1
+        }
+      },
+      "_isDisposed": false,
+      "_myContextId": 0,
+      "_contexts": {},
+      "_toDispose": {
+        "_toDispose": {},
+        "_isDisposed": false
+      },
+      "_lastContextId": 1
+    },
+    "_domNode": {}
   }
 }
+]
