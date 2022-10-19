@@ -74,5 +74,8 @@ export default {
         this.data.nodeList.push(v)
       })
     },
+    save() {
+      console.info(this.data)
+    },
   },
 }

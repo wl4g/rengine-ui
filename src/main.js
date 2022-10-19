@@ -23,7 +23,6 @@ import "codemirror/lib/codemirror.css"
 import "@toast-ui/editor/dist/toastui-editor.css"
 import { Editor } from "@toast-ui/vue-editor"
 import "@toast-ui/editor/dist/i18n/zh-cn.js"
-import "../src/views/rengine/scenes/workflows/design/instrustion"
 //工作流
 import jsPlumb from "jsplumb"
 Vue.prototype.$jsPlumb = jsPlumb.jsPlumb
@@ -35,8 +34,6 @@ Vue.config.productionTip = false
 
 Vue.use(Contextmenu)
 Vue.use(ViewUI)
-
-Vue.use(Contextmenu)
 
 // import ace from 'ace-builds'
 // Vue.use(ace)

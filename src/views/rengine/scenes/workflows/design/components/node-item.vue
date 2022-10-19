@@ -1,22 +1,14 @@
 <template>
-  <div class="node-item" ref="node"
-    :class="[(isActive || isSelected) ? 'active' : '']"
-    :style="flowNodeContainer"
-    v-click-outside="setNotActive"
-    @click="setActive"
-    @mouseenter="showAnchor"
-    @mouseleave="hideAnchor"
-    @dblclick.prevent="editNode"
-    @contextmenu.prevent="onContextmenu">
-    <div class="log-wrap">
-      <img :src="node.logImg" alt="">
+  <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', node.type == 'judge'? 'node-item1':'']" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @dblclick.prevent="editNode" @contextmenu.prevent="onContextmenu">
+    <div class="log-wrap" v-if="node.type !='judge'">
+      <div style="text-align:center;line-height: 40px;">{{node.symbol}}</div>
     </div>
     <div class="nodeName">{{node.nodeName}}</div>
-      <!--连线用--//触发连线的区域-->
-      <div class="node-anchor anchor-top" v-show="mouseEnter"></div>
-      <div class="node-anchor anchor-right" v-show="mouseEnter"></div>
-      <div class="node-anchor anchor-bottom" v-show="mouseEnter"></div>
-      <div class="node-anchor anchor-left" v-show="mouseEnter"></div>
+    <!--连线用--//触发连线的区域-->
+    <div class="node-anchor anchor-top" v-show="mouseEnter"></div>
+    <div class="node-anchor anchor-right" v-show="mouseEnter"></div>
+    <div class="node-anchor anchor-bottom" v-show="mouseEnter"></div>
+    <div class="node-anchor anchor-left" v-show="mouseEnter"></div>
   </div>
 </template>
 
@@ -25,7 +17,7 @@ import ClickOutside from 'vue-click-outside'
 export default {
   name: "nodeItem",
   props: {
-      node: Object
+    node: Object
   },
   directives: {
     ClickOutside
@@ -33,7 +25,7 @@ export default {
   computed: {
     // 节点容器样式
     flowNodeContainer: {
-      get() {
+      get () {
         return {
           top: this.node.top,
           left: this.node.left
@@ -41,38 +33,52 @@ export default {
       }
     }
   },
-  data() {
+  data () {
     return {
       mouseEnter: false,
       isActive: false,
+      dialogVisible: false,
       isSelected: false
     };
   },
+  mounted () {
+    console.info(this.node)
+  },
   methods: {
-    showAnchor() {
+    showAnchor () {
       this.mouseEnter = true
     },
-    hideAnchor() {
+    hideAnchor () {
       this.mouseEnter = false
     },
-    onContextmenu() {
+    onContextmenu () {
       this.$contextmenu({
-        items: [{
-          label: '删除',
-          disabled: false,
-          icon: "",
-          onClick: () => {
-            this.deleteNode()
+        items: [
+          {
+            label: '编辑',
+            disabled: false,
+            icon: "",
+            onClick: () => {
+              this.editNode()
+            }
+          },
+          {
+            label: '删除',
+            disabled: false,
+            icon: "",
+            onClick: () => {
+              this.deleteNode()
+            }
           }
-        }],
+        ],
         event,
         customClass: 'custom-class',
         zIndex: 9999,
         minWidth: 180
       })
     },
-    setActive() {
-      if(window.event.ctrlKey){
+    setActive () {
+      if (window.event.ctrlKey) {
         this.isSelected = !this.isSelected
         return false
       }
@@ -80,32 +86,38 @@ export default {
       this.isSelected = false
       setTimeout(() => {
         this.$emit("changeLineState", this.node.id, true)
-      },0)
+      }, 0)
     },
-    setNotActive() {
-      if(!window.event.ctrlKey){
+    setNotActive () {
+      if (!window.event.ctrlKey) {
         this.isSelected = false
       }
-      if(!this.isActive) {
+      if (!this.isActive) {
         return
       }
       this.$emit("changeLineState", this.node.id, false)
       this.isActive = false
     },
-    editNode() {
+    editNode () {
+      this.isActive = false
+      console.info(this.node.nodeName)
       this.newNodeName = this.node.nodeName
       this.$Modal.confirm({
         render: (h) => {
+          let that = this
+          console.info("aaaa", that.newNodeName)
           return h('Input', {
-              props: {
-                value: this.newNodeName,
-                autofocus: true
-              },
-              on: {
-                input: (val) => {
-                  this.newNodeName = val;
-                }
+
+            props: {
+              value: that.newNodeName,
+              autofocus: true
+            },
+            on: {
+              input: (val) => {
+                console.info(val)
+                that.newNodeName = val;
               }
+            }
           })
         },
         onOk: () => {
@@ -114,7 +126,7 @@ export default {
         }
       })
     },
-    deleteNode() {
+    deleteNode () {
       this.$emit("deleteNode", this.node)
     }
   }
@@ -122,6 +134,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 @labelColor: #409eff;
 @nodeSize: 20px;
 @viewSize: 10px;
@@ -139,14 +159,14 @@ export default {
   z-index: 9995;
   &:hover {
     z-index: 9998;
-    .delete-btn{
+    .delete-btn {
       display: block;
     }
   }
-  .log-wrap{
+  .log-wrap {
     width: 40px;
     height: 40px;
-    border-right: 1px solid  #b7b6b6;
+    border-right: 1px solid #b7b6b6;
   }
   .nodeName {
     flex-grow: 1;
@@ -167,29 +187,39 @@ export default {
     z-index: 9999;
     background: -webkit-radial-gradient(sandybrown 10%, white 30%, #9a54ff 60%);
   }
-  .anchor-top{
-    top: calc((@nodeSize / 2)*-1);
+  .anchor-top {
+    top: calc((@nodeSize / 2) * -1);
     left: 50%;
-    margin-left: calc((@nodeSize/2)*-1);
+    margin-left: calc((@nodeSize / 2) * -1);
   }
-  .anchor-right{
+  .anchor-right {
     top: 50%;
-    right: calc((@nodeSize / 2)*-1);
-    margin-top: calc((@nodeSize / 2)*-1);
+    right: calc((@nodeSize / 2) * -1);
+    margin-top: calc((@nodeSize / 2) * -1);
   }
-  .anchor-bottom{
-    bottom: calc((@nodeSize / 2)*-1);
+  .anchor-bottom {
+    bottom: calc((@nodeSize / 2) * -1);
     left: 50%;
-    margin-left: calc((@nodeSize / 2)*-1);
+    margin-left: calc((@nodeSize / 2) * -1);
   }
-  .anchor-left{
+  .anchor-left {
     top: 50%;
-    left: calc((@nodeSize / 2)*-1);
-    margin-top: calc((@nodeSize / 2)*-1);
+    left: calc((@nodeSize / 2) * -1);
+    margin-top: calc((@nodeSize / 2) * -1);
   }
 }
-.active{
+.node-item1 {
+  width: 40px;
+  border-radius: 50%;
+  .log-wrap {
+    border-right: 0 !important;
+  }
+  .nodeName {
+    text-align: center;
+  }
+}
+.active {
   border: 1px dashed @labelColor;
-  box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
 }
 </style>

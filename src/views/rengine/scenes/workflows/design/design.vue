@@ -1,20 +1,31 @@
 <template>
-  <div class="flow_region">
-    <div class="nodes-wrap">
-      <div v-for="item in nodeTypeList" :key="item.type" class="node" draggable="true" @dragstart="drag($event, item)">
-        <div class="log">
-          <img :src="item.logImg" alt="">
+  <div>
+    <div class="flow_region">
+      <!-- 左侧组件 -->
+      <div class="nodes-wrap">
+        <div v-for="item in nodeTypeList" :key="item.type">
+          <div class="node" draggable="true" @dragstart="drag($event, item)" v-if="item.type !='judge'">
+            <div class="log">
+              <div style="text-align:center;border-right: 1px #cbc7c7 solid;">{{item.symbol}}</div>
+            </div>
+            <div class="name">{{item.typeName}}</div>
+          </div>
+          <div>
+            <div class="node1" draggable="true" @dragstart="drag($event, item)" v-if="item.type =='judge'">
+              <div class="name">{{item.typeName}}</div>
+            </div>
+          </div>
         </div>
-        <div class="name">{{item.typeName}}</div>
+      </div>
+      <div id="flowWrap" ref="flowWrap" class="flow-wrap" @drop="drop($event)" @dragover="allowDrop($event)">
+        <div id="flow">
+          <div v-show="auxiliaryLine.isShowXLine" class="auxiliary-line-x" :style="{width: auxiliaryLinePos.width, top:auxiliaryLinePos.y + 'px', left: auxiliaryLinePos.offsetX + 'px'}"></div>
+          <div v-show="auxiliaryLine.isShowYLine" class="auxiliary-line-y" :style="{height: auxiliaryLinePos.height, left:auxiliaryLinePos.x + 'px', top: auxiliaryLinePos.offsetY + 'px'}"></div>
+          <flowNode v-for="item in data.nodeList" :id="item.id" :key="item.id" :node="item" @setNodeName="setNodeName" @deleteNode="deleteNode" @changeLineState="changeLineState"></flowNode>
+        </div>
       </div>
     </div>
-    <div id="flowWrap" ref="flowWrap" class="flow-wrap" @drop="drop($event)" @dragover="allowDrop($event)">
-      <div id="flow">
-        <div v-show="auxiliaryLine.isShowXLine" class="auxiliary-line-x" :style="{width: auxiliaryLinePos.width, top:auxiliaryLinePos.y + 'px', left: auxiliaryLinePos.offsetX + 'px'}"></div>
-        <div v-show="auxiliaryLine.isShowYLine" class="auxiliary-line-y" :style="{height: auxiliaryLinePos.height, left:auxiliaryLinePos.x + 'px', top: auxiliaryLinePos.offsetY + 'px'}"></div>
-        <flowNode v-for="item in data.nodeList" :id="item.id" :key="item.id" :node="item" @setNodeName="setNodeName" @deleteNode="deleteNode" @changeLineState="changeLineState"></flowNode>
-      </div>
-    </div>
+    <el-button @click="save" class="save">确定</el-button>
   </div>
 </template>
 
@@ -36,7 +47,7 @@ body {
 .flow_region {
   display: flex;
   width: 90%;
-  height: 85vh;
+  height: 83vh;
   margin: 20px auto;
   border: 1px solid #ccc;
   .nodes-wrap {
@@ -63,6 +74,27 @@ body {
       .name {
         width: 0;
         flex-grow: 1;
+        text-align: center;
+      }
+    }
+    .node1 {
+      display: flex;
+      height: 40px;
+      width: 40px;
+      margin: 5px auto;
+      border: 1px solid #ccc;
+      line-height: 40px;
+      border-radius: 50%;
+      &:hover {
+        cursor: grab;
+      }
+      &:active {
+        cursor: grabbing;
+      }
+      .name {
+        width: 40px;
+        height: 40px;
+        text-align: center;
       }
     }
   }
@@ -89,6 +121,9 @@ body {
       }
     }
   }
+}
+.save {
+  float: right;
 }
 </style>
 

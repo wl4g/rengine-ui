@@ -1,95 +1,177 @@
 {
   "nodeList": [
     {
-      "type": "start",
-      "typeName": "开始",
-      "nodeName": "开始",
-      "id": "34v56ha2l9c000",
-      "top": "160px",
-      "left": "100px"
+      "type": "ALL",
+      "typeName": "ALL",
+      "nodeName": "温度是否低于80摄氏度",
+      "symbol": "&",
+      "id": "o9jqu454ihs0",
+      "top": "40px",
+      "left": "280px"
     },
     {
-      "type": "dataSet",
-      "typeName": "文件",
-      "nodeName": "文件",
-      "id": "5sdjugrcqhc000",
-      "top": "160px",
-      "left": "315px"
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "是否广州地区",
+      "symbol": "&&",
+      "id": "52fhbef4l08000",
+      "top": "155px",
+      "left": "280px"
     },
     {
       "type": "encode",
-      "typeName": "加密",
-      "nodeName": "加密",
-      "id": "3atqi5p6oa4000",
-      "top": "80px",
-      "left": "600px"
+      "typeName": "",
+      "nodeName": "告警",
+      "logImg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDEgMjAxIj48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9LmNscy0yLC5jbHMtM3tmaWxsOm5vbmU7c3Ryb2tlOiMwOTIzNzA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtM3tzdHJva2Utd2lkdGg6MC44M3B4O30uY2xzLTR7ZmlsbDojYTM3NWU5O30uY2xzLTV7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+NuaVsOaNruagoemqjDwvdGl0bGU+PGcgaWQ9IuWbvuWxgl8yIiBkYXRhLW5hbWU9IuWbvuWxgiAyIj48ZyBpZD0i5Zu+5bGCXzEtMiIgZGF0YS1uYW1lPSLlm77lsYIgMSI+PGcgY2xhc3M9ImNscy0xIj48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xMDAuNS41aDBhMTAwLDEwMCwwLDAsMSwxMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAtMTAwaDBBMTAwLDEwMCwwLDAsMSwxMDAuNS41WiIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMzMuODMiIHk9IjMzLjgzIiB3aWR0aD0iMTMzLjMzIiBoZWlnaHQ9IjEzMy4zMyIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNDQuOTMiIHk9IjQ0LjkzIiB3aWR0aD0iMTExLjEzIiBoZWlnaHQ9IjExMS4xMyIvPjwvZz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0xNTAuNDIsNDQuOTNINTAuNzdhNS4yNCw1LjI0LDAsMCwwLTUuMjcsNS4zMlYxNTAuNzRhNS4yNCw1LjI0LDAsMCwwLDUuMjcsNS4zMmg5OS40NGE1LjI0LDUuMjQsMCwwLDAsNS4yNy01LjMyVjUwLjI2QTUsNSwwLDAsMCwxNTAuNDIsNDQuOTNaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMTM2LjI5LDc3Ljc5YTUuMzYsNS4zNiwwLDAsMC03LjU0LjQ0TDk5LDExMS43M2wtMTYuOS0xNWE1LjM2LDUuMzYsMCwwLDAtNy41NC40NGgwYTUuMzYsNS4zNiwwLDAsMCwuNDQsNy41NGwyMC44MywxOC41M2E1LjM2LDUuMzYsMCwwLDAsNi43NS4yOCw1LjI5LDUuMjksMCwwLDAsMS4wNS0uOWwzMy4xMy0zNy4yNUE1LjM2LDUuMzYsMCwwLDAsMTM2LjI5LDc3Ljc5WiIvPjwvZz48L2c+PC9zdmc+",
+      "log_bg_color": "rgba(163, 117, 233, 0.2)",
+      "id": "5bc3u77dwpw000",
+      "top": "100px",
+      "left": "520px"
     },
     {
-      "type": "personService",
-      "typeName": "个人服务",
-      "nodeName": "个人服务",
-      "id": "49vcu89p5q0000",
-      "top": "245px",
-      "left": "600px"
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "夏季",
+      "symbol": "&&",
+      "id": "54wn299f14g000",
+      "top": "240px",
+      "left": "180px"
     },
     {
-      "type": "arrange",
-      "typeName": "清洗",
-      "nodeName": "清洗",
-      "id": "1jhiilb0t2tc00",
-      "top": "180px",
-      "left": "880px"
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "非夏季",
+      "symbol": "&&",
+      "id": "3i6nutwnuj0000",
+      "top": "240px",
+      "left": "400px"
     },
     {
-      "type": "end",
-      "typeName": "结束",
-      "nodeName": "结束",
-      "id": "1ogr3wzy6zhc00",
-      "top": "180px",
-      "left": "1160px"
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "夜晚",
+      "symbol": "&&",
+      "id": "9ybem0k758s00",
+      "top": "320px",
+      "left": "80px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "白天",
+      "symbol": "&&",
+      "id": "1hyfldcospmo00",
+      "top": "320px",
+      "left": "250px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "55℃ <温度 < 65℃",
+      "symbol": "&&",
+      "id": "3rfkitub0co000",
+      "top": "415px",
+      "left": "5px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "温度不在范围内",
+      "symbol": "&&",
+      "id": "3b8qp3f89j4000",
+      "top": "415px",
+      "left": "180px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "不告警",
+      "logImg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDEgMjAxIj48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9LmNscy0yLC5jbHMtM3tmaWxsOm5vbmU7c3Ryb2tlOiMwOTIzNzA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtM3tzdHJva2Utd2lkdGg6MC44M3B4O30uY2xzLTR7ZmlsbDojYTM3NWU5O30uY2xzLTV7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+NuaVsOaNruagoemqjDwvdGl0bGU+PGcgaWQ9IuWbvuWxgl8yIiBkYXRhLW5hbWU9IuWbvuWxgiAyIj48ZyBpZD0i5Zu+5bGCXzEtMiIgZGF0YS1uYW1lPSLlm77lsYIgMSI+PGcgY2xhc3M9ImNscy0xIj48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xMDAuNS41aDBhMTAwLDEwMCwwLDAsMSwxMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAtMTAwaDBBMTAwLDEwMCwwLDAsMSwxMDAuNS41WiIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMzMuODMiIHk9IjMzLjgzIiB3aWR0aD0iMTMzLjMzIiBoZWlnaHQ9IjEzMy4zMyIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNDQuOTMiIHk9IjQ0LjkzIiB3aWR0aD0iMTExLjEzIiBoZWlnaHQ9IjExMS4xMyIvPjwvZz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0xNTAuNDIsNDQuOTNINTAuNzdhNS4yNCw1LjI0LDAsMCwwLTUuMjcsNS4zMlYxNTAuNzRhNS4yNCw1LjI0LDAsMCwwLDUuMjcsNS4zMmg5OS40NGE1LjI0LDUuMjQsMCwwLDAsNS4yNy01LjMyVjUwLjI2QTUsNSwwLDAsMCwxNTAuNDIsNDQuOTNaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMTM2LjI5LDc3Ljc5YTUuMzYsNS4zNiwwLDAsMC03LjU0LjQ0TDk5LDExMS43M2wtMTYuOS0xNWE1LjM2LDUuMzYsMCwwLDAtNy41NC40NGgwYTUuMzYsNS4zNiwwLDAsMCwuNDQsNy41NGwyMC44MywxOC41M2E1LjM2LDUuMzYsMCwwLDAsNi43NS4yOCw1LjI5LDUuMjksMCwwLDAsMS4wNS0uOWwzMy4xMy0zNy4yNUE1LjM2LDUuMzYsMCwwLDAsMTM2LjI5LDc3Ljc5WiIvPjwvZz48L2c+PC9zdmc+",
+      "log_bg_color": "rgba(163, 117, 233, 0.2)",
+      "id": "54zvghow4n4000",
+      "top": "490px",
+      "left": "5px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "告警",
+      "logImg": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDEgMjAxIj48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9LmNscy0yLC5jbHMtM3tmaWxsOm5vbmU7c3Ryb2tlOiMwOTIzNzA7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtM3tzdHJva2Utd2lkdGg6MC44M3B4O30uY2xzLTR7ZmlsbDojYTM3NWU5O30uY2xzLTV7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48dGl0bGU+NuaVsOaNruagoemqjDwvdGl0bGU+PGcgaWQ9IuWbvuWxgl8yIiBkYXRhLW5hbWU9IuWbvuWxgiAyIj48ZyBpZD0i5Zu+5bGCXzEtMiIgZGF0YS1uYW1lPSLlm77lsYIgMSI+PGcgY2xhc3M9ImNscy0xIj48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0xMDAuNS41aDBhMTAwLDEwMCwwLDAsMSwxMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAsMTAwaDBhMTAwLDEwMCwwLDAsMS0xMDAtMTAwaDBBMTAwLDEwMCwwLDAsMSwxMDAuNS41WiIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMzMuODMiIHk9IjMzLjgzIiB3aWR0aD0iMTMzLjMzIiBoZWlnaHQ9IjEzMy4zMyIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iNDQuOTMiIHk9IjQ0LjkzIiB3aWR0aD0iMTExLjEzIiBoZWlnaHQ9IjExMS4xMyIvPjwvZz48cGF0aCBjbGFzcz0iY2xzLTQiIGQ9Ik0xNTAuNDIsNDQuOTNINTAuNzdhNS4yNCw1LjI0LDAsMCwwLTUuMjcsNS4zMlYxNTAuNzRhNS4yNCw1LjI0LDAsMCwwLDUuMjcsNS4zMmg5OS40NGE1LjI0LDUuMjQsMCwwLDAsNS4yNy01LjMyVjUwLjI2QTUsNSwwLDAsMCwxNTAuNDIsNDQuOTNaIi8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMTM2LjI5LDc3Ljc5YTUuMzYsNS4zNiwwLDAsMC03LjU0LjQ0TDk5LDExMS43M2wtMTYuOS0xNWE1LjM2LDUuMzYsMCwwLDAtNy41NC40NGgwYTUuMzYsNS4zNiwwLDAsMCwuNDQsNy41NGwyMC44MywxOC41M2E1LjM2LDUuMzYsMCwwLDAsNi43NS4yOCw1LjI5LDUuMjksMCwwLDAsMS4wNS0uOWwzMy4xMy0zNy4yNUE1LjM2LDUuMzYsMCwwLDAsMTM2LjI5LDc3Ljc5WiIvPjwvZz48L2c+PC9zdmc+",
+      "log_bg_color": "rgba(163, 117, 233, 0.2)",
+      "id": "bq80173gme800",
+      "top": "495px",
+      "left": "180px"
     }
   ],
   "lineList": [
     {
-      "from": "34v56ha2l9c000",
-      "to": "5sdjugrcqhc000",
+      "from": "o9jqu454ihs0",
+      "to": "5bc3u77dwpw000",
       "label": "连线名称",
-      "id": "5n6pp5xqd6s000",
+      "id": "17n1doa0tns000",
       "Remark": ""
     },
     {
-      "from": "5sdjugrcqhc000",
-      "to": "3atqi5p6oa4000",
+      "from": "o9jqu454ihs0",
+      "to": "52fhbef4l08000",
       "label": "连线名称",
-      "id": "2a0ya9j1kev400",
+      "id": "4x3fu79jwxs000",
       "Remark": ""
     },
     {
-      "from": "5sdjugrcqhc000",
-      "to": "49vcu89p5q0000",
+      "from": "52fhbef4l08000",
+      "to": "54wn299f14g000",
       "label": "连线名称",
-      "id": "zoisvo5gpvk00",
+      "id": "38grlaoe1co000",
       "Remark": ""
     },
     {
-      "from": "3atqi5p6oa4000",
-      "to": "1jhiilb0t2tc00",
+      "from": "52fhbef4l08000",
+      "to": "3i6nutwnuj0000",
       "label": "连线名称",
-      "id": "4xkb3dju1g0000",
+      "id": "2m24e5nyixw000",
       "Remark": ""
     },
     {
-      "from": "49vcu89p5q0000",
-      "to": "1jhiilb0t2tc00",
+      "from": "54wn299f14g000",
+      "to": "9ybem0k758s00",
       "label": "连线名称",
-      "id": "ldc917l47w000",
+      "id": "34gqzsa96xe000",
       "Remark": ""
     },
     {
-      "from": "1jhiilb0t2tc00",
-      "to": "1ogr3wzy6zhc00",
+      "from": "54wn299f14g000",
+      "to": "1hyfldcospmo00",
       "label": "连线名称",
-      "id": "478galw3u34000",
+      "id": "4m0txs5man8000",
+      "Remark": ""
+    },
+    {
+      "from": "9ybem0k758s00",
+      "to": "3rfkitub0co000",
+      "label": "连线名称",
+      "id": "qplxmhwrdrk00",
+      "Remark": ""
+    },
+    {
+      "from": "9ybem0k758s00",
+      "to": "3b8qp3f89j4000",
+      "label": "连线名称",
+      "id": "3qd1dj1taqu000",
+      "Remark": ""
+    },
+    {
+      "from": "3rfkitub0co000",
+      "to": "54zvghow4n4000",
+      "label": "连线名称",
+      "id": "3ljmqhxrnx4000",
+      "Remark": ""
+    },
+    {
+      "from": "3b8qp3f89j4000",
+      "to": "bq80173gme800",
+      "label": "连线名称",
+      "id": "282sn10pv57o00",
       "Remark": ""
     }
   ]
