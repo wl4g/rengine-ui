@@ -1,5 +1,3 @@
-import { string } from "../../../../utils"
-
 export default {
   name: "ProjectList",
   data() {

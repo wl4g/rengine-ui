@@ -102,6 +102,7 @@ export default {
           {
             name: "命中率",
             type: "line",
+            yAxisIndex: 1,
             data: [],
           },
         ],
