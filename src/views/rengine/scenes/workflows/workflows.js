@@ -91,11 +91,12 @@ export default {
         ruleIds: row.ruleIds,
       }
     },
-    toDesign() {
+    toDesign(row) {
       this.$router.push({
         path: this.permitutil.getRoutePathByPermission(
           "rengine:workflows:design"
         ),
+        query: { name: row.name },
       })
     },
     addLabels() {

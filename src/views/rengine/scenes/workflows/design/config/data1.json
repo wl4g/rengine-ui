@@ -1,0 +1,172 @@
+{
+  "nodeList": [
+    {
+      "type": "ALL",
+      "typeName": "ALL",
+      "nodeName": "近期维修次数是否 >20",
+      "symbol": "&",
+      "id": "4yhhrdco6zk000",
+      "top": "180px",
+      "left": "155px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "更换",
+      "id": "2wrhmnwwtji000",
+      "top": "180px",
+      "left": "420px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "定期维保",
+      "symbol": "&&",
+      "id": "1ck77vntmow000",
+      "top": "280px",
+      "left": "155px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "是否室内",
+      "symbol": "&&",
+      "id": "2ojpd5vi02o000",
+      "top": "375px",
+      "left": "5px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "AND",
+      "symbol": "&&",
+      "id": "3pu77a40fz0000",
+      "top": "380px",
+      "left": "275px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "是否工作3年",
+      "symbol": "&&",
+      "id": "2c6y57qo0rr400",
+      "top": "465px",
+      "left": "-140px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "AND",
+      "symbol": "&&",
+      "id": "2iweo12rbrm000",
+      "top": "465px",
+      "left": "60px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "近期维修次数  <7",
+      "symbol": "&&",
+      "id": "4z4sjfbh428000",
+      "top": "560px",
+      "left": "-240px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "近期维修次数>7",
+      "symbol": "&&",
+      "id": "4s5jr4wfv1g000",
+      "top": "560px",
+      "left": "-75px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "更换",
+      "id": "3m8xmcxuq7u000",
+      "top": "645px",
+      "left": "-240px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "更换",
+      "id": "4d6x4t0l918000",
+      "top": "640px",
+      "left": "-75px"
+    }
+  ],
+  "lineList": [
+    {
+      "from": "4yhhrdco6zk000",
+      "to": "2wrhmnwwtji000",
+      "label": "连线名称",
+      "id": "24ryarzne1r400",
+      "Remark": ""
+    },
+    {
+      "from": "4yhhrdco6zk000",
+      "to": "1ck77vntmow000",
+      "label": "连线名称",
+      "id": "4qznsz5t80s000",
+      "Remark": ""
+    },
+    {
+      "from": "1ck77vntmow000",
+      "to": "2ojpd5vi02o000",
+      "label": "连线名称",
+      "id": "5s1o6c7clp8000",
+      "Remark": ""
+    },
+    {
+      "from": "1ck77vntmow000",
+      "to": "3pu77a40fz0000",
+      "label": "连线名称",
+      "id": "3b5lgahq70c000",
+      "Remark": ""
+    },
+    {
+      "from": "2ojpd5vi02o000",
+      "to": "2c6y57qo0rr400",
+      "label": "连线名称",
+      "id": "30ewrfmkbpc000",
+      "Remark": ""
+    },
+    {
+      "from": "2ojpd5vi02o000",
+      "to": "2iweo12rbrm000",
+      "label": "连线名称",
+      "id": "2vlb6llll5k000",
+      "Remark": ""
+    },
+    {
+      "from": "2c6y57qo0rr400",
+      "to": "4z4sjfbh428000",
+      "label": "连线名称",
+      "id": "2snhtyzoe74000",
+      "Remark": ""
+    },
+    {
+      "from": "2c6y57qo0rr400",
+      "to": "4s5jr4wfv1g000",
+      "label": "连线名称",
+      "id": "1rzih04f53eo00",
+      "Remark": ""
+    },
+    {
+      "from": "4z4sjfbh428000",
+      "to": "3m8xmcxuq7u000",
+      "label": "连线名称",
+      "id": "3cwdm4b8zv0000",
+      "Remark": ""
+    },
+    {
+      "from": "4s5jr4wfv1g000",
+      "to": "4d6x4t0l918000",
+      "label": "连线名称",
+      "id": "4jfjz9calpu000",
+      "Remark": ""
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "nodeList": [
+      {
+          "type": "ALL",
+          "typeName": "ALL",
+          "nodeName": "可用人数 > 需要人数",
+          "symbol": "&",
+          "id": "airrz63s1ks00",
+          "top": "100px",
+          "left": "320px"
+      },
+      {
+          "type": "AND",
+          "typeName": "AND",
+          "nodeName": "工作时间 < 接单时间",
+          "symbol": "&&",
+          "id": "idu82wk5ovs00",
+          "top": "180px",
+          "left": "320px"
+      },
+      {
+          "type": "ALL",
+          "typeName": "ALL",
+          "nodeName": "审核驳回",
+          "symbol": "&",
+          "id": "1us3gwohr8rk00",
+          "top": "100px",
+          "left": "555px"
+      },
+      {
+          "type": "ALL",
+          "typeName": "ALL",
+          "nodeName": "是否老客户",
+          "symbol": "&",
+          "id": "2gj661uhqt1c00",
+          "top": "260px",
+          "left": "320px"
+      },
+      {
+          "type": "ALL",
+          "typeName": "ALL",
+          "nodeName": "老客户",
+          "symbol": "&",
+          "id": "5a9jzoywito000",
+          "top": "360px",
+          "left": "200px"
+      },
+      {
+          "type": "AND",
+          "typeName": "AND",
+          "nodeName": "新客户",
+          "symbol": "&&",
+          "id": "122ojl95ke8000",
+          "top": "360px",
+          "left": "420px"
+      },
+      {
+          "type": "AND",
+          "typeName": "AND",
+          "nodeName": "1.5*成本 < 接单利润",
+          "symbol": "&&",
+          "id": "4pt5jcmw3d4000",
+          "top": "460px",
+          "left": "100px"
+      },
+      {
+          "type": "encode",
+          "typeName": "",
+          "nodeName": "审核通过",
+          "id": "135kfbld74wg0",
+          "top": "580px",
+          "left": "20px"
+      },
+      {
+          "type": "encode",
+          "typeName": "",
+          "nodeName": "审核驳回",
+          "id": "2ax3v353p5zw00",
+          "top": "580px",
+          "left": "200px"
+      },
+      {
+          "type": "AND",
+          "typeName": "AND",
+          "nodeName": "2.5*成本 < 接单利润",
+          "symbol": "&&",
+          "id": "2bxuv7j4qiv400",
+          "top": "460px",
+          "left": "385px"
+      },
+      {
+          "type": "encode",
+          "typeName": "",
+          "nodeName": "审核通过",
+          "id": "4v85bg9fvny000",
+          "top": "580px",
+          "left": "360px"
+      },
+      {
+          "type": "encode",
+          "typeName": "",
+          "nodeName": "审核驳回",
+          "id": "11qg2jx2zb0000",
+          "top": "580px",
+          "left": "540px"
+      }
+  ],
+  "lineList": [
+      {
+          "from": "airrz63s1ks00",
+          "to": "idu82wk5ovs00",
+          "label": "连线名称",
+          "id": "1g4ykfu23thc00",
+          "Remark": ""
+      },
+      {
+          "from": "airrz63s1ks00",
+          "to": "1us3gwohr8rk00",
+          "label": "连线名称",
+          "id": "3wh8uadico2000",
+          "Remark": ""
+      },
+      {
+          "from": "idu82wk5ovs00",
+          "to": "1us3gwohr8rk00",
+          "label": "连线名称",
+          "id": "423l13n3740000",
+          "Remark": ""
+      },
+      {
+          "from": "idu82wk5ovs00",
+          "to": "2gj661uhqt1c00",
+          "label": "连线名称",
+          "id": "41jlgeik8so000",
+          "Remark": ""
+      },
+      {
+          "from": "2gj661uhqt1c00",
+          "to": "5a9jzoywito000",
+          "label": "连线名称",
+          "id": "4vi2rt6xgbg000",
+          "Remark": ""
+      },
+      {
+          "from": "2gj661uhqt1c00",
+          "to": "122ojl95ke8000",
+          "label": "连线名称",
+          "id": "11cr24d0moa800",
+          "Remark": ""
+      },
+      {
+          "from": "5a9jzoywito000",
+          "to": "4pt5jcmw3d4000",
+          "label": "连线名称",
+          "id": "2o2bb1q8nns000",
+          "Remark": ""
+      },
+      {
+          "from": "4pt5jcmw3d4000",
+          "to": "135kfbld74wg0",
+          "label": "连线名称",
+          "id": "d170dzhhl5400",
+          "Remark": ""
+      },
+      {
+          "from": "4pt5jcmw3d4000",
+          "to": "2ax3v353p5zw00",
+          "label": "连线名称",
+          "id": "4ht3ub640bo000",
+          "Remark": ""
+      },
+      {
+          "from": "122ojl95ke8000",
+          "to": "2bxuv7j4qiv400",
+          "label": "连线名称",
+          "id": "1kh154w25ra800",
+          "Remark": ""
+      },
+      {
+          "from": "2bxuv7j4qiv400",
+          "to": "4v85bg9fvny000",
+          "label": "连线名称",
+          "id": "5n8cqphgn58000",
+          "Remark": ""
+      },
+      {
+          "from": "2bxuv7j4qiv400",
+          "to": "11qg2jx2zb0000",
+          "label": "连线名称",
+          "id": "5s0bba2blqs000",
+          "Remark": ""
+      }
+  ]
+}

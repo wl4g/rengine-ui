@@ -1,0 +1,109 @@
+{
+  "nodeList": [
+    {
+      "type": "ALL",
+      "typeName": "ALL",
+      "nodeName": "预算金额 < 剩余预算金额",
+      "symbol": "&",
+      "id": "3rj6ggk29l4000",
+      "top": "535px",
+      "left": "980px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "电脑 预算5000<X<20000",
+      "symbol": "&&",
+      "id": "4cwhqmddndu000",
+      "top": "620px",
+      "left": "980px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "联想电脑 6000<X<10000",
+      "symbol": "&&",
+      "id": "2k56ptsu4ye000",
+      "top": "695px",
+      "left": "895px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "审核驳回",
+      "id": "3b3ge5zwzoy000",
+      "top": "535px",
+      "left": "1260px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "员工级别",
+      "symbol": "&&",
+      "id": "3uc0rc754ii000",
+      "top": "780px",
+      "left": "820px"
+    },
+    {
+      "type": "encode",
+      "typeName": "",
+      "nodeName": "审核批准",
+      "id": "1ilfz5wcv4f400",
+      "top": "880px",
+      "left": "820px"
+    },
+    {
+      "type": "AND",
+      "typeName": "AND",
+      "nodeName": "非员工级别",
+      "symbol": "&&",
+      "id": "2o329ibzl72000",
+      "top": "780px",
+      "left": "980px"
+    }
+  ],
+  "lineList": [
+    {
+      "from": "3rj6ggk29l4000",
+      "to": "4cwhqmddndu000",
+      "label": "连线名称",
+      "id": "r5eoiwv3kfk00",
+      "Remark": ""
+    },
+    {
+      "from": "3rj6ggk29l4000",
+      "to": "3b3ge5zwzoy000",
+      "label": "连线名称",
+      "id": "5t60ykt0d0k000",
+      "Remark": ""
+    },
+    {
+      "from": "4cwhqmddndu000",
+      "to": "2k56ptsu4ye000",
+      "label": "连线名称",
+      "id": "5guwdw7uj18000",
+      "Remark": ""
+    },
+    {
+      "from": "2k56ptsu4ye000",
+      "to": "3uc0rc754ii000",
+      "label": "连线名称",
+      "id": "1vle3u8ri3sw00",
+      "Remark": ""
+    },
+    {
+      "from": "3uc0rc754ii000",
+      "to": "1ilfz5wcv4f400",
+      "label": "连线名称",
+      "id": "11z8vxmuujlc00",
+      "Remark": ""
+    },
+    {
+      "from": "2k56ptsu4ye000",
+      "to": "2o329ibzl72000",
+      "label": "连线名称",
+      "id": "j9upgpp46wg00",
+      "Remark": ""
+    }
+  ]
+}

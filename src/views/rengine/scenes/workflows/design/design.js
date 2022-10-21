@@ -8,6 +8,7 @@ import {
 } from "./config/commonConfig"
 import methods from "./config/methods"
 import data from "./config/data.json"
+import data1 from "./config/data1.json"
 import flowNode from "./components/node-item"
 export default {
   name: "FlowEdit",
@@ -50,14 +51,30 @@ export default {
       },
     }
   },
-  mounted() {
-    this.jsPlumb = jsPlumb.getInstance()
-    this.initNodeTypeObj()
-    this.initNode()
-    this.fixNodesPosition()
-    this.$nextTick(() => {
-      this.init()
+  beforeRouteEnter(to, from, next) {
+    next(that => {
+      console.log("每次进入路由执行", that)
+      // 每次进入路由执行
+      if (that.jsPlumb) {
+        $("#flowWrap").html("")
+      }
+      that.jsPlumb = jsPlumb.getInstance()
+      that.initNodeTypeObj()
+      that.initNode()
+      that.fixNodesPosition()
+      that.$nextTick(() => {
+        that.init()
+      })
     })
+  },
+  mounted() {
+    // this.jsPlumb = jsPlumb.getInstance()
+    // this.initNodeTypeObj()
+    // this.initNode()
+    // this.fixNodesPosition()
+    // this.$nextTick(() => {
+    //   this.init()
+    // })
   },
   methods: {
     ...methods,
@@ -67,8 +84,10 @@ export default {
       })
     },
     initNode() {
-      this.data.lineList = data.lineList
-      data.nodeList.map(v => {
+      let dataName = this.$route.query.name
+      let dataJson = dataName == "设备更换" ? data1 : data
+      this.data.lineList = dataJson.lineList
+      dataJson.nodeList.map(v => {
         v.logImg = this.nodeTypeObj[v.type].logImg
         v.log_bg_color = this.nodeTypeObj[v.type].log_bg_color
         this.data.nodeList.push(v)

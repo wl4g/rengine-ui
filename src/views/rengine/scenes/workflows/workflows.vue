@@ -85,7 +85,7 @@
           </el-col>
           <el-col :span="24">
             <el-form-item label="备注" prop="remark">
-              <el-input v-model="saveForm.remark" placeholder="请输入备注"></el-input>
+              <el-input type="textarea" v-model="saveForm.remark" placeholder="请输入备注"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
