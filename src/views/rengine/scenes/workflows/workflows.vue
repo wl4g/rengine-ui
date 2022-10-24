@@ -4,7 +4,7 @@
       <el-form-item :label="$t('message.common.name')">
         <el-input v-model="searchParams.name" placeholder="e.g. example" style="width:165px"></el-input>
       </el-form-item>
-      <input hidden></input>
+      <input hidden />
       <el-form-item>
         <el-button @click="onSubmit" type="success" :loading="loading">{{$t('message.common.search')}}</el-button>
       </el-form-item>

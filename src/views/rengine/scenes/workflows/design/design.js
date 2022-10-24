@@ -9,6 +9,8 @@ import {
 import methods from "./config/methods"
 import data from "./config/data.json"
 import data1 from "./config/data1.json"
+import data2 from "./config/data2.json"
+import data3 from "./config/data3.json"
 import flowNode from "./components/node-item"
 export default {
   name: "FlowEdit",
@@ -53,11 +55,7 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     next(that => {
-      console.log("每次进入路由执行", that)
       // 每次进入路由执行
-      if (that.jsPlumb) {
-        $("#flowWrap").html("")
-      }
       that.jsPlumb = jsPlumb.getInstance()
       that.initNodeTypeObj()
       that.initNode()
@@ -67,17 +65,17 @@ export default {
       })
     })
   },
-  mounted() {
-    // this.jsPlumb = jsPlumb.getInstance()
-    // this.initNodeTypeObj()
-    // this.initNode()
-    // this.fixNodesPosition()
-    // this.$nextTick(() => {
-    //   this.init()
-    // })
+  //离开页面时执行
+  beforeRouteLeave(to, from, next) {
+    let that = this
+    console.log("守卫完成", that.data)
+    that.jsPlumb.clear()
+    that.data.nodeList = []
+    that.data.lineList = []
+    next()
   },
+  mounted() {},
   methods: {
-    ...methods,
     initNodeTypeObj() {
       nodeTypeList.map(v => {
         this.nodeTypeObj[v.type] = v
@@ -86,13 +84,29 @@ export default {
     initNode() {
       let dataName = this.$route.query.name
       let dataJson = dataName == "设备更换" ? data1 : data
+      switch (dataName) {
+        case "设备更换":
+          dataJson = data1
+          break
+        case "string":
+          dataJson = data
+          break
+        case "购买审核":
+          dataJson = data2
+          break
+        case "接单审核":
+          dataJson = data3
+          break
+      }
       this.data.lineList = dataJson.lineList
+      console.info("datajson", dataJson)
       dataJson.nodeList.map(v => {
-        v.logImg = this.nodeTypeObj[v.type].logImg
-        v.log_bg_color = this.nodeTypeObj[v.type].log_bg_color
+        // v.logImg = this.nodeTypeObj[v.type].logImg
+        // v.log_bg_color = this.nodeTypeObj[v.type].log_bg_color
         this.data.nodeList.push(v)
       })
     },
+    ...methods,
     save() {
       console.info(this.data)
     },
