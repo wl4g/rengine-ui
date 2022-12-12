@@ -4,10 +4,7 @@ export const jsplumbSetting = {
   Anchors: ["TopCenter", "RightMiddle", "BottomCenter", "LeftMiddle"],
   Container: "flow",
   // 连线的样式 StateMachine、Flowchart,有四种默认类型：Bezier（贝塞尔曲线），Straight（直线），Flowchart（流程图），State machine（状态机）
-  Connector: [
-    "Flowchart",
-    { cornerRadius: 5, alwaysRespectStubs: true, stub: 5 },
-  ],
+  Connector: ["Bezier", { cornerRadius: 5, alwaysRespectStubs: true, stub: 5 }],
   // 鼠标不能拖动删除线
   ConnectionsDetachable: false,
   // 删除线的时候节点不删除

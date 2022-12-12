@@ -1,9 +1,9 @@
 <template>
-  <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', node.type == 'judge'? 'node-item1':'']" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @dblclick.prevent="editNode" @contextmenu.prevent="onContextmenu">
-    <div class="log-wrap" v-if="node.type !='judge'">
-      <div style="text-align:center;line-height: 40px;">{{node.symbol}}</div>
+  <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', `node1_${node['@type']}`]" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @dblclick.prevent="editNode" @contextmenu.prevent="onContextmenu">
+    <div :class="`node1_${node['@type']}`">
+      <div :class="`name_${node['@type']}`">{{node[`@type`]}}</div>
     </div>
-    <div class="nodeName">{{node.nodeName}}</div>
+    <!-- <div class="nodeName">{{node.name}}</div> -->
     <!--连线用--//触发连线的区域-->
     <div class="node-anchor anchor-top" v-show="mouseEnter"></div>
     <div class="node-anchor anchor-right" v-show="mouseEnter"></div>
@@ -43,6 +43,7 @@ export default {
   },
   mounted () {
     console.info(this.node)
+    console.info("11111", this.node[`@type`])
   },
   methods: {
     showAnchor () {
@@ -163,6 +164,7 @@ body {
       display: block;
     }
   }
+
   .log-wrap {
     width: 40px;
     height: 40px;
@@ -221,5 +223,77 @@ body {
 .active {
   border: 1px dashed @labelColor;
   box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
+}
+
+.node1_BOOT {
+  width: 80px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #f5898959;
+  .name_BOOT {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.node1_PROCESS {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #00800059;
+  .name_PROCESS {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.node1_RELATION {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #00800059;
+  transform: rotate(-45deg);
+  margin: 20px auto;
+  .name_RELATION {
+    height: 60px;
+    line-height: 60px;
+    transform: rotate(45deg);
+  }
+}
+.node1_FAILBACK {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #d8f34659;
+  .name_FAILBACK {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.node1_RUN {
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #dde1c959;
+  .name_RUN {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.node1_LOGICAL {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border: #eee 1px solid;
+  background: #dde1c959;
+  border-radius: 50%;
+  .name_LOGICAL {
+    height: 70px;
+    line-height: 70px;
+  }
 }
 </style>

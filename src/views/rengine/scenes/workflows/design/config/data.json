@@ -1,172 +1,258 @@
 {
-  "nodeList": [
-    {
-      "type": "ALL",
-      "typeName": "ALL",
-      "nodeName": "温度是否低于80摄氏度",
-      "symbol": "&",
-      "id": "o9jqu454ihs0",
-      "top": "40px",
-      "left": "280px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "是否广州地区",
-      "symbol": "&&",
-      "id": "52fhbef4l08000",
-      "top": "155px",
-      "left": "280px"
-    },
-    {
-      "type": "encode",
-      "typeName": "",
-      "nodeName": "告警",
-      "id": "5bc3u77dwpw000",
-      "top": "100px",
-      "left": "520px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "夏季",
-      "symbol": "&&",
-      "id": "54wn299f14g000",
-      "top": "240px",
-      "left": "180px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "非夏季",
-      "symbol": "&&",
-      "id": "3i6nutwnuj0000",
-      "top": "240px",
-      "left": "400px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "夜晚",
-      "symbol": "&&",
-      "id": "9ybem0k758s00",
-      "top": "320px",
-      "left": "80px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "白天",
-      "symbol": "&&",
-      "id": "1hyfldcospmo00",
-      "top": "320px",
-      "left": "250px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "55℃ <温度 < 65℃",
-      "symbol": "&&",
-      "id": "3rfkitub0co000",
-      "top": "415px",
-      "left": "5px"
-    },
-    {
-      "type": "AND",
-      "typeName": "AND",
-      "nodeName": "温度不在范围内",
-      "symbol": "&&",
-      "id": "3b8qp3f89j4000",
-      "top": "415px",
-      "left": "180px"
-    },
-    {
-      "type": "encode",
-      "typeName": "",
-      "nodeName": "不告警",
-      "id": "54zvghow4n4000",
-      "top": "490px",
-      "left": "5px"
-    },
-    {
-      "type": "encode",
-      "typeName": "",
-      "nodeName": "告警",
-      "id": "bq80173gme800",
-      "top": "495px",
-      "left": "180px"
-    }
-  ],
-  "lineList": [
-    {
-      "from": "o9jqu454ihs0",
-      "to": "5bc3u77dwpw000",
-      "label": "连线名称",
-      "id": "17n1doa0tns000",
-      "Remark": ""
-    },
-    {
-      "from": "o9jqu454ihs0",
-      "to": "52fhbef4l08000",
-      "label": "连线名称",
-      "id": "4x3fu79jwxs000",
-      "Remark": ""
-    },
-    {
-      "from": "52fhbef4l08000",
-      "to": "54wn299f14g000",
-      "label": "连线名称",
-      "id": "38grlaoe1co000",
-      "Remark": ""
-    },
-    {
-      "from": "52fhbef4l08000",
-      "to": "3i6nutwnuj0000",
-      "label": "连线名称",
-      "id": "2m24e5nyixw000",
-      "Remark": ""
-    },
-    {
-      "from": "54wn299f14g000",
-      "to": "9ybem0k758s00",
-      "label": "连线名称",
-      "id": "34gqzsa96xe000",
-      "Remark": ""
-    },
-    {
-      "from": "54wn299f14g000",
-      "to": "1hyfldcospmo00",
-      "label": "连线名称",
-      "id": "4m0txs5man8000",
-      "Remark": ""
-    },
-    {
-      "from": "9ybem0k758s00",
-      "to": "3rfkitub0co000",
-      "label": "连线名称",
-      "id": "qplxmhwrdrk00",
-      "Remark": ""
-    },
-    {
-      "from": "9ybem0k758s00",
-      "to": "3b8qp3f89j4000",
-      "label": "连线名称",
-      "id": "3qd1dj1taqu000",
-      "Remark": ""
-    },
-    {
-      "from": "3rfkitub0co000",
-      "to": "54zvghow4n4000",
-      "label": "连线名称",
-      "id": "3ljmqhxrnx4000",
-      "Remark": ""
-    },
-    {
-      "from": "3b8qp3f89j4000",
-      "to": "bq80173gme800",
-      "label": "连线名称",
-      "id": "282sn10pv57o00",
-      "Remark": ""
-    }
-  ]
+  "code": 200,
+  "status": "Normal",
+  "requestId": null,
+  "timestamp": 1670489808467,
+  "message": "Ok",
+  "data": {
+    "records": [
+      {
+        "id": 6150868953448448,
+        "orgCode": "top",
+        "enable": 1,
+        "labels": ["test"],
+        "remark": "string",
+        "createBy": null,
+        "createDate": "2022-09-27 12:50:22",
+        "updateBy": null,
+        "updateDate": "2022-09-27 12:50:22",
+        "delFlag": 0,
+        "humanCreateDate": null,
+        "humanUpdateDate": null,
+        "name": "电商充值赠送活动流程",
+        "engine": "JS",
+        "graph": {
+          "nodes": [
+            {
+              "@type": "BOOT",
+              "id": "0",
+              "name": "The Boot",
+              "attributes": {
+                "top": "100px",
+                "color": "#5f5f5f",
+                "left": "-40px"
+              }
+            },
+            {
+              "@type": "PROCESS",
+              "id": "11",
+              "name": "预处理(如篡改当前时间以用于测试目的)",
+              "attributes": {
+                "top": "175px",
+                "color": "#5f5f5f",
+                "left": "-40px"
+              },
+              "ruleId": "6150869239922688"
+            },
+            {
+              "@type": "PROCESS",
+              "id": "21",
+              "name": "当前时间是否满足(10.1~10.8)",
+              "attributes": {
+                "top": "245px",
+                "color": "#5f5f5f",
+                "left": "-40px"
+              },
+              "ruleId": "6169046602203136"
+            },
+            {
+              "@type": "LOGICAL",
+              "id": "31",
+              "name": "ALL_AND逻辑运算",
+              "attributes": {
+                "top": "320px",
+                "color": "#5f5f5f",
+                "left": "-40px"
+              },
+              "logical": "ALL_AND"
+            },
+            {
+              "@type": "LOGICAL",
+              "id": "41",
+              "name": "AND逻辑运算",
+              "attributes": {
+                "top": "420px",
+                "color": "#5f5f5f",
+                "left": "-210px"
+              },
+              "logical": "AND"
+            },
+            {
+              "@type": "LOGICAL",
+              "id": "42",
+              "name": "AND逻辑运算",
+              "attributes": {
+                "top": "420px",
+                "color": "#5f5f5f",
+                "left": "130px"
+              },
+              "logical": "AND"
+            },
+            {
+              "@type": "PROCESS",
+              "id": "51",
+              "name": "充值是否>=120元",
+              "attributes": {
+                "top": "505px",
+                "color": "#5f5f5f",
+                "left": "-315px"
+              },
+              "ruleId": "6150869239922688"
+            },
+            {
+              "@type": "LOGICAL",
+              "id": "52",
+              "name": "AND逻辑运算",
+              "attributes": {
+                "top": "505px",
+                "color": "#5f5f5f",
+                "left": "-110px"
+              },
+              "logical": "AND"
+            },
+            {
+              "@type": "PROCESS",
+              "id": "53",
+              "name": "当前时间是否满足(10.5~10.8)",
+              "attributes": {
+                "top": "505px",
+                "color": "#5f5f5f",
+                "left": "35px"
+              },
+              "ruleId": "6169046602203136"
+            },
+            {
+              "@type": "PROCESS",
+              "id": "54",
+              "name": "充值是否>=50元",
+              "attributes": {
+                "top": "505px",
+                "color": "#5f5f5f",
+                "left": "240px"
+              },
+              "ruleId": "6169046602203136"
+            },
+            {
+              "@type": "FAILBACK",
+              "id": "62",
+              "name": "如果赠送余额失败则执行回退规则",
+              "attributes": {
+                "top": "600px",
+                "color": "#5f5f5f",
+                "left": "-110px"
+              },
+              "ruleId": "6169046816178176"
+            },
+            {
+              "@type": "RUN",
+              "id": "63",
+              "name": "赠送20积分",
+              "attributes": {
+                "top": "600px",
+                "color": "#5f5f5f",
+                "left": "240px"
+              },
+              "ruleId": "6169046816178176"
+            },
+            {
+              "@type": "RUN",
+              "id": "71",
+              "name": "赠送10元余额",
+              "attributes": {
+                "top": "690px",
+                "color": "#5f5f5f",
+                "left": "-110px"
+              },
+              "ruleId": "6169046816178176"
+            }
+          ],
+          "connections": [
+            {
+              "name": "Unnamed Connection",
+              "to": "11",
+              "from": "0",
+              "id": "100"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "21",
+              "from": "11",
+              "id": "101"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "31",
+              "from": "21",
+              "id": "102"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "41",
+              "from": "31",
+              "id": "103"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "42",
+              "from": "31",
+              "id": "104"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "51",
+              "from": "41",
+              "id": "105"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "52",
+              "from": "41",
+              "id": "106"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "53",
+              "from": "42",
+              "id": "107"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "54",
+              "from": "42",
+              "id": "108"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "61",
+              "from": "51",
+              "id": "109"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "62",
+              "from": "52",
+              "id": "110"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "63",
+              "from": "54",
+              "id": "111"
+            },
+            {
+              "name": "Unnamed Connection",
+              "to": "71",
+              "from": "62",
+              "id": "112"
+            }
+          ]
+        },
+        "rules": null
+      }
+    ],
+    "pageSize": 1,
+    "pageNum": 0,
+    "total": 1,
+    "pages": 1
+  }
 }

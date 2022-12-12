@@ -8,9 +8,9 @@ import {
 } from "./config/commonConfig"
 import methods from "./config/methods"
 import data from "./config/data.json"
-import data1 from "./config/data1.json"
-import data2 from "./config/data2.json"
-import data3 from "./config/data3.json"
+// import data1 from "./config/data1.json"
+// import data2 from "./config/data2.json"
+// import data3 from "./config/data3.json"
 import flowNode from "./components/node-item"
 export default {
   name: "FlowEdit",
@@ -83,31 +83,36 @@ export default {
     },
     initNode() {
       let dataName = this.$route.query.name
-      let dataJson = dataName == "设备更换" ? data1 : data
-      switch (dataName) {
-        case "设备更换":
-          dataJson = data1
-          break
-        case "string":
-          dataJson = data
-          break
-        case "购买审核":
-          dataJson = data2
-          break
-        case "接单审核":
-          dataJson = data3
-          break
-      }
-      this.data.lineList = dataJson.lineList
+      let dataJson = data.data.records[0].graph
+      // switch (dataName) {
+      //   case "设备更换":
+      //     dataJson = data1
+      //     break
+      //   case "string":
+      //     dataJson = data
+      //     break
+      //   case "购买审核":
+      //     dataJson = data2
+      //     break
+      //   case "接单审核":
+      //     dataJson = data3
+      //     break
+      // }
+      this.data.lineList = dataJson.connections
       console.info("datajson", dataJson)
-      dataJson.nodeList.map(v => {
+      dataJson.nodes.map(v => {
         // v.logImg = this.nodeTypeObj[v.type].logImg
         // v.log_bg_color = this.nodeTypeObj[v.type].log_bg_color
+        v = { ...v, ...v.attributes }
+        console.info(v)
         this.data.nodeList.push(v)
       })
     },
     ...methods,
     save() {
+      this.data.nodeList.map(item => {
+        item.attributes = { ...item.attributes, left: item.left, top: item.top }
+      })
       console.info(this.data)
     },
   },
