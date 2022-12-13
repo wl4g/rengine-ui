@@ -231,6 +231,8 @@ const methods = {
       })
     })
     mainContainerWrap.addEventListener("mouseup", function wrapMouseup() {
+      console.info("999999999")
+      this.isClickItem = false
       this.style.cursor = "grab"
     })
   },
@@ -238,7 +240,7 @@ const methods = {
   setNodeName(nodeId, name) {
     this.data.nodeList.some(v => {
       if (v.id === nodeId) {
-        v.nodeName = name
+        v.name = name
         return true
       } else {
         return false
@@ -260,11 +262,14 @@ const methods = {
   },
 
   //更改连线状态
-  changeLineState(nodeId, val) {
-    console.log(val)
+  changeLineState(node, val) {
+    this.isClickItem = true
+    this.isClickItemContent =
+      node.constructor === Object ? node : this.isClickItemContent
+    console.log("isClickItem", node)
     let lines = this.jsPlumb.getAllConnections()
     lines.forEach(line => {
-      if (line.targetId === nodeId || line.sourceId === nodeId) {
+      if (line.targetId === node.id || line.sourceId === node.id) {
         if (val) {
           line.canvas.classList.add("active")
         } else {

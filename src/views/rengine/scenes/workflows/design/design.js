@@ -23,6 +23,42 @@ export default {
       currentItem: null,
       nodeTypeList: nodeTypeList,
       nodeTypeObj: {},
+      menuList: [
+        {
+          name: "保存",
+          key: "save",
+        },
+        {
+          name: "历史工作流",
+          key: "historyWorkFlow",
+        },
+        {
+          name: "导出工作流",
+          key: "exportWorkFlow",
+        },
+      ],
+      isClickItem: false,
+      isClickItemContent: null,
+      oldWorkFlowDialogVisible: false,
+      //form 属性
+      saveForm: {
+        id: "",
+        nameEn: "",
+        organizationCode: "",
+        nameZh: "",
+        parentId: "",
+        type: "",
+        menuIds: [],
+        menuNameStrs: "",
+        roleIds: [],
+        groupExt: {
+          id: "",
+          displayName: "",
+          contact: "",
+          contactPhone: "",
+          address: "",
+        },
+      },
       data: {
         nodeList: [],
         lineList: [],
@@ -114,6 +150,21 @@ export default {
         item.attributes = { ...item.attributes, left: item.left, top: item.top }
       })
       console.info(this.data)
+    },
+    clickMenuItem(val) {
+      console.info("111111", val)
+      switch (val) {
+        case "save":
+          this.save()
+          break
+        case "historyWorkFlow":
+          console.info("historyWorkFlow")
+          this.oldWorkFlowDialogVisible = true
+          break
+
+        default:
+          break
+      }
     },
   },
 }

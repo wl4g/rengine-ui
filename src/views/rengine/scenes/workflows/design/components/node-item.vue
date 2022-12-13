@@ -1,14 +1,14 @@
 <template>
   <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', `node1_${node['@type']}`]" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @dblclick.prevent="editNode" @contextmenu.prevent="onContextmenu">
-    <div :class="`node1_${node['@type']}`">
-      <div :class="`name_${node['@type']}`">{{node[`@type`]}}</div>
+    <div :class="[node['@type'] != 'RELATION' ? `node1_${node['@type']}`:'']">
+      <div :class="`name_all name_${node['@type']}`">{{node[`@type`] == "LOGICAL" ? node.logical + ":" +node.name :node.name}}</div>
     </div>
     <!-- <div class="nodeName">{{node.name}}</div> -->
     <!--连线用--//触发连线的区域-->
-    <div class="node-anchor anchor-top" v-show="mouseEnter"></div>
-    <div class="node-anchor anchor-right" v-show="mouseEnter"></div>
-    <div class="node-anchor anchor-bottom" v-show="mouseEnter"></div>
-    <div class="node-anchor anchor-left" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-top node-anchor-top_${node['@type']}`" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-right node-anchor-right_${node['@type']}`" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-bottom node-anchor-bottom_${node['@type']}`" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-left node-anchor-left_${node['@type']}`" v-show="mouseEnter"></div>
   </div>
 </template>
 
@@ -85,8 +85,9 @@ export default {
       }
       this.isActive = true
       this.isSelected = false
+
       setTimeout(() => {
-        this.$emit("changeLineState", this.node.id, true)
+        this.$emit("changeLineState", this.node, true)
       }, 0)
     },
     setNotActive () {
@@ -101,8 +102,8 @@ export default {
     },
     editNode () {
       this.isActive = false
-      console.info(this.node.nodeName)
-      this.newNodeName = this.node.nodeName
+      console.info(this.node.name)
+      this.newNodeName = this.node.name
       this.$Modal.confirm({
         render: (h) => {
           let that = this
@@ -224,13 +225,18 @@ body {
   border: 1px dashed @labelColor;
   box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
 }
-
+.name_all {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .node1_BOOT {
   width: 80px;
   height: 40px;
   border-radius: 50%;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #f5898959;
   .name_BOOT {
     height: 40px;
@@ -241,7 +247,7 @@ body {
   width: 80px;
   height: 40px;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #00800059;
   .name_PROCESS {
     height: 40px;
@@ -252,11 +258,12 @@ body {
   width: 60px;
   height: 60px;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #00800059;
   transform: rotate(-45deg);
   margin: 20px auto;
   .name_RELATION {
+    width: 80px;
     height: 60px;
     line-height: 60px;
     transform: rotate(45deg);
@@ -266,7 +273,7 @@ body {
   width: 80px;
   height: 40px;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #d8f34659;
   .name_FAILBACK {
     height: 40px;
@@ -277,7 +284,7 @@ body {
   width: 80px;
   height: 40px;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #dde1c959;
   .name_RUN {
     height: 40px;
@@ -288,12 +295,15 @@ body {
   width: 70px;
   height: 70px;
   text-align: center;
-  border: #eee 1px solid;
+  border: #d5d5d5 1px solid;
   background: #dde1c959;
   border-radius: 50%;
   .name_LOGICAL {
     height: 70px;
     line-height: 70px;
   }
+}
+.node-anchor_RELATION {
+  transform: rotate(-45deg);
 }
 </style>
