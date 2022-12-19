@@ -141,14 +141,15 @@ export default {
         enable: true,
         pageNum: 0,
         pageSize: 1,
-        uploadId: "string",
-        scenesId: "string",
+        uploadId: 0,
+        scenesId: 0,
         extension: "string",
         uploadType: "USER_LIBRARY_WITH_GROOVY"
       }
       this.$$api_modules_queryUpload({
         data: data,
         fn: res => {
+          this.$message.success("success")
           this.loading = false
           this.tableData = res.data.records
           this.total = res.data.total

@@ -4,7 +4,10 @@ export const jsplumbSetting = {
   Anchors: ["TopCenter", "RightMiddle", "BottomCenter", "LeftMiddle"],
   Container: "flow",
   // 连线的样式 StateMachine、Flowchart,有四种默认类型：Bezier（贝塞尔曲线），Straight（直线），Flowchart（流程图），State machine（状态机）
-  Connector: ["Bezier", { curviness: 30 }],
+  Connector: [
+    "Bezier",
+    { curviness: 30, cornerRadius: 5, alwaysRespectStubs: true, stub: 5 },
+  ],
   // 鼠标不能拖动删除线
   ConnectionsDetachable: false,
   // 删除线的时候节点不删除
@@ -27,9 +30,9 @@ export const jsplumbSetting = {
   // 绘制线
   PaintStyle: {
     stroke: "#409eff",
-    strokeWidth: 2,
+    strokeWidth: 3,
   },
-  HoverPaintStyle: { stroke: "#ff00cc", strokeWidth: 2 },
+  HoverPaintStyle: { stroke: "#ff00cc", strokeWidth: 4 },
   // 绘制箭头
   Overlays: [
     [

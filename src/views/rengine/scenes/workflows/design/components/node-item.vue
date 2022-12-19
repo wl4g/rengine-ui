@@ -1,14 +1,14 @@
 <template>
-  <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', `node1_${node['@type']}`]" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @dblclick.prevent="editNode" @contextmenu.prevent="onContextmenu">
+  <div class="node-item" ref="node" :class="[(isActive || isSelected) ? 'active' : '', `node1_${node['@type']}`]" :style="flowNodeContainer" v-click-outside="setNotActive" @click="setActive" @mouseenter="showAnchor" @mouseleave="hideAnchor" @contextmenu.prevent="onContextmenu">
     <div :class="[node['@type'] != 'RELATION' ? `node1_${node['@type']}`:'']">
       <div :class="`name_all name_${node['@type']}`">{{node[`@type`] == "LOGICAL" ? node.logical + ":" +node.name :node.name}}</div>
     </div>
     <!-- <div class="nodeName">{{node.name}}</div> -->
     <!--连线用--//触发连线的区域-->
     <div :class="`node-anchor anchor-top node-anchor-top_${node['@type']}`" v-show="mouseEnter"></div>
-    <div :class="`node-anchor anchor-right node-anchor-right_${node['@type']}`" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-right node-anchor-right_${node['@type']}`" v-show="mouseEnter && node['@type'] =='RELATION'"></div>
     <div :class="`node-anchor anchor-bottom node-anchor-bottom_${node['@type']}`" v-show="mouseEnter"></div>
-    <div :class="`node-anchor anchor-left node-anchor-left_${node['@type']}`" v-show="mouseEnter"></div>
+    <div :class="`node-anchor anchor-left node-anchor-left_${node['@type']}`" v-show="mouseEnter   && node['@type'] =='RELATION'"></div>
   </div>
 </template>
 
@@ -42,8 +42,6 @@ export default {
     };
   },
   mounted () {
-    console.info(this.node)
-    console.info("11111", this.node[`@type`])
   },
   methods: {
     showAnchor () {
@@ -107,7 +105,6 @@ export default {
       this.$Modal.confirm({
         render: (h) => {
           let that = this
-          console.info("aaaa", that.newNodeName)
           return h('Input', {
 
             props: {
@@ -123,7 +120,6 @@ export default {
           })
         },
         onOk: () => {
-          console.log(this.newNodeName)
           this.$emit('setNodeName', this.node.id, this.newNodeName)
         }
       })

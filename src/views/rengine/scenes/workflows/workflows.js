@@ -41,13 +41,14 @@ export default {
     },
     getTableData() {
       let data = {
-        workflowId: "string",
-        scenesId: this.scenesId ? this.scenesId : "string",
+        // workflowId: "string",
+        scenesId: this.scenesId ? this.scenesId : 0,
         name: this.searchParams.name,
         labels: "string",
         pageNum: this.pageNum,
         pageSize: 10,
         orgCode: "string",
+        enable: true,
       }
       this.$$api_modules_queryWorkflow({
         data: data,
@@ -96,7 +97,7 @@ export default {
         path: this.permitutil.getRoutePathByPermission(
           "rengine:workflows:design"
         ),
-        query: { name: row.name },
+        query: { id: row.id },
       })
     },
     addLabels() {

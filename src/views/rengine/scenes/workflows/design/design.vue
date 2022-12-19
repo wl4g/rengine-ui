@@ -6,7 +6,7 @@
           电商充值赠送活动流程
         </div>
         <div class="top-menu-right">
-          <div class="top-menu-right-item" v-for="item in menuList" :key="item" @click="clickMenuItem(item.key)">{{item.name}}</div>
+          <div class="top-menu-right-item" v-for="item in menuList" :key="item" @click="clickMenuItem(item.key)"><i :class="`${item.icon} menuIcon`"></i>{{item.name}}</div>
         </div>
       </div>
       <div class="flow_region">
@@ -32,14 +32,20 @@
     </div>
     <div class="right-instructions">
       <div class="right-instructions-top" v-if="isClickItem == false">工作流属性</div>
-      <div class="right-instructions-top right-instructions-top-name" v-else>{{isClickItemContent.name}}</div>
+      <div class="right-instructions-top right-instructions-top-name" v-else>{{isClickItemContent['@type']}}</div>
       <div class="right-instructions-content">
         <div class="instructions-content" v-if="isClickItem == false">
           <div class="instructions-content-item">
             <div class="instructions-content-name">工作流名称
-              <el-popconfirm title="工作流名称">
+              <el-popover placement="top-start" width="200" trigger="click" v-model="visible">
+                <el-input v-model="workflowName" clearable placeholder="请输入内容"></el-input>
+                <div>1-100个字符，以大小写字母、中文或数字开头，可包含"-"或"_"</div>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false,saveWorkflowName()">确定</el-button>
+                </div>
                 <i slot="reference" class="el-icon-edit-outline instructions-i"></i>
-              </el-popconfirm>
+              </el-popover>
             </div>
             <div class="instructions-content-text">电商充值赠送活动流程</div>
           </div>
@@ -57,9 +63,14 @@
           </div>
           <div class="instructions-content-item">
             <div class="instructions-content-name">工作流描述
-              <el-popconfirm title="工作流描述">
+              <el-popover placement="top-start" width="200" trigger="click" v-model="visible1">
+                <el-input v-model="workflowName" clearable placeholder="请输入内容"></el-input>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false,saveWorkflowName()">确定</el-button>
+                </div>
                 <i slot="reference" class="el-icon-edit-outline instructions-i"></i>
-              </el-popconfirm>
+              </el-popover>
             </div>
             <div class="instructions-content-text">string</div>
           </div>
@@ -67,9 +78,15 @@
         <div class="instructions-content" v-else>
           <div class="instructions-content-item">
             <div class="instructions-content-name">名称
-              <el-popconfirm title="工作流名称">
+              <el-popover placement="top-start" width="200" trigger="click" v-model="visible2">
+                <el-input v-model="isClickItemContent.name" clearable placeholder="请输入内容"></el-input>
+                <div>1-100个字符，以大小写字母、中文或数字开头，可包含"-"或"_"</div>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false,saveWorkflowName()">确定</el-button>
+                </div>
                 <i slot="reference" class="el-icon-edit-outline instructions-i"></i>
-              </el-popconfirm>
+              </el-popover>
             </div>
             <div class="instructions-content-text">{{isClickItemContent.name}}</div>
           </div>
@@ -83,9 +100,14 @@
           </div>
           <div class="instructions-content-item">
             <div class="instructions-content-name">工作流描述
-              <el-popconfirm title="工作流描述">
+              <el-popover placement="top-start" width="200" trigger="click" v-model="visible3">
+                <el-input v-model="workflowName" clearable placeholder="请输入内容"></el-input>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false,saveWorkflowName()">确定</el-button>
+                </div>
                 <i slot="reference" class="el-icon-edit-outline instructions-i"></i>
-              </el-popconfirm>
+              </el-popover>
             </div>
             <div class="instructions-content-text">string</div>
           </div>
@@ -95,28 +117,43 @@
     </div>
     <el-dialog title="历史工作流" size="tiny" :visible.sync="oldWorkFlowDialogVisible" width="70%" :before-close="handleClose">
       <div>
-        <el-table :data="tableData" style="width: 100%">
-          <el-table-column prop="date" label="工作流ID" width="80">
+        <el-table :data="oldWorkflowDesignTableData" style="width: 100%">
+          <el-table-column prop="id" label="ID" width="140">
           </el-table-column>
-          <el-table-column prop="name" label="工作流名称" width="180">
+          <el-table-column prop="workflowId" label="工作流ID" width="140">
+          </el-table-column>
+          <el-table-column prop="name" label="工作流名称" width="120">
+          </el-table-column>
+          <el-table-column prop="revision" label="版本">
           </el-table-column>
           <el-table-column prop="address" label="状态">
           </el-table-column>
-          <el-table-column prop="address" label="创建人">
+          <el-table-column prop="createBy" label="创建人">
           </el-table-column>
-          <el-table-column prop="address" label="创建时间">
+          <el-table-column prop="createDate" label="创建时间">
           </el-table-column>
-          <el-table-column prop="address" label="修改人">
+          <el-table-column prop="updateBy" label="修改人">
           </el-table-column>
-          <el-table-column prop="address" label="修改时间">
+          <el-table-column prop="updateDate" label="修改时间">
           </el-table-column>
-          <el-table-column prop="address" label="操作">
+          <el-table-column :label="$t('message.common.operation')" min-width="100">
+            <template slot-scope="scope">
+              <a class="table_a" @click="cloneWorkflowDesign(scope.row)">clone</a> |
+              <el-popover placement="top" width="160" v-model="workflowDesignDelVisible">
+                <p>确定删除该设计图？</p>
+                <div style="text-align: right; margin: 0">
+                  <el-button size="mini" type="text" @click="workflowDesignDelVisible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="workflowDesignDelVisible = false ; workflowDesignDel(scope.row)">确定</el-button>
+                </div>
+                <a class="table_a" slot="reference">删除</a>
+              </el-popover>
+            </template>
           </el-table-column>
         </el-table>
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="confirmSelectRegion">确 定</el-button>
+        <el-button @click="oldWorkFlowDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="handleClose">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -166,6 +203,9 @@ body {
 .top-menu-right-item {
   padding: 0 5px;
   cursor: pointer;
+  .menuIcon {
+    padding-right: 2px;
+  }
 }
 .top-menu-right-item:hover {
   color: #2ab1e8;

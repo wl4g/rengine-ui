@@ -51,6 +51,31 @@ export default [
     dataType: "json",
     sysModule: global.modules,
   },
+  //工作流设计
+  {
+    name: "工作流设计查询",
+    method: "queryWorkflowDesign",
+    path: "/workflowgraph/query",
+    type: "get",
+    dataType: "json",
+    sysModule: global.modules,
+  },
+  {
+    name: "工作流设计保存",
+    method: "saveWorkflowDesign",
+    path: "/workflowgraph/save",
+    type: "post",
+    dataType: "json",
+    sysModule: global.modules,
+  },
+  {
+    name: "历史工作流设计删除",
+    method: "workflowgraphDel",
+    path: "/workflowgraph/delete",
+    type: "post",
+    dataType: "json",
+    sysModule: global.modules,
+  },
 
   //规则模型
   {

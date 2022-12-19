@@ -7,8 +7,23 @@ const methods = {
       // 导入默认配置
       this.jsPlumb.importDefaults(this.jsplumbSetting)
       //完成连线前的校验
+      let res = true
       this.jsPlumb.bind("beforeDrop", evt => {
-        let res = () => {} //此处可以添加是否创建连接的校验， 返回 false 则不添加；
+        let startList =
+          this.data.lineList.length > 0
+            ? this.data.lineList.filter(item => item.from == evt.sourceId)
+            : []
+        if (startList.length > 0) {
+          let haveList = this.data.nodeList.filter(
+            item => item.id == startList[0].from
+          )
+          console.info("1111111have", haveList[0]["@type"])
+          res = haveList[0]["@type"] == "RELATION" ? true : false
+        } else {
+          res = true
+        }
+        // let res = () => {
+        // } //此处可以添加是否创建连接的校验， 返回 false 则不添加；
         return res
       })
       // 连线创建成功后，维护本地数据
@@ -126,6 +141,7 @@ const methods = {
     this.addNode(temp)
   },
   addLine(line) {
+    console.info(line)
     let from = line.source.id
     let to = line.target.id
     this.data.lineList.push({
@@ -193,8 +209,8 @@ const methods = {
       //设置滚动缩放的组合键，默认不需要组合键
       beforeWheel: e => {
         console.log(e)
-        // let shouldIgnore = !e.ctrlKey
-        // return shouldIgnore
+        let shouldIgnore = !e.ctrlKey
+        return shouldIgnore
       },
       beforeMouseDown: function (e) {
         // allow mouse-down panning only if altKey is down. Otherwise - ignore
@@ -230,10 +246,10 @@ const methods = {
         this.style.cursor = "grab"
       })
     })
+    let that = this
     mainContainerWrap.addEventListener("mouseup", function wrapMouseup() {
-      console.info("999999999")
-      this.isClickItem = false
       this.style.cursor = "grab"
+      that.isClickItem = false
     })
   },
 
@@ -263,11 +279,13 @@ const methods = {
 
   //更改连线状态
   changeLineState(node, val) {
-    this.isClickItem = true
     this.isClickItemContent =
       node.constructor === Object ? node : this.isClickItemContent
-    console.log("isClickItem", node)
+    if (node && Object.prototype.toString.call(node) === "[object Object]") {
+      this.isClickItem = true
+    }
     let lines = this.jsPlumb.getAllConnections()
+    console.info(node)
     lines.forEach(line => {
       if (line.targetId === node.id || line.sourceId === node.id) {
         if (val) {
@@ -275,6 +293,8 @@ const methods = {
         } else {
           line.canvas.classList.remove("active")
         }
+      } else {
+        line.canvas.classList.remove("active")
       }
     })
   },

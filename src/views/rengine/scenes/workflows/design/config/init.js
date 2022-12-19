@@ -55,6 +55,4 @@ const nodeTypeList = [
   // },
 ]
 
-console.log(nodeTypeList)
-
 export { nodeTypeList }
